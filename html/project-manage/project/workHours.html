@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>开发云工时统计</title>
+  <link rel="stylesheet" href="../../../css/bootstrap.css">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <link rel="stylesheet" href="../../../css/font-awesome.min.css">
+  <script src="../../../js/jq-3.3.1.js"></script>
+  <script src="../../../js/index.js"></script>
+</head>
+
+<body class="clearfix">
+  <header class="clearfix">
+    <div class="logo">
+      <img src="../../../img/index/logo.png" alt="logo">
+    </div>
+
+    <div class="role">
+      <span>Master <i class="fa fa-caret-right"></i></span>
+
+      <div class="role-select">
+        <p class="role-item">User</p>
+        <p class="role-item">Upton</p>
+      </div>
+    </div>
+
+    <div class="right-control clearfix">
+      <div class="notice">
+        <a href="../../project-manage/messageNotice.html">
+          <i class="fa fa-bell"></i>
+        </a>
+
+        <span class="num">5</span>
+      </div>
+      <div class="user">
+        <i class="fa fa-user"></i>
+        <span>13800138000,您好</span>
+      </div>
+      <div class="logout" title="注销">
+        <a href="../../login/login.html">
+          <span class="icon-container">
+            <i class="fa fa-power-off"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <aside>
+    <ul class="menu">
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="../../index.html">
+            <span class="menu-icon project-situation"></span>
+            <span>项目情况</span>
+          </a>
+        </div>
+      </li>
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon resource-manage"></span>
+            <span>资源管理</span>
+            <i class="fa fa-caret-left"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item">
+            <a href="../../resource-manage/taskToApplyFor.html">任务申请</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../resource-manage/virtualManage.html">虚拟机管理</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item active open">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon project-manage"></span>
+            <span>项目管理</span>
+            <i class="fa fa-caret-down"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item sub-menu-item-active">
+            <a href="../../project-manage/project.html">我的项目</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../project-manage/projectWeekly.html">项目周报</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../project-manage/workingHours.html">工时统计</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../project-manage/daily.html">人员日报</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../project-manage/messageNotice.html">消息通知</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon system-config"></span>
+            <span>系统设置</span>
+            <i class="fa fa-caret-left"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item">
+            <a href="../../system-config/infomation.html">个人信息</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../system-config/bingdingXiaohui.html">绑定小慧号</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <section class="main">
+    <div class="main-container">
+      <p class="module-title">我的项目 >> 无纸化</p>
+
+      <div class="tab-container">
+        <ul class="clearfix">
+          <li class="tab-item"><a href="./projectDetail.html">项目基本信息</a></li>
+          <li class="tab-item"><a href="./projectTeam.html">项目团队</a></li>
+          <li class="tab-item"><a href="javascript:void(0);">项目计划 <i class="fa fa-caret-left"></i></a></li>
+          <li class="tab-item"><a href="./projectChange.html">项目变更</a></li>
+          <li class="tab-item"><a href="javascript:void(0);">成本控制 <i class="fa fa-caret-left"></i></a></li>
+          <li class="tab-item"><a href="javascript:void(0);">项目报告 <i class="fa fa-caret-left"></i></a></li>
+          <li class="tab-item"><a href="./riskManagement.html">风险管理</a></li>
+          <li class="tab-item active"><a href="./workHours.html">开发云工时统计</a></li>
+          <li class="tab-item"><a href="./defaectAnalysis.html">缺陷分析</a></li>
+          <li class="tab-item"><a href="./codeStatistics.html">代码统计</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

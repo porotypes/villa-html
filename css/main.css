@@ -505,6 +505,9 @@ aside {
   padding: 12px 20px;
   background-color: #f8fbff;
 }
+.modal-body {
+  padding: 20px;
+}
 .modal-title {
   font-size: 20px;
   font-weight: 600;
@@ -533,6 +536,55 @@ aside {
 }
 .modal-btn:last-child {
   margin-right: 0;
+}
+
+/* tab */
+.tab-container {
+  padding: 20px 0;
+}
+.tab-container ul {
+  margin: 0;
+  padding: 0 30px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 2px solid #71a4ff;
+}
+.tab-container .tab-item {
+  float: left;
+  margin: 0 6px 0 0;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #71a4ff;
+  font-size: 18px;
+  font-weight: 600;
+  overflow: hidden;
+}
+.tab-container .tab-item:last-child {
+  margin-right: 0;
+}
+.tab-container .tab-item a {
+  display: block;
+  width: 100%;
+  height: 50px;
+  color: #71a4ff;
+  text-decoration: none;
+}
+.tab-container .tab-item:hover {
+  border: none;
+}
+.tab-container .tab-item:hover > a {
+  background-color: #71a4ff;
+  color: #ffffff;
+}
+.tab-container .tab-item:active {
+  border: none;
+}
+.tab-container .tab-item.active > a {
+  background-color: #71a4ff;
+  color: #ffffff;
 }
 
 /* other */
