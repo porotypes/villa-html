@@ -8,8 +8,10 @@
   <title>虚拟机管理</title>
   <link rel="stylesheet" href="../../css/bootstrap.css">
   <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/resource.css">
   <link rel="stylesheet" href="../../css/font-awesome.min.css">
   <script src="../../js/jq-3.3.1.js"></script>
+  <script src="../../js/bootstrap.js"></script>
   <script src="../../js/index.js"></script>
 </head>
 
@@ -124,8 +126,420 @@
   </aside>
 
   <section class="main">
+    <div class="main-container">
+      <p class="module-title">虚拟机管理</p>
+      <div class="search-bar clearfix border-0">
+        <div class="search-box">
+          <label>
+            项目名称:
+            <select class="search-input">
+              <option value="1" selected>项目一</option>
+              <option value="2">项目二</option>
+              <option value="3">项目三</option>
+            </select>
+          </label>
+          <button class="search-btn">查 询</button>
+        </div>
+        <br>
+        <div class="pull-left">
+          <button class="operation-btn">启动</button>
+          <button class="operation-btn">停止</button>
+          <button class="operation-btn">重启</button>
+          <button class="operation-btn">禁用</button>
+          <button class="operation-btn">查看VNC</button>
+          <button class="operation-btn" data-toggle="modal" data-target="#resetModel">重置密码</button>
+          <button class="operation-btn" data-toggle="modal" data-target="#controlModel">访问控制</button>
+          <button class="operation-btn" data-toggle="modal" data-target="#applyModal">申请端口访问</button>
+          <button class="operation-btn" data-toggle="modal" data-target="#allotModal">分配到用户</button>
+          <button class="operation-btn green-bg">登录模板</button>
+        </div>
+      </div>
 
+      <div class="content">
+        <table class="villa-table">
+          <thead>
+            <th width="50">
+              <label>
+                <input type="checkbox" id="villa-1">
+                <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                <span style="visibility: hidden;">0</span>
+              </label>
+            </th>
+            <th width="200">虚拟机名称</th>
+            <th width="160">登录名</th>
+            <th width="130">密码</th>
+            <th width="120">使用者</th>
+            <th>登录模板</th>
+            <th>状态</th>
+            <th>套餐</th>
+            <th>操作系统</th>
+            <th>远程连接</th>
+            <th>用途</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label>
+                  <input type="checkbox" id="villa-1">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>1</span>
+                </label>
+              </td>
+              <td>
+                <a data-toggle="modal" data-target="#vmModal">vm_001</a>
+              </td>
+              <td>clouder2</td>
+              <td>已分配</td>
+              <td>username</td>
+              <td>工作日登录</td>
+              <td>运行</td>
+              <td>2核2G</td>
+              <td></td>
+              <td>192.168.1.22:80</td>
+              <td>Email</td>
+            </tr>
+            <tr>
+              <td>
+                <label>
+                  <input type="checkbox" id="villa-1">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>2</span>
+                </label>
+              </td>
+              <td>
+                <a>vm_002</a>
+              </td>
+              <td>clouder</td>
+              <td>查看</td>
+              <td>username</td>
+              <td>工作日登录</td>
+              <td>运行</td>
+              <td>1核1G</td>
+              <td></td>
+              <td>无</td>
+              <td>SVN+NFS+Jira+Wiki+SMS</td>
+            </tr>
+            <tr>
+              <td>
+                <label>
+                  <input type="checkbox" id="villa-1">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>3</span>
+                </label>
+              </td>
+              <td>
+                <a>群聊云桌面-开发</a>
+              </td>
+              <td>clouder开发</td>
+              <td></td>
+              <td>开发</td>
+              <td>工作日登录</td>
+              <td>运行</td>
+              <td>1核1G</td>
+              <td></td>
+              <td>无</td>
+              <td>群聊共享桌面</td>
+            </tr>
+            <tr>
+              <td>
+                <label>
+                  <input type="checkbox" id="villa-1">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>4</span>
+                </label>
+              </td>
+              <td>
+                <a>群聊云桌面-设计</a>
+              </td>
+              <td>clouder</td>
+              <td>查看</td>
+              <td>username</td>
+              <td>工作日登录</td>
+              <td>运行</td>
+              <td>1核1G</td>
+              <td></td>
+              <td>无</td>
+              <td>SVN+NFS+Jira+Wiki+SMS</td>
+            </tr>
+            <tr>
+              <td>
+                <label>
+                  <input type="checkbox" id="villa-1">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>5</span>
+                </label>
+              </td>
+              <td>
+                <a>群聊云桌面-设计</a>
+              </td>
+              <td>clouder</td>
+              <td>查看</td>
+              <td>username</td>
+              <td>工作日登录</td>
+              <td>运行</td>
+              <td>1核1G</td>
+              <td></td>
+              <td>无</td>
+              <td>SVN+NFS+Jira+Wiki+SMS</td>
+            </tr>
+            <tr>
+              <td colspan="11">
+                <div class="villa-pagination">
+                  共计10条记录 当前显示项目:
+                  <select name="" id="">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                  </select>
+                  <ul class="clearfix">
+                    <li><i class="fa fa-angle-left"></i></li>
+                    <li class="active">1</li>
+                    <li>...</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>...</li>
+                    <li>10</li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                  </ul>
+                  <input type="text" class="page-num">
+                  <button class="page-btn">GO</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </section>
+
+  <div class="modal fade" id="resetModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 620px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">重置密码</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="addForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label">验证码:</span>
+                <input type="text" name="code" class="form-input">
+                <span id="verify">
+                  <canvas width="100" height="40" id="verifyCanvas"></canvas>
+                  <img id="code_img">
+                </span>
+              </label>
+            </div>
+            <div class="form-item">
+              <button type="button" class="modal-btn text-center offset-3">重置密码</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="controlModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog table-dialog" role="document" style="max-width: 1400px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">访问控制</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <table class="villa-table">
+            <thead>
+              <th>协议</th>
+              <th>IP通配</th>
+              <th>起始端口</th>
+              <th>结束端口</th>
+              <th>启用时间</th>
+              <th>结束时间</th>
+              <th>操作</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <select class="table-input">
+                    <option value="XDP" selected>XDP</option>
+                    <option value="VNC">VNC</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="text" class="table-input" value="::/0">
+                </td>
+                <td>
+                  <input type="text" class="table-input">
+                </td>
+                <td>
+                  <input type="text" class="table-input">
+                </td>
+                <td>
+                  <input type="text" class="table-input" value="2017-03-15 10:45">
+                </td>
+                <td>
+                  <input type="text" class="table-input" value="2017-03-15 10:45">
+                </td>
+                <td>
+                  <a href="javascript:void(0);" title="添加">添加</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">XDP</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <a href="javascript:void(0);" title="编辑">编辑</a>
+                  <a href="javascript:void(0);" title="添加">删除</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="applyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 620px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">申请端口访问</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="addForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label">虚拟机端口:</span>
+                <input type="text" name="name" class="form-input long-input">
+              </label>
+            </div>
+            <div class="form-item text-center">
+              <span class="gray">提交申请后，系统将会自动分配其对应的公网IP和端口</span>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn" id="applyBtn">提交</button>
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">关闭</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="allotModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog allot-table-dialog" role="document" style="max-width: 800px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">分配到用户</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <table class="villa-table">
+            <thead>
+              <th width="50"></th>
+              <th>用户名</th>
+              <th>姓名</th>
+              <th width="200">邮箱</th>
+              <th width="200">手机</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="vertical-align:text-left">
+                  <label>
+                    <input type="radio" id="villa-1">
+                  </label>
+                </td>
+                <td>username1</td>
+                <td>张三</td>
+                <td>XXXXXX@126.com</td>
+                <td>13562489752</td>
+              </tr>
+              <tr>
+                <td class="vertical-align:text-left">
+                  <label>
+                    <input type="radio" id="villa-1">
+                  </label>
+                </td>
+                <td>username1</td>
+                <td>张三</td>
+                <td>XXXXXX@126.com</td>
+                <td>13562489752</td>
+              </tr>
+              <tr>
+                <td class="vertical-align:text-left">
+                  <label>
+                    <input type="radio" id="villa-1">
+                  </label>
+                </td>
+                <td>username1</td>
+                <td>张三</td>
+                <td>XXXXXX@126.com</td>
+                <td>13562489752</td>
+              </tr>
+              <tr>
+                <td class="vertical-align:text-left">
+                  <label>
+                    <input type="radio" id="villa-1">
+                  </label>
+                </td>
+                <td>username1</td>
+                <td>张三</td>
+                <td>XXXXXX@126.com</td>
+                <td>13562489752</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <form action="" id="addForm">
+            <div class="form-item text-center mt-3">
+              <label>
+                <span class="form-label">登录模板:</span>
+                <select class="search-input">
+                  <option value="0">工作日登录设置</option>
+                  <option value="1">自然日登录设置</option>
+                </select>
+              </label>
+            </div>
+          </form>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="modal-btn" id="addBtn">确定</button>
+        </div>
+
+        <div class="text-center" style="height: 100px">
+          <p class="gray">分配机器的同时，将机器添加到用户的小慧云桌面中</p>
+          <p class="gray">小慧APP收到分配虚拟机后，可看到机器相关信息，如项目名称、Master等说明信息</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="allotModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog allot-table-dialog" role="document" style="max-width: 800px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">vm_001</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
+
+<script src="../../js/code.js"></script>
