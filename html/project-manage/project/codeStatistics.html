@@ -5,11 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>代码分析</title>
+  <title>代码行统计</title>
   <link rel="stylesheet" href="../../../css/bootstrap.css">
   <link rel="stylesheet" href="../../../css/main.css">
   <link rel="stylesheet" href="../../../css/font-awesome.min.css">
   <script src="../../../js/jq-3.3.1.js"></script>
+  <script src="../../../js/echarts.common.min.js"></script>
   <script src="../../../js/index.js"></script>
 </head>
 
@@ -65,7 +66,7 @@
           <a href="javascript:void(0);">
             <span class="menu-icon resource-manage"></span>
             <span>资源管理</span>
-            <i class="fa fa-caret-left"></i>
+            <i class="fa fa-caret-down"></i>
           </a>
         </div>
         <ul class="sub-menu">
@@ -108,7 +109,7 @@
           <a href="javascript:void(0);">
             <span class="menu-icon system-config"></span>
             <span>系统设置</span>
-            <i class="fa fa-caret-left"></i>
+            <i class="fa fa-caret-down"></i>
           </a>
         </div>
         <ul class="sub-menu">
@@ -131,15 +132,116 @@
         <ul class="clearfix">
           <li class="tab-item"><a href="./projectDetail.html">项目基本信息</a></li>
           <li class="tab-item"><a href="./projectTeam.html">项目团队</a></li>
-          <li class="tab-item"><a href="javascript:void(0);">项目计划 <i class="fa fa-caret-left"></i></a></li>
+          <li class="tab-item">
+            <a href="javascript:void(0);">项目计划 <i class="fa fa-caret-down"></i></a>
+            <ul class="tab-sub-item">
+              <li><a href="./projectProgress.html">项目进度</a></li>
+              <li><a href="./milestone.html">里程碑</a></li>
+              <li><a href="./taskAllocation.html">任务分配</a></li>
+            </ul>
+          </li>
           <li class="tab-item"><a href="./projectChange.html">项目变更</a></li>
-          <li class="tab-item"><a href="javascript:void(0);">成本控制 <i class="fa fa-caret-left"></i></a></li>
-          <li class="tab-item"><a href="javascript:void(0);">项目报告 <i class="fa fa-caret-left"></i></a></li>
+          <li class="tab-item">
+            <a href="javascript:void(0);">成本控制 <i class="fa fa-caret-down"></i></a>
+            <ul class="tab-sub-item">
+              <li><a href="./humanCost.html">人力成本</a></li>
+              <li><a href="./travelCost.html">出差费用</a></li>
+              <li><a href="./otherCost.html">其他费用</a></li>
+            </ul>
+          </li>
+          <li class="tab-item">
+            <a href="javascript:void(0);">项目报告 <i class="fa fa-caret-down"></i></a>
+            <ul class="tab-sub-item">
+              <li><a href="./daily.html">人员日报</a></li>
+              <li><a href="./weekly.html">项目周报</a></li>
+            </ul>
+          </li>
           <li class="tab-item"><a href="./riskManagement.html">风险管理</a></li>
           <li class="tab-item"><a href="./workHours.html">开发云工时统计</a></li>
           <li class="tab-item"><a href="./defaectAnalysis.html">缺陷分析</a></li>
-          <li class="tab-item active"><a href="./codeStatistics.html">代码统计</a></li>
+          <li class="tab-item active">
+            <a href="javascript:void(0);">代码行统计 <i class="fa fa-caret-down"></i></a>
+            <ul class="tab-sub-item">
+              <li><a href="./codeStatistics.html">代码行统计</a></li>
+              <li><a href="./codeLog.html">代码提交日志</a></li>
+            </ul>
+          </li>
         </ul>
+
+        <div class="content">
+          <div class="search-bar clearfix">
+            <div class="pull-right">
+              <label>
+                统计日期:
+                <input type="text" class="search-input">
+                至
+                <input type="text" class="search-input">
+              </label>
+              <button class="search-btn">查 询</button>
+            </div>
+          </div>
+          <div id="codesChart" style="margin: 20px 0;width: 100%;height: 400px;"></div>
+          <table class="villa-table">
+            <thead>
+              <th>序号</th>
+              <th>日期</th>
+              <th>代码行数</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2018-02-01</td>
+                <td>800</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>2018-02-02</td>
+                <td>1500</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>2018-02-03</td>
+                <td>2200</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>2018-02-04</td>
+                <td>2500</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>2018-02-05</td>
+                <td>2600</td>
+              </tr>
+              <tr>
+                <td colspan="8">
+                  <div class="villa-pagination">
+                    共计10条记录 当前显示项目:
+                    <select name="" id="">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                      <option value="15">15</option>
+                      <option value="20">20</option>
+                    </select>
+                    <ul class="clearfix">
+                      <li><i class="fa fa-angle-left"></i></li>
+                      <li class="active">1</li>
+                      <li>...</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>...</li>
+                      <li>10</li>
+                      <li><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                    <input type="text" class="page-num">
+                    <button class="page-btn">GO</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </section>
