@@ -475,6 +475,9 @@ aside {
 .light.red {
   background-color: #ff3a49;
 }
+.light.yellow {
+  background-color: #f39800;
+}
 
 /* progress */
 .progress {
@@ -499,7 +502,7 @@ aside {
   max-width: 800px;
 }
 .modal-header {
-  padding: 12px 30px;
+  padding: 12px 20px;
   background-color: #f8fbff;
 }
 .modal-title {
@@ -628,7 +631,8 @@ aside {
   color: #ff0000;
   font-size: 16px;
 }
-.form-item .form-input {
+.form-item .form-input,
+.form-item .progress + input {
   padding: 4px;
   width: 178px;
   font-size: 14px;
@@ -647,10 +651,33 @@ aside {
 .form-item .long-input {
   width: 470px;
 }
+.form-item .form-input:focus,
+.form-item .progress + input:focus,
 .form-item .form-input:focus {
   color: #495057;
   background-color: #fff;
   border-color: #80bdff;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.form-item .form-raio-group {
+  display: inline-block;
+  width: 178px;
+}
+.form-item .form-raio-group span {
+  margin-right: 8px;
+}
+.form-item .progress {
+  width: 400px;
+  vertical-align: middle;
+}
+.form-item .progress + input {
+  width: 65px;
+  text-align: center;
+}
+.form-item input:disabled,
+.form-item select:disabled,
+.form-item textarea:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
 }
