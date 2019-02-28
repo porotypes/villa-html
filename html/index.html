@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Villa 首页</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <script src="../js/jq-3.3.1.js"></script>
+  <script src="../js/highcharts/highcharts.js"></script>
+  <script src="../js/highcharts/highcharts-3d.js"></script>
+  <script src="../js/highcharts/exporting.js"></script>
+  <script src="../js/echarts.common.min.js"></script>
+  <script src="../js/index.js"></script>
+</head>
+
+<body class="clearfix">
+  <header class="clearfix">
+    <div class="logo">
+      <img src="../img/index/logo.png" alt="logo">
+    </div>
+
+    <div class="role">
+      <span>Master <i class="fa fa-caret-right"></i></span>
+
+      <div class="role-select">
+        <p class="role-item">User</p>
+        <p class="role-item">Upton</p>
+      </div>
+    </div>
+
+    <div class="right-control clearfix">
+      <div class="notice">
+        <a href="./project-manage/messageNotice.html">
+          <i class="fa fa-bell"></i>
+        </a>
+
+        <span class="num">5</span>
+      </div>
+      <div class="user">
+        <i class="fa fa-user"></i>
+        <span>13800138000,您好</span>
+      </div>
+      <div class="logout" title="注销">
+        <a href="./login/login.html">
+          <span class="icon-container">
+            <i class="fa fa-power-off"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <aside>
+    <ul class="menu">
+      <li class="menu-item active">
+        <div class="clearfix">
+          <a href="./index.html">
+            <span class="menu-icon project-situation"></span>
+            <span>项目情况</span>
+          </a>
+        </div>
+      </li>
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon resource-manage"></span>
+            <span>资源管理</span>
+            <i class="fa fa-caret-left"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item">
+            <a href="./resource-manage/taskToApplyFor.html">任务申请</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="./resource-manage/virtualManage.html">虚拟机管理</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon project-manage"></span>
+            <span>项目管理</span>
+            <i class="fa fa-caret-left"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item">
+            <a href="./project-manage/project.html">我的项目</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="./project-manage/projectWeekly.html">项目周报</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="./project-manage/workingHours.html">工时统计</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="./project-manage/daily.html">人员日报</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="./project-manage/messageNotice.html">消息通知</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon system-config"></span>
+            <span>系统设置</span>
+            <i class="fa fa-caret-left"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item">
+            <a href="../system-config/infomation.html">个人信息</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../system-config/bingdingXiaohui.html">绑定小慧号</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <section class="main">
+    <div class="top clearfix">
+      <div class="message-notice">
+        <p class="module-title clearfix">
+          消息通知
+          <a class="more" href="">更多<i class="fa fa-angle-right"></i></a>
+        </p>
+        <div class="message-list">
+          <ul>
+            <li class="list-item">
+              <a class="clearfix" href="###" title="张三提交了XXX项目 2018-12-06日日报，报告项目情况">
+                <span class="content">1.张三提交了XXX项目 2018-12-06日日报，报告项目情况</span>
+                <span class="time">2018-12-03</span>
+              </a>
+            </li>
+            <li class="list-item">
+              <a class="clearfix" href="###" title="张三提交了XXX项目 2018-12-06日日报，报告项目情况">
+                <span class="content">2.张三提交了XXX项目 2018-12-06日日报，报告项目情况</span>
+                <span class="time">2018-12-03</span>
+              </a>
+            </li>
+            <li class="list-item">
+              <a class="clearfix" href="###" title="张三提交了XXX项目 2018-12-06日日报，报告项目情况">
+                <span class="content">3.张三提交了XXX项目 2018-12-06日日报，报告项目情况</span>
+                <span class="time">2018-12-03</span>
+              </a>
+            </li>
+            <li class="list-item">
+              <a class="clearfix" href="###" title="张三提交了XXX项目 2018-12-06日日报，报告项目情况">
+                <span class="content">4.张三提交了XXX项目 2018-12-06日日报，报告项目情况</span>
+                <span class="time">2018-12-03</span>
+              </a>
+            </li>
+            <li class="list-item">
+              <a class="clearfix" href="###" title="张三提交了XXX项目 2018-12-06日日报，报告项目情况">
+                <span class="content">5.张三提交了XXX项目 2018-12-06日日报，报告项目情况</span>
+                <span class="time">2018-12-03</span>
+              </a>
+            </li>
+            <li class="list-item">
+              <a class="clearfix" href="###" title="张三提交了XXX项目 2018-12-06日日报，报告项目情况">
+                <span class="content">6.张三提交了XXX项目 2018-12-06日日报，报告项目情况</span>
+                <span class="time">2018-12-03</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-charts">
+        <p class="module-title">项目阶段与任务统计</p>
+        <div class="content">
+          <div class="project-phase">
+            <div id="projectPhaseChart" style="width: 555px; height: 328px;"></div>
+          </div>
+          <div class="split"></div>
+          <div class="task-statistial">
+            <div id="taskStatistialChart" style="width: 505px; height: 318px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="center">
+      <p class="module-title clearfix">
+        <span>近15天开发云使用时间统计</span>
+        <select>
+          <option value="7">近7天</option>
+          <option value="15">近15天</option>
+          <option value="30">近30天</option>
+        </select>
+      </p>
+      <div class="content">
+        <div id="oneCloudUseTime" style="width: 1616px; height: 233px;"></div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <p class="module-title">进行中的项目</p>
+      <div class="content">
+        <table class="villa-table">
+          <thead>
+            <th width="50">序号</th>
+            <th>项目名称</th>
+            <th width="100" class="text-center">亮灯情况</th>
+            <th width="400">当前进度</th>
+            <th>开始时间</th>
+            <th>结束时间</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center">1</td>
+              <td><a href="###">无纸化</a></td>
+              <td class="text-center">
+                <span class="light green"></span>
+              </td>
+              <td><span class="progress"><i></i></span> 38%</td>
+              <td>2018-09-01</td>
+              <td>2019-02-01</td>
+            </tr>
+            <tr>
+              <td class="text-center">2</td>
+              <td><a href="###">无纸化</a></td>
+              <td class="text-center">
+                <span class="light red"></span>
+              </td>
+              <td><span class="progress"><i></i></span> 38%</td>
+              <td>2018-09-01</td>
+              <td>2019-02-01</td>
+            </tr>
+            <tr>
+              <td class="text-center">3</td>
+              <td><a href="###">无纸化</a></td>
+              <td class="text-center">
+                <span class="light green"></span>
+              </td>
+              <td><span class="progress"><i></i></span> 38%</td>
+              <td>2018-09-01</td>
+              <td>2019-02-01</td>
+            </tr>
+            <tr>
+              <td class="text-center">4</td>
+              <td><a href="###">无纸化</a></td>
+              <td class="text-center">
+                <span class="light green"></span>
+              </td>
+              <td><span class="progress"><i></i></span> 38%</td>
+              <td>2018-09-01</td>
+              <td>2019-02-01</td>
+            </tr>
+            <tr>
+              <td class="text-center">5</td>
+              <td><a href="###">无纸化</a></td>
+              <td class="text-center">
+                <span class="light green"></span>
+              </td>
+              <td><span class="progress"><i></i></span> 38%</td>
+              <td>2018-09-01</td>
+              <td>2019-02-01</td>
+            </tr>
+            <tr>
+              <td colspan="6">
+                <div class="villa-pagination">
+                  共计10条记录 当前显示项目:
+                  <select name="" id="">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                  </select>
+                  <ul class="clearfix">
+                    <li><i class="fa fa-angle-left"></i></li>
+                    <li class="active">1</li>
+                    <li>...</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>...</li>
+                    <li>10</li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                  </ul>
+                  <input type="text" class="page-num">
+                  <button class="page-btn">GO</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

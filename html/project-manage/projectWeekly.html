@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>项目周报</title>
+  <link rel="stylesheet" href="../../css/bootstrap.css">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../css/foundation-datepicker.min.css">
+  <script src="../../js/jq-3.3.1.js"></script>
+  <script src="../../js/jquery.validate.js"></script>
+  <script src="../../js/bootstrap.js"></script>
+  <script src="../../js/index.js"></script>
+  <script src="../../js/project.js"></script>
+  <script src="../../js/foundation-datepicker.min.js"></script>
+  <script src="../../js/foundation-datepicker.zh-CN.js"></script>
+</head>
+
+<body class="clearfix">
+  <header class="clearfix">
+    <div class="logo">
+      <img src="../../img/index/logo.png" alt="logo">
+    </div>
+
+    <div class="role">
+      <span>Master <i class="fa fa-caret-right"></i></span>
+
+      <div class="role-select">
+        <p class="role-item">User</p>
+        <p class="role-item">Upton</p>
+      </div>
+    </div>
+
+    <div class="right-control clearfix">
+      <div class="notice">
+        <a href="../project-manage/messageNotice.html">
+          <i class="fa fa-bell"></i>
+        </a>
+
+        <span class="num">5</span>
+      </div>
+      <div class="user">
+        <i class="fa fa-user"></i>
+        <span>13800138000,您好</span>
+      </div>
+      <div class="logout" title="注销">
+        <a href="../login/login.html">
+          <span class="icon-container">
+            <i class="fa fa-power-off"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <aside>
+    <ul class="menu">
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="../index.html">
+            <span class="menu-icon project-situation"></span>
+            <span>项目情况</span>
+          </a>
+        </div>
+      </li>
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon resource-manage"></span>
+            <span>资源管理</span>
+            <i class="fa fa-caret-left"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item">
+            <a href="../resource-manage/taskToApplyFor.html">任务申请</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../resource-manage/virtualManage.html">虚拟机管理</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item active open">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon project-manage"></span>
+            <span>项目管理</span>
+            <i class="fa fa-caret-down"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item">
+            <a href="../project-manage/project.html">我的项目</a>
+          </li>
+          <li class="sub-menu-item sub-menu-item-active">
+            <a href="../project-manage/projectWeekly.html">项目周报</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../project-manage/workingHours.html">工时统计</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../project-manage/daily.html">人员日报</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../project-manage/messageNotice.html">消息通知</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon system-config"></span>
+            <span>系统设置</span>
+            <i class="fa fa-caret-left"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item">
+            <a href="../system-config/infomation.html">个人信息</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../system-config/bingdingXiaohui.html">绑定小慧号</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <section class="main">
+    <div class="main-container">
+      <p class="module-title">项目周报</p>
+
+      <div class="content">
+        <table class="villa-table">
+          <thead>
+            <th width="50">
+              <label>
+                <input type="checkbox" id="villa-1">
+                <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                <span style="visibility: hidden;">0</span>
+              </label>
+            </th>
+            <th>项目名称</th>
+            <th>报告周期</th>
+            <th width="380">项目总进度</th>
+            <th width="100" class="text-center">亮灯状态</th>
+            <th>填写时间</th>
+            <th width="130">操作</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label>
+                  <input type="checkbox">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>1</span>
+                </label>
+              </td>
+              <td>
+                <a href="javascript:void(0);">无纸化</a>
+              </td>
+              <td>2018-02-01 至 2018-02-28</td>
+              <td><span class="progress"><i></i></span> 38%</td>
+              <td class="text-center"><span class="light green"></span></td>
+              <td>2018-02-01</td>
+              <td>
+                <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                  class="operation-icon"><i class="fa fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>
+                  <input type="checkbox">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>2</span>
+                </label>
+              </td>
+              <td>
+                <a href="javascript:void(0);">无纸化</a>
+              </td>
+              <td>2018-02-01 至 2018-02-28</td>
+              <td><span class="progress"><i></i></span> 38%</td>
+              <td class="text-center"><span class="light green"></span></td>
+              <td>2018-02-01</td>
+              <td>
+                <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                  class="operation-icon"><i class="fa fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>
+                  <input type="checkbox">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>3</span>
+                </label>
+              </td>
+              <td>
+                <a href="javascript:void(0);">无纸化</a>
+              </td>
+              <td>2018-02-01 至 2018-02-28</td>
+              <td><span class="progress"><i></i></span> 38%</td>
+              <td class="text-center"><span class="light green"></span></td>
+              <td>2018-02-01</td>
+              <td>
+                <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                  class="operation-icon"><i class="fa fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>
+                  <input type="checkbox">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>4</span>
+                </label>
+              </td>
+              <td>
+                <a href="javascript:void(0);">无纸化</a>
+              </td>
+              <td>2018-02-01 至 2018-02-28</td>
+              <td><span class="progress"><i></i></span> 38%</td>
+              <td class="text-center"><span class="light green"></span></td>
+              <td>2018-02-01</td>
+              <td>
+                <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                  class="operation-icon"><i class="fa fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>
+                  <input type="checkbox">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>5</span>
+                </label>
+              </td>
+              <td>
+                <a href="javascript:void(0);">无纸化无纸化无纸化无纸化</a>
+              </td>
+              <td>2018-02-01 至 2018-02-28</td>
+              <td><span class="progress"><i></i></span> 38%</td>
+              <td class="text-center"><span class="light green"></span></td>
+              <td>2018-02-01</td>
+              <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                  class="operation-icon"><i class="fa fa-edit"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="8">
+                <div class="villa-pagination">
+                  共计10条记录 当前显示项目:
+                  <select name="" id="">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                  </select>
+                  <ul class="clearfix">
+                    <li><i class="fa fa-angle-left"></i></li>
+                    <li class="active">1</li>
+                    <li>...</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>...</li>
+                    <li>10</li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                  </ul>
+                  <input type="text" class="page-num">
+                  <button class="page-btn">GO</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
