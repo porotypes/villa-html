@@ -501,6 +501,12 @@ aside {
   margin: 100px auto 0;
   max-width: 800px;
 }
+.table-dialog {
+  max-width: 1400px;
+}
+.allot-table-dialog{
+  max-width: 800px;
+}
 .modal-header {
   padding: 12px 20px;
   background-color: #f8fbff;
@@ -647,7 +653,18 @@ aside {
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.search-input:focus {
+.table-input {
+  padding: 6px 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.search-input:focus, .table-input:focus {
   color: #495057;
   background-color: #fff;
   border-color: #80bdff;
@@ -763,4 +780,7 @@ aside {
 .form-item textarea:disabled {
   background-color: #e9ecef;
   cursor: not-allowed;
+}
+.green-bg{
+  background-color: #009900;
 }
