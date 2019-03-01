@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="../../css/bootstrap.css">
   <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../css/project.css">
   <script src="../../js/jq-3.3.1.js"></script>
+  <script src="../../js/bootstrap.js"></script>
   <script src="../../js/index.js"></script>
 </head>
 
@@ -124,8 +126,298 @@
   </aside>
 
   <section class="main">
+    <div class="main-container">
+      <p class="module-title">人民日报</p>
+      <div class="search-bar clearfix">
+        <div class="search-box">
+          <label>
+            项目名称:
+            <select class="search-input">
+              <option value="1" selected>项目一</option>
+            </select>
+            <span class="ml-5">汇报日期:</span>
+            <input type="text" class="search-input">
+            <span class="ml-5">至:</span>
+            <input type="text" class="search-input">
+          </label>
+          <button class="search-btn ml-3">查 询</button>
+        </div>
+      </div>
+      <div class="operation search-bar border-0">
+        <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
+        <button class="operation-btn" data-toggle="modal" data-target="#editModal">查看</button>
+        <button class="operation-btn" data-toggle="modal" data-target="#auditModal">审核</button>
+      </div>
 
+      <div class="content">
+        <table class="villa-table">
+          <thead>
+            <th>所属项目</th>
+            <th>任务</th>
+            <th width="250">汇报日期</th>
+            <th width="200">填报时间</th>
+            <th>状态</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>国家电投</td>
+              <td>模块一开发</td>
+              <td>‎2018-03-12</td>
+              <td>‎2018-03-12 ‏‎16:08:13</td>
+              <td>未审核</td>
+            </tr>
+            <tr>
+              <td>一体机</td>
+              <td>模块一开发</td>
+              <td>‎2018-03-12</td>
+              <td>‎2018-03-12 ‏‎16:08:13</td>
+              <td>审核通过</td>
+            </tr>
+            <tr>
+              <td>无纸化</td>
+              <td>模块一开发</td>
+              <td>‎2018-03-12</td>
+              <td>‎2018-03-12 ‏‎16:08:13</td>
+              <td>发回重写</td>
+            </tr>
+            <tr>
+              <td>一体机</td>
+              <td>模块一开发</td>
+              <td>‎2018-03-12</td>
+              <td>‎2018-03-12 ‏‎16:08:13</td>
+              <td>审核通过</td>
+            </tr>
+            <tr>
+              <td>无纸化</td>
+              <td>模块一开发</td>
+              <td>‎2018-03-12</td>
+              <td>‎2018-03-12 ‏‎16:08:13</td>
+              <td>发回重写</td>
+            </tr>
+            <tr>
+              <td colspan="11">
+                <div class="villa-pagination">
+                  共计10条记录 当前显示项目:
+                  <select name="" id="">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                  </select>
+                  <ul class="clearfix">
+                    <li><i class="fa fa-angle-left"></i></li>
+                    <li class="active">1</li>
+                    <li>...</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>...</li>
+                    <li>10</li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                  </ul>
+                  <input type="text" class="page-num">
+                  <button class="page-btn">GO</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
   </section>
+
+  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 625px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">日报新增</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="addForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label">所属项目:</span>
+                <input type="text" name="name" class="form-input long-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">汇报日期:</span>
+                <input type="text" name="name" class="form-input" value="2018-05-01">
+              </label>
+            </div>
+            <div class="work-content">
+              <div class="form-item">
+                <label>
+                  <span class="form-label">任务:</span>
+                  <input type="text" name="name" class="form-input">
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">工作工时:</span>
+                  <input type="text" name="name" class="form-input input-tip" value="4">
+                  小时
+                </label>
+                <label>
+                  <span class="form-label">加班工时:</span>
+                  <input type="text" name="name" class="form-input input-tip" value="4">
+                  小时
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">完成内容:</span>
+                  <textarea rows="5" name="projectSituation" class="form-input long-input">1、模块2档编写 2、模块2系统开发
+                  </textarea>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">任务进度:</span>
+                  <td><span class="progress"><i></i></span> 10%</td>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="modal-btn" id="addBtn">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog dialog" role="document" style="width: 625px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">日报查看</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form action="" id="addForm">
+              <div class="form-item">
+                <label>
+                  <span class="form-label">所属项目:</span>
+                  <input type="text" name="name" class="form-input long-input" disabled>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">汇报日期:</span>
+                  <input type="text" name="name" class="form-input" value="2018-05-01" disabled>
+                </label>
+              </div>
+              <div class="work-content">
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">任务:</span>
+                    <input type="text" name="name" class="form-input" disabled>
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">工作工时:</span>
+                    <input type="text" name="name" class="form-input input-tip" value="4" disabled>
+                    小时
+                  </label>
+                  <label>
+                    <span class="form-label">加班工时:</span>
+                    <input type="text" name="name" class="form-input input-tip" value="4" disabled>
+                    小时
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">完成内容:</span>
+                    <textarea disabled rows="5" name="projectSituation" class="form-input long-input">1、模块2档编写 2、模块2系统开发
+                    </textarea>
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">任务进度:</span>
+                    <td><span class="progress"><i></i></span> 10%</td>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+            <button type="button" class="modal-btn" id="addBtn">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="modal fade" id="auditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog dialog" role="document" style="width: 625px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">日报审核</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form action="" id="addForm">
+              <div class="form-item">
+                <label>
+                  <span class="form-label">所属项目:</span>
+                  <input type="text" name="name" class="form-input long-input" disabled>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">汇报日期:</span>
+                  <input type="text" name="name" class="form-input" value="2018-05-01" disabled>
+                </label>
+              </div>
+              <div class="work-content">
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">任务:</span>
+                    <input type="text" name="name" class="form-input" disabled>
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">工作工时:</span>
+                    <input type="text" name="name" class="form-input input-tip" value="4" disabled>
+                    小时
+                  </label>
+                  <label>
+                    <span class="form-label">加班工时:</span>
+                    <input type="text" name="name" class="form-input input-tip" value="4" disabled>
+                    小时
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">完成内容:</span>
+                    <textarea disabled rows="5" name="projectSituation" class="form-input long-input">1、模块2档编写 2、模块2系统开发
+                    </textarea>
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">任务进度:</span>
+                    <td><span class="progress"><i></i></span> 10%</td>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+            <button type="button" class="modal-btn" id="addBtn">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 
 </html>

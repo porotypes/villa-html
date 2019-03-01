@@ -186,7 +186,7 @@
                 </label>
               </td>
               <td>
-                <a data-toggle="modal" data-target="#vmModal">vm_001</a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#vmModal">vm_001</a>
               </td>
               <td>clouder2</td>
               <td>已分配</td>
@@ -408,7 +408,7 @@
   </div>
 
   <div class="modal fade" id="applyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog dialog" role="document" style="width: 620px;">
+    <div class="modal-dialog dialog" role="document" style="width: 625px;">
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">申请端口访问</h4>
@@ -526,7 +526,7 @@
     </div>
   </div>
 
-  <div class="modal fade" id="allotModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal fade" id="vmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog dialog allot-table-dialog" role="document" style="max-width: 800px;">
       <div class="modal-content">
         <div class="modal-header">
@@ -534,10 +534,92 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
+          <div class="tab-container">
+            <ul class="clearfix" id="tab">
+              <li class="tab-item active"><a href="javascript:void(0);">基本信息</a></li>
+              <li class="tab-item"><a href="javascript:void(0);">端口映射</a></li>
+            </ul>
+          </div>
+          <div class="tab-content" id="tab-content">
+            <div>
+              <table class="villa-table vertical-table">
+                <tr>
+                  <td class="column">云主机名称</td>
+                  <td>vm_001</td>
+                </tr>
+                <tr>
+                  <td class="column">操作系统</td>
+                  <td>Windows 2008</td>
+                </tr>
+                <tr>
+                  <td class="column">CPU</td>
+                  <td>2 核</td>
+                </tr>
+                <tr>
+                  <td class="column">内存</td>
+                  <td>4 GB</td>
+                </tr>
+                <tr>
+                  <td class="column">数据盘</td>
+                  <td>200G</td>
+                </tr>
+                <tr>
+                  <td class="column"> 虚拟 IP</td>
+                  <td>192.168.1.1</td>
+                </tr>
+                <tr>
+                  <td class="column">VPN IP</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="column">创建时间</td>
+                  <td>2015/04/08</td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <table class="villa-table">
+                <thead>
+                  <th>序号</th>
+                  <th>虚拟机端口</th>
+                  <th>公网IP：Port</th>
+                  <th>分配时间</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>22</td>
+                    <td></td>
+                    <td>2014/04/16 16:00</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>22</td>
+                    <td></td>
+                    <td>2014/04/16 16:00</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>22</td>
+                    <td></td>
+                    <td>2014/04/16 16:00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    $('#tab-content div').eq(0).show().siblings().hide();
+    $('#tab li').click(function () {
+      let i = $(this).index(); //下标第一种写法
+      $(this).addClass('active').siblings().removeClass('active');
+      $('#tab-content div').eq(i).show().siblings().hide();
+    });
+  </script>
 </body>
 
 </html>

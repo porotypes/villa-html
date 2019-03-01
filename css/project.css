@@ -1,0 +1,14 @@
+.work-content{
+    border: 1px solid #d3d3d3;
+    padding: 10px 0;
+    position: relative;
+    margin-top: 10px;
+}
+.work-content::before{
+    font-weight: 600;
+    font-weight: bold;
+    position: absolute;
+    top: -26px;
+    content: '工作内容';
+    color: #000;
+}

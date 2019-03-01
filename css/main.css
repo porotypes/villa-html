@@ -393,6 +393,15 @@ aside {
 .villa-table label input[type=checkbox]:checked + .checkbox-icon i {
   display: block;
 }
+/* 纵向table */
+.vertical-table td{
+  border: 1px solid #d2d2d2
+}
+.vertical-table td.column{
+  background: #6da2ff;
+  width: 40%
+}
+
 
 /* pagination */
 .villa-pagination {
@@ -783,4 +792,11 @@ aside {
 }
 .green-bg{
   background-color: #009900;
+}
+.input-tip{
+  width: 140px !important;
+}
+.w-178{
+  width: 178px;
+  display: inline-block
 }

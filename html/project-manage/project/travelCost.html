@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../../../css/main.css">
   <link rel="stylesheet" href="../../../css/font-awesome.min.css">
   <script src="../../../js/jq-3.3.1.js"></script>
+  <script src="../../../js/bootstrap.js"></script>
   <script src="../../../js/index.js"></script>
 </head>
 
@@ -168,11 +169,300 @@
         </ul>
 
         <div class="content">
-
+          <div class="operation">
+            <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
+            <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button>
+            <button class="operation-btn">删除</button>
+          </div>
+          <table class="villa-table mt-3">
+            <thead>
+              <th width="50">
+                <label>
+                  <input type="checkbox" id="villa-1">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span style="visibility: hidden;">0</span>
+                </label>
+              </th>
+              <th>姓名</th>
+              <th>开始时间</th>
+              <th>结束时间</th>
+              <th>出差时长(天)</th>
+              <th>补贴(人/天)</th>
+              <th>补贴合计(元)</th>
+              <th>报销(元)</th>
+              <th>合计(元)</th>
+              <th>备注</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>1</span>
+                  </label>
+                </td>
+                <td>张三</td>
+                <td>2018-03-01</td>
+                <td>2018-03-05</td>
+                <td>4</td>
+                <td class="text-right">160.00</td>
+                <td class="text-right">580.00</td>
+                <td class="text-right">30.00</td>
+                <td class="text-right">610.00</td>
+                <td>现场培训</td>
+              </tr>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>1</span>
+                  </label>
+                </td>
+                <td>张三</td>
+                <td>2018-03-01</td>
+                <td>2018-03-05</td>
+                <td>2</td>
+                <td class="text-right">160.00</td>
+                <td class="text-right">580.00</td>
+                <td class="text-right">30.00</td>
+                <td class="text-right">610.00</td>
+                <td>现场培训</td>
+              </tr>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>3</span>
+                  </label>
+                </td>
+                <td>张三</td>
+                <td>2018-03-01</td>
+                <td>2018-03-05</td>
+                <td>4</td>
+                <td class="text-right">160.00</td>
+                <td class="text-right">580.00</td>
+                <td class="text-right">30.00</td>
+                <td class="text-right">610.00</td>
+                <td>现场培训</td>
+              </tr>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>4</span>
+                  </label>
+                </td>
+                <td>张三</td>
+                <td>2018-03-01</td>
+                <td>2018-03-05</td>
+                <td>4</td>
+                <td class="text-right">160.00</td>
+                <td class="text-right">580.00</td>
+                <td class="text-right">30.00</td>
+                <td class="text-right">610.00</td>
+                <td>现场培训</td>
+              </tr>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>5</span>
+                  </label>
+                </td>
+                <td>张三</td>
+                <td>2018-03-01</td>
+                <td>2018-03-05</td>
+                <td>4</td>
+                <td class="text-right">160.00</td>
+                <td class="text-right">580.00</td>
+                <td class="text-right">30.00</td>
+                <td class="text-right">610.00</td>
+                <td>现场培训</td>
+              </tr>
+              <tr style="background: #6da2ff">
+                <td></td>
+                <td>总计</td>
+                <td></td>
+                <td></td>
+                <td>20</td>
+                <td></td>
+                <td class="text-right">3680.00</td>
+                <td class="text-right">150.00</td>
+                <td class="text-right">100300.00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="12">
+                  <div class="villa-pagination">
+                    共计10条记录 当前显示项目:
+                    <select name="" id="">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                      <option value="15">15</option>
+                      <option value="20">20</option>
+                    </select>
+                    <ul class="clearfix">
+                      <li><i class="fa fa-angle-left"></i></li>
+                      <li class="active">1</li>
+                      <li>...</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>...</li>
+                      <li>10</li>
+                      <li><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                    <input type="text" class="page-num">
+                    <button class="page-btn">GO</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- 新增 -->
+  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 625px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">成本新增</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="addForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>姓名:</span>
+                <select class="form-input" name="name">
+                  <option value="123">张三</option>
+                  <option value="123">李四</option>
+                  <option value="123">王五</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>出差时间:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+              <label>
+                <span class="form-label text-center">至</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">成本:</span>
+                <input type="text" name="time" class="form-input input-tip">天
+              </label>
+              <label>
+                <span class="form-label"></span>
+                补助小计: 320元
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">差旅费:</span>
+                <input type="text" name="time" class="form-input input-tip">元
+              </label>
+              <label>
+                <span class="form-label"></span>
+                合计: 820元
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">备注:</span>
+                <textarea rows="5" name="remark" class="form-input long-input" value="客户现场技术支持"></textarea>
+              </label>
+              <label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="modal-btn" id="addBtn">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 修改 -->
+  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 625px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">成本修改</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="addForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>姓名:</span>
+                <select class="form-input" name="name">
+                  <option value="123">张三</option>
+                  <option value="123">李四</option>
+                  <option value="123">王五</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>出差时间:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+              <label>
+                <span class="form-label text-center">至</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">成本:</span>
+                <input type="text" name="time" class="form-input input-tip">天
+              </label>
+              <label>
+                <span class="form-label"></span>
+                补助小计: 320元
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">差旅费:</span>
+                <input type="text" name="time" class="form-input input-tip">元
+              </label>
+              <label>
+                <span class="form-label"></span>
+                合计: 820元
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">备注:</span>
+                <textarea rows="5" name="remark" class="form-input long-input" value="客户现场技术支持"></textarea>
+              </label>
+              <label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="modal-btn" id="addBtn">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>

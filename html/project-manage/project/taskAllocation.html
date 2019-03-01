@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../../../css/main.css">
   <link rel="stylesheet" href="../../../css/font-awesome.min.css">
   <script src="../../../js/jq-3.3.1.js"></script>
+  <script src="../../../js/bootstrap.js"></script>
   <script src="../../../js/index.js"></script>
 </head>
 
@@ -168,11 +169,540 @@
         </ul>
 
         <div class="content">
-
+          <div class="operation">
+            <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
+            <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button>
+            <button class="operation-btn" data-toggle="modal" data-target="#interruptModal">中断</button>
+            <button class="operation-btn" data-toggle="modal" data-target="#transferModal">任务移交</button>
+            <button class="operation-btn" data-toggle="modal" data-target="#detailModal">任汇报读明细</button>
+          </div>
+          <table class="villa-table mt-3">
+            <thead>
+              <th width="50">
+                <label>
+                  <input type="checkbox" id="villa-1">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span style="visibility: hidden;">0</span>
+                </label>
+              </th>
+              <th>里程碑</th>
+              <th>任务名称</th>
+              <th>关联变更</th>
+              <th>负责人</th>
+              <th>计划开始时间</th>
+              <th>计划结束时间</th>
+              <th>预计工时(小时)</th>
+              <th>实际工时</th>
+              <th>进度</th>
+              <th>状态</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>1</span>
+                  </label>
+                </td>
+                <td>需求</td>
+                <td>需求1</td>
+                <td></td>
+                <td>张三</td>
+                <td>2018-03-12</td>
+                <td>2018-03-15</td>
+                <td>4</td>
+                <td>2</td>
+                <td><span class="progress"><i></i></span> 50%</td>
+                <td>正常</td>
+              </tr>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>1</span>
+                  </label>
+                </td>
+                <td>需求</td>
+                <td>需求1</td>
+                <td></td>
+                <td>张三</td>
+                <td>2018-03-12</td>
+                <td>2018-03-15</td>
+                <td>4</td>
+                <td>2</td>
+                <td><span class="progress"><i></i></span> 50%</td>
+                <td>正常</td>
+              </tr>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>1</span>
+                  </label>
+                </td>
+                <td>需求</td>
+                <td>需求1</td>
+                <td></td>
+                <td>张三</td>
+                <td>2018-03-12</td>
+                <td>2018-03-15</td>
+                <td>4</td>
+                <td>2</td>
+                <td><span class="progress"><i></i></span> 50%</td>
+                <td>正常</td>
+              </tr>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>1</span>
+                  </label>
+                </td>
+                <td>需求</td>
+                <td>需求1</td>
+                <td></td>
+                <td>张三</td>
+                <td>2018-03-12</td>
+                <td>2018-03-15</td>
+                <td>4</td>
+                <td>2</td>
+                <td><span class="progress"><i></i></span> 50%</td>
+                <td>正常</td>
+              </tr>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>1</span>
+                  </label>
+                </td>
+                <td>需求</td>
+                <td>需求1</td>
+                <td></td>
+                <td>张三</td>
+                <td>2018-03-12</td>
+                <td>2018-03-15</td>
+                <td>4</td>
+                <td>2</td>
+                <td><span class="progress"><i></i></span> 50%</td>
+                <td>正常</td>
+              </tr>
+              <tr>
+                <td colspan="9">
+                  <div class="villa-pagination">
+                    共计10条记录 当前显示项目:
+                    <select name="" id="">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                      <option value="15">15</option>
+                      <option value="20">20</option>
+                    </select>
+                    <ul class="clearfix">
+                      <li><i class="fa fa-angle-left"></i></li>
+                      <li class="active">1</li>
+                      <li>...</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>...</li>
+                      <li>10</li>
+                      <li><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                    <input type="text" class="page-num">
+                    <button class="page-btn">GO</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- 新增 -->
+  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 625px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">项目任务</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="addForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>任务名称:</span>
+                <input type="text" name="name" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>任务类型:</span>
+                <select class="form-input" name="type">
+                  <option value="123">开发</option>
+                  <option value="123">测试</option>
+                  <option value="123">运维</option>
+                  <option value="123">需求设计</option>
+                  <option value="123">其他</option>
+                </select>
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>所属里程碑:</span>
+                <select class="form-input" name="type">
+                  <option value="123">开发</option>
+                  <option value="123">测试</option>
+                  <option value="123">运维</option>
+                  <option value="123">需求设计</option>
+                  <option value="123">其他</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>关联变更:</span>
+                <div class="w-178">
+                  <input type="radio" name="radio" value="是" class="ml-2" checked>是
+                  <input type="radio" name="radio" value="否" class="ml-2">否
+                </div>
+                <!-- 选择是 变更名称显示 选择否 无显示 -->
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>变更名称:</span>
+                <select class="form-input" name="type">
+                  <option value="123">无</option>
+                  <option value="123">xxx开发</option>
+                  <option value="123">xxx测试</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>负责人:</span>
+                <select class="form-input" name="type">
+                  <option value="123">张三</option>
+                  <option value="123">李四</option>
+                  <option value="123">王五</option>
+                </select>
+              </label>
+              <label>
+                <span class="form-label text-center"><i class="form-require">*</i>计划工时:</span>
+                <input type="text" name="end" class="form-input input-tip">小时
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>计划完成时间:</span>
+                <input type="text" name="start" class="form-input">
+              </label>
+              <label>
+                <span class="form-label text-center">至:</span>
+                <input type="text" name="end" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">备注:</span>
+                <textarea rows="5" name="remark" class="form-input long-input" value="XX日 参与项目启动会议"></textarea>
+              </label>
+              <label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="modal-btn" id="addBtn">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 编辑 -->
+  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 625px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">任务修改</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="addForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>任务名称:</span>
+                <input type="text" name="name" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>任务类型:</span>
+                <select class="form-input" name="type">
+                  <option value="123">开发</option>
+                  <option value="123">测试</option>
+                  <option value="123">运维</option>
+                  <option value="123">需求设计</option>
+                  <option value="123">其他</option>
+                </select>
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>所属里程碑:</span>
+                <select class="form-input" name="type">
+                  <option value="123">开发</option>
+                  <option value="123">测试</option>
+                  <option value="123">运维</option>
+                  <option value="123">需求设计</option>
+                  <option value="123">其他</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>关联变更:</span>
+                <div class="w-178">
+                  <input type="radio" name="radio" value="是" class="ml-2" checked>是
+                  <input type="radio" name="radio" value="否" class="ml-2">否
+                </div>
+                <!-- 选择是 变更名称显示 选择否 无显示 -->
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>变更名称:</span>
+                <select class="form-input" name="type">
+                  <option value="123">无</option>
+                  <option value="123">xxx开发</option>
+                  <option value="123">xxx测试</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>负责人:</span>
+                <select class="form-input" name="type">
+                  <option value="123">张三</option>
+                  <option value="123">李四</option>
+                  <option value="123">王五</option>
+                </select>
+              </label>
+              <label>
+                <span class="form-label text-center"><i class="form-require">*</i>计划工时:</span>
+                <input type="text" name="end" class="form-input input-tip">小时
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>计划完成时间:</span>
+                <input type="text" name="start" class="form-input">
+              </label>
+              <label>
+                <span class="form-label text-center">至:</span>
+                <input type="text" name="end" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">备注:</span>
+                <textarea rows="5" name="remark" class="form-input long-input" value="XX日 参与项目启动会议"></textarea>
+              </label>
+              <label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="modal-btn" id="addBtn">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 中断model -->
+  <div class="modal fade" id="interruptModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 625px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">任务中断</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="addForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>中断原因:</span>
+                <input type="text" name="start" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>关联变更:</span>
+                <div class="w-178">
+                  <input type="radio" name="radio" value="是" class="ml-2" checked>是
+                  <input type="radio" name="radio" value="否" class="ml-2">否
+                </div>
+                <!-- 选择是 变更名称显示 选择否 无显示 -->
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>变更名称:</span>
+                <select class="form-input" name="type">
+                  <option value="123">无</option>
+                  <option value="123">xxx开发</option>
+                  <option value="123">xxx测试</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">备注:</span>
+                <textarea rows="5" name="remark" class="form-input long-input"></textarea>
+              </label>
+              <label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="modal-btn" id="addBtn">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 任务移交 -->
+  <div class="modal fade" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 625px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">任务移交</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="addForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label">移交人:</span>
+                <select class="form-input" name="name">
+                  <option value="123">张三</option>
+                  <option value="123">李四</option>
+                  <option value="123">王五</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">接收人:</span>
+                <select class="form-input" name="name">
+                  <option value="123">张三</option>
+                  <option value="123">李四</option>
+                  <option value="123">王五</option>
+                </select>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="modal-btn" id="addBtn">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 任汇报度明细 -->
+  <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 650px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">日报汇总</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body" style="max-height: 600px; overflow: auto">
+          <form action="" id="addForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label">汇报日期:</span>
+                <input type="text" name="end" class="form-input">
+              </label>
+              <label>
+                <span class="form-label">工时:</span>
+                <input type="text" name="end" class="form-input input-tip">小时
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">完成内容:</span>
+                <textarea rows="5" name="remark" class="form-input long-input" value="1、模块2档编写
+                    2、模块2系统开发"></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">任务进度:</span>
+                <span class="progress"><i></i></span> 10%
+              </label>
+            </div>
+            <hr>
+            <div class="form-item">
+                <label>
+                  <span class="form-label">汇报日期:</span>
+                  <input type="text" name="end" class="form-input">
+                </label>
+                <label>
+                  <span class="form-label">工时:</span>
+                  <input type="text" name="end" class="form-input input-tip">小时
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">完成内容:</span>
+                  <textarea rows="5" name="remark" class="form-input long-input" value="1、模块2档编写
+                      2、模块2系统开发"></textarea>
+                </label>
+                <label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">任务进度:</span>
+                  <span class="progress"><i></i></span> 10%
+                </label>
+              </div>
+              <hr>
+            <div class="form-item">
+                <label>
+                  <span class="form-label">汇报日期:</span>
+                  <input type="text" name="end" class="form-input">
+                </label>
+                <label>
+                  <span class="form-label">工时:</span>
+                  <input type="text" name="end" class="form-input input-tip">小时
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">完成内容:</span>
+                  <textarea rows="5" name="remark" class="form-input long-input" value="1、模块2档编写
+                      2、模块2系统开发"></textarea>
+                </label>
+                <label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">任务进度:</span>
+                  <span class="progress"><i></i></span> 10%
+                </label>
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="modal-btn" id="addBtn">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
