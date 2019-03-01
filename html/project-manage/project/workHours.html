@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../../../css/bootstrap.css">
   <link rel="stylesheet" href="../../../css/main.css">
   <link rel="stylesheet" href="../../../css/font-awesome.min.css">
+  <script src="../../../js/echarts.common.min.js"></script>
   <script src="../../../js/jq-3.3.1.js"></script>
   <script src="../../../js/index.js"></script>
 </head>
@@ -65,7 +66,7 @@
           <a href="javascript:void(0);">
             <span class="menu-icon resource-manage"></span>
             <span>资源管理</span>
-            <i class="fa fa-caret-left"></i>
+            <i class="fa fa-caret-down"></i>
           </a>
         </div>
         <ul class="sub-menu">
@@ -108,7 +109,7 @@
           <a href="javascript:void(0);">
             <span class="menu-icon system-config"></span>
             <span>系统设置</span>
-            <i class="fa fa-caret-left"></i>
+            <i class="fa fa-caret-down"></i>
           </a>
         </div>
         <ul class="sub-menu">
@@ -128,18 +129,98 @@
       <p class="module-title">我的项目 >> 无纸化</p>
 
       <div class="tab-container">
+
         <ul class="clearfix">
           <li class="tab-item"><a href="./projectDetail.html">项目基本信息</a></li>
           <li class="tab-item"><a href="./projectTeam.html">项目团队</a></li>
-          <li class="tab-item"><a href="javascript:void(0);">项目计划 <i class="fa fa-caret-left"></i></a></li>
+          <li class="tab-item">
+            <a href="javascript:void(0);">任务分配 <i class="fa fa-caret-down"></i></a>
+            <ul class="tab-sub-item">
+              <li><a href="./projectProgress.html">项目进度</a></li>
+              <li><a href="./milestone.html">里程碑</a></li>
+              <li><a href="./taskAllocation.html">任务分配</a></li>
+            </ul>
+          </li>
           <li class="tab-item"><a href="./projectChange.html">项目变更</a></li>
-          <li class="tab-item"><a href="javascript:void(0);">成本控制 <i class="fa fa-caret-left"></i></a></li>
-          <li class="tab-item"><a href="javascript:void(0);">项目报告 <i class="fa fa-caret-left"></i></a></li>
+          <li class="tab-item">
+            <a href="javascript:void(0);">成本控制 <i class="fa fa-caret-down"></i></a>
+            <ul class="tab-sub-item">
+              <li><a href="./humanCost.html">人力成本</a></li>
+              <li><a href="./travelCost.html">出差费用</a></li>
+              <li><a href="./otherCost.html">其他费用</a></li>
+            </ul>
+          </li>
+          <li class="tab-item">
+            <a href="javascript:void(0);">项目报告 <i class="fa fa-caret-down"></i></a>
+            <ul class="tab-sub-item">
+              <li><a href="./daily.html">人员日报</a></li>
+              <li><a href="./weekly.html">项目周报</a></li>
+            </ul>
+          </li>
           <li class="tab-item"><a href="./riskManagement.html">风险管理</a></li>
           <li class="tab-item active"><a href="./workHours.html">开发云工时统计</a></li>
           <li class="tab-item"><a href="./defaectAnalysis.html">缺陷分析</a></li>
-          <li class="tab-item"><a href="./codeStatistics.html">代码统计</a></li>
+          <li class="tab-item">
+            <a href="javascript:void(0);">代码统计 <i class="fa fa-caret-down"></i></a>
+            <ul class="tab-sub-item">
+              <li><a href="./codeStatistics.html">代码行统计</a></li>
+              <li><a href="./codeLog.html">代码提交日志</a></li>
+            </ul>
+          </li>
         </ul>
+
+        <div class="content">
+          <div id="oneCloudUseTime2" style="margin: 15px 0;width: 100%; height: 233px;"></div>
+          <table class="villa-table">
+            <thead>
+              <th>序号</th>
+              <th>用户名称</th>
+              <th>角色</th>
+              <th>登录次数</th>
+              <th>累计登录次数</th>
+              <th>使用时间</th>
+              <th>累计使用时间</th>
+              <th>本周开发活跃度</th>
+              <th>虚拟机名称</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>开发人员</td>
+                <td>8</td>
+                <td></td>
+                <td></td>
+                <td>8</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>李四</td>
+                <td>开发人员</td>
+                <td>8</td>
+                <td></td>
+                <td></td>
+                <td>8</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>王五</td>
+                <td>开发人员</td>
+                <td>8</td>
+                <td></td>
+                <td></td>
+                <td>8</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </section>

@@ -65,7 +65,7 @@
           <a href="javascript:void(0);">
             <span class="menu-icon resource-manage"></span>
             <span>资源管理</span>
-            <i class="fa fa-caret-left"></i>
+            <i class="fa fa-caret-down"></i>
           </a>
         </div>
         <ul class="sub-menu">
@@ -108,7 +108,7 @@
           <a href="javascript:void(0);">
             <span class="menu-icon system-config"></span>
             <span>系统设置</span>
-            <i class="fa fa-caret-left"></i>
+            <i class="fa fa-caret-down"></i>
           </a>
         </div>
         <ul class="sub-menu">
@@ -131,15 +131,100 @@
         <ul class="clearfix">
           <li class="tab-item active"><a href="./projectDetail.html">项目基本信息</a></li>
           <li class="tab-item"><a href="./projectTeam.html">项目团队</a></li>
-          <li class="tab-item"><a href="javascript:void(0);">项目计划 <i class="fa fa-caret-left"></i></a></li>
+          <li class="tab-item">
+            <a href="javascript:void(0);">项目计划 <i class="fa fa-caret-down"></i></a>
+            <ul class="tab-sub-item">
+              <li><a href="./projectProgress.html">项目进度</a></li>
+              <li><a href="./milestone.html">里程碑</a></li>
+              <li><a href="./taskAllocation.html">任务分配</a></li>
+            </ul>
+          </li>
           <li class="tab-item"><a href="./projectChange.html">项目变更</a></li>
-          <li class="tab-item"><a href="javascript:void(0);">成本控制 <i class="fa fa-caret-left"></i></a></li>
-          <li class="tab-item"><a href="javascript:void(0);">项目报告 <i class="fa fa-caret-left"></i></a></li>
+          <li class="tab-item">
+            <a href="javascript:void(0);">成本控制 <i class="fa fa-caret-down"></i></a>
+            <ul class="tab-sub-item">
+              <li><a href="./humanCost.html">人力成本</a></li>
+              <li><a href="./travelCost.html">出差费用</a></li>
+              <li><a href="./otherCost.html">其他费用</a></li>
+            </ul>
+          </li>
+          <li class="tab-item">
+            <a href="javascript:void(0);">项目报告 <i class="fa fa-caret-down"></i></a>
+            <ul class="tab-sub-item">
+              <li><a href="./daily.html">人员日报</a></li>
+              <li><a href="./weekly.html">项目周报</a></li>
+            </ul>
+          </li>
           <li class="tab-item"><a href="./riskManagement.html">风险管理</a></li>
           <li class="tab-item"><a href="./workHours.html">开发云工时统计</a></li>
           <li class="tab-item"><a href="./defaectAnalysis.html">缺陷分析</a></li>
-          <li class="tab-item"><a href="./codeStatistics.html">代码统计</a></li>
+          <li class="tab-item">
+            <a href="javascript:void(0);">代码统计 <i class="fa fa-caret-down"></i></a>
+            <ul class="tab-sub-item">
+              <li><a href="./codeStatistics.html">代码行统计</a></li>
+              <li><a href="./codeLog.html">代码提交日志</a></li>
+            </ul>
+          </li>
         </ul>
+
+        <div class="content">
+          <form style="margin-top: 15px;" id="editForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label">项目名称:</span>
+                <input type="text" name="name" class="form-input long-input" value="无纸化" disabled>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">项目类型:</span>
+                <input type="text" name="amount" class="form-input" value="123" disabled>
+              </label>
+              <label>
+                <span class="form-label">项目总负责人:</span>
+                <input type="text" name="amount" class="form-input" value="张三" disabled>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">合同金额:</span>
+                <input type="text" name="amount" class="form-input" value="8000" disabled>
+              </label>
+              <label>
+                <span class="form-label">实施成本预算:</span>
+                <input type="text" name="cost" class="form-input" value="8000" disabled>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">计划起始日期:</span>
+                <input type="text" name="startTime" id="startTime2" class="form-input" value="2018-02-01" disabled>
+              </label>
+              <label>
+                <span class="form-label">计划结束日期:</span>
+                <input type="text" name="endTime" id="endTime2" class="form-input" value="2018-02-28" disabled>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">项目文档:</span>
+                <input type="text" name="amount" class="form-input" value="请先绑定文档桌面" disabled>
+              </label>
+              <label>
+                <span class="form-label"></span>
+                <button type="button" class="modal-btn" id="editBtn">扫码绑定 <i class="fa fa-caret-right"></i></button>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">项目情况:</span>
+                <textarea rows="5" name="projectSituation" class="form-input long-input"
+                  disabled>本项目建设内容包括：CC-CMM For ITSD 认证咨询、IT运维管理体系优化升级、信息安全风险管控体系融合研究，体系试运行。2017年 12月15日前完成项目验收。广东电网信息中心客户服务部综合组、运维组、质检组、应用组等。</textarea>
+              </label>
+              <label>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
