@@ -44,4 +44,18 @@ $(function() {
     a.click();
   });
 
+  $('#personal').on('click', function() {
+    $('#company').removeClass('active');
+    $(this).addClass('active');
+    $('.company-register').hide();
+    $('.personal-register').show();
+  });
+
+  $('#company').on('click', function() {
+    $('#personal').removeClass('active');
+    $(this).addClass('active');
+    $('.company-register').show();
+    $('.personal-register').hide();
+  });
+
 });

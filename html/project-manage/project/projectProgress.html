@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="../../../css/bootstrap.css">
   <link rel="stylesheet" href="../../../css/main.css">
   <link rel="stylesheet" href="../../../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../../css/jsgantt.css">
   <script src="../../../js/jq-3.3.1.js"></script>
+  <script src="../../../js/jsgantt.js"></script>
   <script src="../../../js/index.js"></script>
 </head>
 
@@ -125,7 +127,7 @@
 
   <section class="main">
     <div class="main-container">
-      <p class="module-title">我的项目 >> 无纸化</p>
+      <p class="module-title"><a href="../project.html">我的项目</a> >> 无纸化</p>
 
       <div class="tab-container">
         <ul class="clearfix">
@@ -168,11 +170,30 @@
         </ul>
 
         <div class="content">
-
+          <div style="margin-top: 20px;" class="gantt" id="GanttChartDIV"></div>
         </div>
       </div>
     </div>
   </section>
 </body>
+<script>
+  var g = new JSGantt.GanttChart(document.getElementById('GanttChartDIV'), 'day');
+
+  if (g.getDivId() != null) {
+    g.setCaptionType('Complete');
+    g.setUseToolTip(0);
+    g.setDayMajorDateDisplayFormat('yyyy/mm');
+    g.setDayColWidth(69);
+
+    g.AddTaskItem(new JSGantt.TaskItem(1, '需求分析1', '', '', 'ggroupblack', '', 0, '', 0, 1, 0, 1, '', '', '', g));
+    g.AddTaskItem(new JSGantt.TaskItem(2, '需求分析2', '', '', 'ggroupblack', '', 0, '', 0, 1, 0, 1, '', '', '', g));
+
+    g.AddTaskItem(new JSGantt.TaskItem(3, '现场调研1', '2018-02-11', '2018-03-15', 'gtaskred', '', 0, '', 50, 0, 1, 0, '', '', '', g));
+    g.AddTaskItem(new JSGantt.TaskItem(4, '现场调研2', '2018-02-11', '2018-02-20', 'gtaskyellow', '', 0, '', 30, 0, 2, 0, '', '', '', g));
+    g.AddTaskItem(new JSGantt.TaskItem(5, '现场调研3', '2018-02-21', '2018-03-15', 'gtaskgreen', '', 0, '', 80, 0, 2, 0, '', '', '', g));
+
+    g.Draw();
+  }
+</script>
 
 </html>
