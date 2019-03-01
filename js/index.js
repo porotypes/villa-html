@@ -335,4 +335,99 @@ $(function () {
     oneCloudUseTime2.setOption(oneCloudUseTimeOption2);
   }
 
+  // 缺陷分析折线图配置
+  if (document.getElementById('defaectChart')) {
+    var defaectChart = echarts.init(document.getElementById('defaectChart'));
+    var defaectChartOption = {
+      title: {
+        text: 'PisMarket 缺陷新增、解决趋势图',
+        left: 'center'
+      },
+      color: ['#46f946', '#f9b046'],
+      tooltip: {
+        trigger: 'axis'
+      },
+      legend: {
+        bottom: '3%',
+        data: ['缺陷新增量', '缺陷解决量']
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '10%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['2018-02-01', '2018-02-02', '2018-02-03', '2018-02-04', '2018-02-05', '2018-02-06', '2018-02-06']
+      },
+      yAxis: {
+        type: 'value',
+        name: '缺陷数',
+        nameLocation: 'center',
+        nameGap: 50,
+      },
+      series: [
+        {
+          name: '缺陷新增量',
+          type: 'line',
+          stack: '1',
+          data: [120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+          name: '缺陷解决量',
+          type: 'line',
+          stack: '2',
+          data: [220, 182, 191, 234, 290, 330, 310]
+        }
+      ]
+    };
+    defaectChart.setOption(defaectChartOption);
+  }
+
+  // 缺陷分析环形饼图配置
+  if (document.getElementById('bugChart')) {
+    var bugChart = echarts.init(document.getElementById('bugChart'));
+    var bugChartOption = {
+      title: {
+        text: 'Bug占比统计',
+        left: 'center'
+      },
+      color: ['#46f946', '#f74848', '#5b5b5b'],
+      tooltip: {
+        trigger: 'item'
+      },
+      legend: {
+        bottom: 10,
+        left: 'center',
+        data: ['已解决', '未解决', '关闭']
+      },
+      series: [
+        {
+          type: 'pie',
+          radius: ['50%', '70%'],
+          center: ['50%', '50%'],
+          selectedMode: 'single',
+          label: {
+            color: '#000000'
+          },
+          data: [
+            { value: 30, name: '已解决' },
+            { value: 20, name: '未解决' },
+            { value: 50, name: '关闭' }
+          ],
+          itemStyle: {
+            emphasis: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.8)'
+            }
+          }
+        }
+      ]
+    };
+    bugChart.setOption(bugChartOption);
+  }
+
 });

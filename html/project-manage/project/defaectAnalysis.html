@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../../../css/main.css">
   <link rel="stylesheet" href="../../../css/font-awesome.min.css">
   <script src="../../../js/jq-3.3.1.js"></script>
+  <script src="../../../js/echarts.common.min.js"></script>
   <script src="../../../js/index.js"></script>
 </head>
 
@@ -125,7 +126,7 @@
 
   <section class="main">
     <div class="main-container">
-      <p class="module-title">我的项目 >> 无纸化</p>
+      <p class="module-title"><a href="../project.html">我的项目</a> >> 无纸化</p>
 
       <div class="tab-container">
         <ul class="clearfix">
@@ -168,7 +169,181 @@
         </ul>
 
         <div class="content">
+          <div class="search-bar clearfix">
+            <div class="pull-right">
+              <label>
+                统计日期:
+                <input type="text" class="search-input">
+                至
+                <input type="text" class="search-input">
+              </label>
+              <button class="search-btn">查 询</button>
+            </div>
+          </div>
 
+          <div class="charts-container">
+            <div id="defaectChart" style="width: 70%;height: 400px;"></div>
+            <div id="bugChart" style="width: 30%;height: 400px;"></div>
+          </div>
+
+          <table class="villa-table" style="margin: 20px 0;">
+            <thead>
+              <tr>
+                <th rowspan="2">序号</th>
+                <th rowspan="2">日期</th>
+                <th colspan="4" class="text-center">严重</th>
+                <th colspan="4" class="text-center">重要</th>
+                <th colspan="4" class="text-center">一般</th>
+                <th colspan="4" class="text-center">合计</th>
+              </tr>
+              <tr>
+                <th width="80">已解决</th>
+                <th width="80">未解决</th>
+                <th width="80">关闭</th>
+                <th width="80">小计</th>
+                <th width="80">已解决</th>
+                <th width="80">未解决</th>
+                <th width="80">关闭</th>
+                <th width="80">小计</th>
+                <th width="80">已解决</th>
+                <th width="80">未解决</th>
+                <th width="80">关闭</th>
+                <th width="80">小计</th>
+                <th width="80">已解决</th>
+                <th width="80">未解决</th>
+                <th width="80">关闭</th>
+                <th width="80">小计</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2018-02-01</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>9</td>
+                <td>6</td>
+                <td></td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>2018-02-01</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>9</td>
+                <td>6</td>
+                <td></td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>2018-02-01</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>9</td>
+                <td>6</td>
+                <td></td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>2018-02-01</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>9</td>
+                <td>6</td>
+                <td></td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>2018-02-01</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>3</td>
+                <td>2</td>
+                <td></td>
+                <td>5</td>
+                <td>9</td>
+                <td>6</td>
+                <td></td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td colspan="99">
+                  <div class="villa-pagination">
+                    共计10条记录 当前显示项目:
+                    <select name="" id="">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                      <option value="15">15</option>
+                      <option value="20">20</option>
+                    </select>
+                    <ul class="clearfix">
+                      <li><i class="fa fa-angle-left"></i></li>
+                      <li class="active">1</li>
+                      <li>...</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>...</li>
+                      <li>10</li>
+                      <li><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                    <input type="text" class="page-num">
+                    <button class="page-btn">GO</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

@@ -125,36 +125,37 @@
 
   <section class="main">
     <div class="main-container">
-      <p class="module-title">个人设置</p>
-      <div class="content m-3">
-          <h5 >修改登录密码</p>
-          <form action="" id="addForm">
-            <div class="form-item">
-              <label>
-                <span class="form-label">原始密码:</span>
-                <input type="text" name="name" class="form-input long-input">
-                <i class="form-require">*</i>
-              </label>
-            </div>
-            <div class="form-item">
-                <label>
-                  <span class="form-label">修改密码:</span>
-                  <input type="text" name="name" class="form-input long-input">
-                  <i class="form-require">*</i>
-                </label>
-              </div>
-              <div class="form-item">
-                  <label>
-                    <span class="form-label">确认密码:</span>
-                    <input type="text" name="name" class="form-input long-input">
-                    <i class="form-require">*</i>
-                  </label>
-                </div>
-                <div class="form-item">
-                    <button type="submit" class="search-btn offset-1">确定</button>
-                    <button type="reset" class="search-btn ml-3">取消</button>
-                  </div>
-          </form>
+      <p class="module-title">个人信息</p>
+
+      <div class="search-bar">
+        <p class="sub-title">修改登录密码</p>
+      </div>
+
+      <div style="margin-top: 20px; padding: 0 70px;">
+        <form action="">
+          <div class="form-item">
+            <label>
+              <input type="password" placeholder="请输入原密码" class="form-input md-input">
+              <i class="form-require">*</i>
+            </label>
+          </div>
+          <div class="form-item">
+            <label>
+              <input type="password" placeholder="请输入新密码" class="form-input md-input">
+              <i class="form-require">*</i>
+            </label>
+          </div>
+          <div class="form-item">
+            <label>
+              <input type="password" placeholder="确认新密码" class="form-input md-input">
+              <i class="form-require">*</i>
+            </label>
+          </div>
+          <div class="form-item">
+            <button class="modal-btn">确定</button>
+            <button type="reset" class="modal-btn modal-cancel-btn">重置</button>
+          </div>
+        </form>
       </div>
     </div>
   </section>

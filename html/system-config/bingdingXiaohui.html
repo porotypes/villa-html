@@ -126,11 +126,27 @@
   <section class="main">
     <div class="main-container">
       <p class="module-title">绑定小慧号</p>
+<<<<<<< HEAD
       <div class="content m-5">
         <button id="bindingXiaohui">绑定小慧号</button>
+=======
+
+      <div style="margin: 20px;">
+        <p><button class="modal-btn" id="generateQrCode">生成二维码</button></p>
+        <p class="binding-qrcode-wrap">
+          <img class="binding-qrcode" src="../../img/qrcode-binding.png">
+        </p>
+>>>>>>> cmh
       </div>
     </div>
   </section>
 </body>
+<script>
+  $(function() {
+    $('#generateQrCode').on('click', function() {
+      $('.binding-qrcode-wrap').toggle();
+    });
+  });
+</script>
 
 </html>
