@@ -5,21 +5,37 @@
   background-image: url(../img/login/bg.png);
   background-size: 100% 100%;
 }
+.register-form-container,
 .login-form-container {
   position: absolute;
   top: 16.667%;
   right: 14.0625%;
   width: 420px;
-  height: 430px;
+  height: auto;
   background-color: #FFFFFF;
   border-radius: 8px;
   overflow: hidden;
 }
+.register-form-container {
+  top: 8%;
+}
+.register-form-container .register-form-header,
 .login-form-container .login-form-header {
   position: relative;
   padding: 20px 0 0 20px;
   width: 100%;
   height: 85px;
+}
+.register-form-container .register-form-header .logo,
+.login-form-container .login-form-header .logo {
+  margin-top: 0;
+}
+.register-form-container .register-form-header .logo-text,
+.login-form-container .login-form-header .logo-text {
+  font-size: 40px;
+  color: #456fe7;
+  font-weight: 600;
+  vertical-align: middle;
 }
 .login-form-container .login-form-header .qr-login {
   position: absolute;
@@ -39,25 +55,32 @@
 .login-form-container .login-form-header .normal-login-tip {
   display: none;
 }
+.register-form-container .register-form-main,
 .login-form-container .login-form-main {
   padding: 20px 24px;
   width: 100%;
 }
 
 /* form */
-.login-form-container .login-form-main .login-form-item {
+.login-form-container .login-form-main .login-form-item,
+.register-form-container .register-form-main .register-form-item {
   position: relative;
   margin-bottom: 38px;
 }
+.register-form-container .register-form-main .register-form-item {
+  margin-bottom: 24px;
+}
+.register-form-container .register-form-main .register-form-item input,
 .login-form-container .login-form-main .login-form-item input {
   padding: 0 14px; 
   width: 100%;
   height: 42px;
   border: 1px solid #CCCCCC;
-  border-radius: 3px;
-  box-shadow: inset -2px 2px 2px #ededed;
+  border-radius: 5px;
+  box-shadow: inset -3px 3px 5px #ededed;
   color: #b3b3b3;
 }
+.register-form-container .register-form-main .register-form-item .error-tip,
 .login-form-container .login-form-main .login-form-item .error-tip {
   display: none;
   position: absolute;
@@ -65,7 +88,8 @@
   color: #ff5a5a;
   font-size: 14px;
 }
-.login-form-container .login-form-main .login-form-btn {
+.login-form-container .login-form-main .login-form-btn,
+.register-form-container .register-form-main .register-form-btn {
   width: 100%;
   height: 44px;
   background-color: #456fe7;
@@ -73,8 +97,25 @@
   font-size: 16px;
   font-weight: bold;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
+}
+.register-form-container .register-form-main .register-form-btn {
+  background-color: #FFFFFF;
+  color: #456fe7;
+  border: 1px solid #456fe7;
+}
+.register-form-container .register-form-main .register-form-btn:hover {
+  background-color: #456fe7;
+  color: #FFFFFF;
+  border: 1px solid #456fe7;
+}
+.register-form-container .register-form-main .back-login {
+  text-align: left;
+  font-size: 14px;
+}
+.register-form-container .register-form-main .back-login a {
+  color: #ff5a5a;
 }
 
 /* qrcode */
@@ -93,6 +134,7 @@
   font-size: 16px;
 }
 
+.register-form-container .register-form-footer,
 .login-form-container .login-form-footer {
   padding: 0 24px;
   width: 100%;
@@ -100,15 +142,112 @@
   line-height: 96px;
   font-size: 14px;
 }
+.register-form-container .register-form-footer {
+  padding: 0 24px 20px;
+  height: auto;
+  line-height: 1.5;
+}
+.register-form-container .register-form-footer > span.left,
 .login-form-container .login-form-footer > span.left {
   float: left;
 }
+.register-form-container .register-form-footer > span.left a,
 .login-form-container .login-form-footer > span.left a {
   color: #ff5a5a;
 }
+.register-form-container .register-form-footer > span.right,
 .login-form-container .login-form-footer > span.right {
   float: right;
 }
 .login-form-container .login-form-footer > span.right a {
   color: #000000;
+}
+.register-form-container .register-form-footer > span.right a {
+  color: #ff5a5a;
+}
+
+/* register */
+.register-form-main .company-register {
+  display: none;
+}
+.register-type {
+  margin-top: 26px;
+  width: 100%;
+  font-size: 0;
+  text-align: center;
+}
+.register-type span {
+  display: inline-block;
+  width: 30%;
+  font-size: 18px;
+}
+.register-type span > a {
+  position: relative;
+  font-weight: 600;
+  color: #000000;
+  text-decoration: none;
+}
+.register-type span > a::after {
+  content: '';
+  display: none;
+  position: absolute;
+  bottom: -5px;;
+  left: 50%;
+  transform: translateX(-15px);
+  width: 30px;
+  height: 1px;
+  background: #456fe7;
+}
+.register-type span > a:hover {
+  color: #456fe7;
+}
+.register-type span > a.active {
+  color: #456fe7;
+}
+.register-type span > a.active::after {
+  display: block;
+}
+
+/* 手机输入框 */
+.register-form-item.phone-input {
+  position: relative;
+  padding: 0 0 0 66px;
+}
+.register-form-item.phone-input input {
+  border-radius: 0 5px 5px 0 !important;
+  border-left: none;
+}
+.register-form-item.phone-input::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '+86';
+  width: 66px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 14px;
+  color: #000000;
+  background-color: #6da2ff;
+  border-radius: 5px 0 0 5px;
+  text-align: center
+}
+/* 获取验证码 */
+.register-form-item .auth-code {
+  float: left;
+  width: 200px;
+}
+.register-form-item .auth-code-btn {
+  float: right;
+  width: 150px;
+}
+.register-form-item .auth-code-btn button {
+  width: 150px;
+  height: 42px;
+  background-color: #ffffff;
+  color: #456fe7;
+  border: 1px solid #456fe7;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
 }

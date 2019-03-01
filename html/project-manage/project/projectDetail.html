@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../../../css/main.css">
   <link rel="stylesheet" href="../../../css/font-awesome.min.css">
   <script src="../../../js/jq-3.3.1.js"></script>
+  <script src="../../../js/bootstrap.js"></script>
   <script src="../../../js/index.js"></script>
 </head>
 
@@ -125,7 +126,7 @@
 
   <section class="main">
     <div class="main-container">
-      <p class="module-title">我的项目 >> 无纸化</p>
+      <p class="module-title"><a href="../project.html">我的项目</a> >> 无纸化</p>
 
       <div class="tab-container">
         <ul class="clearfix">
@@ -188,11 +189,17 @@
             <div class="form-item">
               <label>
                 <span class="form-label">合同金额:</span>
-                <input type="text" name="amount" class="form-input" value="8000" disabled>
+                <div class="form-input-with-unit">
+                  <input type="text" name="amount" class="form-input" value="8000" disabled>
+                  <i class="unit">元</i>
+                </div>
               </label>
               <label>
                 <span class="form-label">实施成本预算:</span>
-                <input type="text" name="cost" class="form-input" value="8000" disabled>
+                <div class="form-input-with-unit">
+                  <input type="text" name="amount" class="form-input" value="8000" disabled>
+                  <i class="unit">元</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -212,7 +219,9 @@
               </label>
               <label>
                 <span class="form-label"></span>
-                <button type="button" class="modal-btn" id="editBtn">扫码绑定 <i class="fa fa-caret-right"></i></button>
+                <button type="button" class="modal-btn" data-toggle="modal" data-target="#codeModal">
+                  扫码绑定 <i class="fa fa-caret-right"></i>
+                </button>
               </label>
             </div>
             <div class="form-item">
@@ -228,6 +237,16 @@
       </div>
     </div>
   </section>
+
+  <div class="modal fade" id="codeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 240px;">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img style="width: 200px;height: 200px;" src="../../../img/qrcode-binding.png">
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

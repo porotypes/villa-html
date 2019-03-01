@@ -224,6 +224,11 @@ aside {
   font-weight: 600;
   border-bottom: 1px solid #eaf2ff;
 }
+.main .sub-title {
+  margin: 0;
+  padding: 0 0 0 50px;
+  font-weight: bold;
+}
 .main .module-title .more {
   float: right;
   font-size: 18px;
@@ -527,6 +532,7 @@ aside {
   border: none;
   background-color: #6da2ff;
   color: #ffffff;
+  font-size: 14px;
   cursor: pointer;
 }
 .modal-cancel-btn {
@@ -707,11 +713,12 @@ aside {
 
 .form-item {
   width: 100%;
-  font-size: 14px;
+  font-size: 0;
 }
 .form-item label {
   position: relative;
   margin-bottom: 18px;
+  font-size: 14px;
 }
 .form-item label.error {
   position: absolute;
@@ -725,6 +732,7 @@ aside {
   min-width: 105px;
   font-weight: 600;
   text-align: right;
+  font-size: 14px;
 }
 .form-item .form-require {
   margin-right: 5px;
@@ -750,6 +758,9 @@ aside {
 }
 .form-item .long-input {
   width: 470px;
+}
+.form-item .md-input {
+  width: 250px;
 }
 .form-item .form-input:focus,
 .form-item .progress + input:focus,
@@ -781,6 +792,58 @@ aside {
   background-color: #f2f2f2;
   /* cursor: not-allowed; */
 }
+.form-item input:disabled + .unit {
+  background-color: #e2e2e2;
+  color: #000000;
+  border-color: #e2e2e2;
+}
+.form-item .form-input-with-unit {
+  position: relative;
+  display: inline-block;
+  padding: 0 40px 0 0;
+  width: 178px;
+}
+.form-item .form-input-with-unit input {
+  width: 138px;
+  border-radius: 0.25rem 0 0 0.25rem;
+  border-right: none;
+}
+.form-item .form-input-with-unit .unit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px;
+  width: 40px;
+  font-size: 14px;
+  border-radius: 0 0.25rem 0.25rem 0;
+  background-color: #6da2ff;
+  color: #fff;
+  border: 1px solid #6da2ff;
+  text-align: center;
+  font-style: normal;
+}
 .green-bg{
   background-color: #009900;
+}
+.charts-container {
+  margin: 20px 0 0;
+  width: 100%;
+  font-size: 0;
+}
+.charts-container > div {
+  display: inline-block;
+}
+/* 绑定二维码 */
+.binding-qrcode-wrap {
+  display: none;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+.binding-qrcode {
+  width: 180px;
+  height: 180px;
+  cursor: pointer;
 }
