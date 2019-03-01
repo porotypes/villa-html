@@ -266,4 +266,73 @@ $(function () {
     codesChart.setOption(codesChartOption);
   }
 
+  // 开发云工时统计柱状图配置
+  if (document.getElementById('oneCloudUseTime2')) {
+    let oneCloudUseTime2 = echarts.init(document.getElementById('oneCloudUseTime2'));
+    var oneCloudUseTimeOption2 = {
+      title: {
+        text: 'PisMarket 开发云使用时间统计',
+        left: 'center'
+      },
+      color: ['#3398DB'],
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'shadow'
+        },
+        formatter: '使用时间: {c}小时'
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '5%',
+        containLabel: true
+      },
+      xAxis: [
+        {
+          type: 'category',
+          name: '日期',
+          nameLocation: 'center',
+          nameGap: 20,
+          data: [
+            '2018-09-01', '2018-09-02', '2018-09-03', '2018-09-04', '2018-09-05', '2018-09-06', '2018-09-07', '2018-09-08',
+            '2018-09-09', '2018-09-10', '2018-09-11', '2018-09-12', '2018-09-13', '2018-09-14', '2018-09-15'
+          ],
+          axisTick: {
+            alignWithLabel: true
+          },
+          axisLabel: {
+            interval: 0
+          },
+          nameTextStyle: {
+            color: '#4a4a4a'
+          }
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          name: '次数',
+          nameLocation: 'center',
+          nameGap: 50,
+          max: 15
+        }
+      ],
+      series: [
+        {
+          name: '使用时间',
+          type: 'bar',
+          barWidth: '60%',
+          itemStyle: {
+            normal: {
+              color: '#1bc899'
+            }
+          },
+          data: ['10.00', '12.00', '11.50', '8.50', '7.50', '8.00', '10.00', '11.00', '12.00', '12.00', '7.00', '10.50', '11.50', '12.00', '8.00']
+        }
+      ]
+    };
+    oneCloudUseTime2.setOption(oneCloudUseTimeOption2);
+  }
+
 });
