@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>团队云申请</title>
+  <link rel="stylesheet" href="../../../css/bootstrap.css">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <link rel="stylesheet" href="../../../css/font-awesome.min.css">
+  <script src="../../../js/jq-3.3.1.js"></script>
+  <script src="../../../js/bootstrap.js"></script>
+  <script src="../../../js/index.js"></script>
+</head>
+
+<body class="clearfix">
+  <header class="clearfix">
+    <div class="logo">
+      <img src="../../../img/index/logo.png" alt="logo">
+    </div>
+
+    <div class="role">
+      <span>Master <i class="fa fa-caret-right"></i></span>
+
+      <div class="role-select">
+        <p class="role-item">User</p>
+        <p class="role-item">Upton</p>
+      </div>
+    </div>
+
+    <div class="right-control clearfix">
+      <div class="notice">
+        <a href="../../project-manage/messageNotice.html">
+          <i class="fa fa-bell"></i>
+        </a>
+
+        <span class="num">5</span>
+      </div>
+      <div class="user">
+        <i class="fa fa-user"></i>
+        <span>13800138000,您好</span>
+      </div>
+      <div class="logout" title="注销">
+        <a href="../login/login.html">
+          <span class="icon-container">
+            <i class="fa fa-power-off"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <aside>
+    <ul class="menu">
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="../../index.html">
+            <span class="menu-icon project-situation"></span>
+            <span>项目情况</span>
+          </a>
+        </div>
+      </li>
+      <li class="menu-item active open">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon resource-manage"></span>
+            <span>资源管理</span>
+            <i class="fa fa-caret-down"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item sub-menu-item-active">
+            <a href="../../resource-manage/taskToApplyFor.html">任务申请</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../resource-manage/virtualManage.html">虚拟机管理</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon project-manage"></span>
+            <span>项目管理</span>
+            <i class="fa fa-caret-left"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item">
+            <a href="../../project-manage/project.html">我的项目</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../project-manage/projectWeekly.html">项目周报</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../project-manage/workingHours.html">工时统计</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../project-manage/daily.html">人员日报</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../project-manage/messageNotice.html">消息通知</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon system-config"></span>
+            <span>系统设置</span>
+            <i class="fa fa-caret-left"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item">
+            <a href="../../system-config/infomation.html">个人信息</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../system-config/bingdingXiaohui.html">绑定小慧号</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <section class="main">
+    <div class="main-container">
+      <p class="module-title">团队云申请</p>
+
+      <div class="content">
+        <div class="steps-warp mb-20">
+          <div class="steps">
+            <span class="step active">
+              <span class="step-num">1</span>
+              <span class="step-text">基础配置</span>
+            </span>
+            <span class="step">
+              <span class="step-num">2</span>
+              <span class="step-text">虚拟机资源</span>
+            </span>
+            <span class="step">
+              <span class="step-num">3</span>
+              <span class="step-text">提交支付</span>
+            </span>
+          </div>
+        </div>
+        <!-- <hr> -->
+        <div class="form-wrap">
+          <form action="" id="baseConfigForm">
+            <div class="form-item">
+              <label for="">
+                <span class="form-label">项目名称:</span>
+                <select name="" id="" class="form-input long-input">
+                  <option value=""></option>
+                  <option value="123">123</option>
+                  <option value="123">123</option>
+                  <option value="123">123</option>
+                </select>
+                <span>提示: 如果没有项目将不能申请团队云，请先创建项目</span>
+              </label>
+            </div>
+            <hr>
+            <div class="form-half">
+              <div class="form-item">
+                <p class="form-title">团队云账号初始化设置</p>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">用户名前缀:<i class="form-require">*</i></span>
+                  <input type="text" class="form-input">
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">密码:<i class="form-require">*</i></span>
+                  <input type="password" class="form-input">
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">确认密码:<i class="form-require">*</i></span>
+                  <input type="password" class="form-input">
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">密码更新提醒:</span>
+                  <select name="" id="" class="form-input">
+                    <option value="永不">永不</option>
+                    <option value="一个月">一个月</option>
+                    <option value="二个月">二个月</option>
+                    <option value="三个月">三个月</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <div class="form-half">
+              <div class="form-item">
+                <p class="form-title">选择团队云内部共享服务</p>
+              </div>
+              <div class="form-item">
+                <label class="pl-20">
+                  <input type="checkbox">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>SVN + NFS + jira + Wiki + SMS</span>
+                </label>
+              </div>
+              <div class="form-item">
+                <label class="pl-20">
+                  <input type="checkbox">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>数据库服务</span>
+                </label>
+              </div>
+              <div class="form-item">
+                <label class="pl-20">
+                  <input type="checkbox">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>内部邮件系统</span>
+                </label>
+              </div>
+              <div class="form-item">
+                <label class="pl-20">
+                  <input type="checkbox">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span>群聊共享服务</span>
+                </label>
+              </div>
+            </div>
+            <hr>
+            <div class="form-item">
+              <p class="form-title">文件拷贝信息</p>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">内网文件服务器:</span>
+                <select name="" id="" class="form-input long-input">
+                  <option value="SVN + NFS + jira + Wiki + SMS">SVN + NFS + jira + Wiki + SMS</option>
+                  <option value="数据库服务">数据库服务</option>
+                  <option value="内部邮件系统">内部邮件系统</option>
+                  <option value="群聊共享服务">群聊共享服务</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">外网文件服务器:</span>
+                <input type="text" class="form-input long-input" value="审核通过后，会分配一个云盘" disabled>
+              </label>
+            </div>
+            <div class="form-item text-center">
+              <button class="modal-btn modal-cancel-btn">
+                <a href="../taskToApplyFor.html">返回</a>
+              </button>
+              <button class="modal-btn" id="nextBtn">下一步</button>
+            </div>
+          </form>
+
+          <div id="virtualResource">
+            <form action="">
+              <span class="form-half">
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">城市:</span>
+                    <select name="" id="" class="form-input">
+                      <option value="广州">广州</option>
+                      <option value="深圳">深圳</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    <span class="form-label">运营商:</span>
+                    <select name="" id="" class="form-input">
+                      <option value="电信">电信</option>
+                      <option value="移动">移动</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">颜色深度:</span>
+                    <select name="" id="" class="form-input">
+                      <option value="24">24</option>
+                      <option value="16">16</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    <span class="form-label">链路速度:</span>
+                    <select name="" id="" class="form-input">
+                      <option value="优秀">优秀</option>
+                      <option value="良好">良好</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">套餐名称:</span>
+                    <select name="" id="" class="form-input">
+                      <option value="2核4G">2核4G</option>
+                      <option value="2核4G">2核4G</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    <span class="form-label">模板名称:</span>
+                    <select name="" id="" class="form-input">
+                      <option value="模板名称">模板名称</option>
+                      <option value="模板名称">模板名称</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">单价:</span>
+                    <div class="form-input-with-unit">
+                      <input type="text" name="cost" class="form-input" value="10">
+                      <i class="unit long-unit">元/月</i>
+                    </div>
+                  </label>
+
+                  <label>
+                    <span class="form-label">数量:<i class="form-require">*</i></span>
+                    <input type="text" class="form-input" value="10">
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">总价:</span>
+                    <div class="form-input-with-unit">
+                      <input type="text" name="cost" class="form-input" value="100">
+                      <i class="unit long-unit">元</i>
+                    </div>
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label"></span>
+                    <button class="modal-btn">添加</button>
+                  </label>
+                </div>
+              </span>
+
+              <span class="form-half pl-20">
+                <div class="mb-20">
+                  可申请虚拟机20个，已申请2个，剩余8个
+                </div>
+                <div>
+                  可申请免费虚拟机5个，已申请1个，剩余4个
+                </div>
+              </span>
+            </form>
+
+            <table class="villa-table">
+              <thead>
+                <th width="50">序号</th>
+                <th>城市</th>
+                <th>运营商</th>
+                <th>颜色深度</th>
+                <th>链路速度</th>
+                <th>套餐名称</th>
+                <th>模板名称</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>总价</th>
+                <th>操作</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>广州</td>
+                  <td>电信</td>
+                  <td></td>
+                  <td></td>
+                  <td>2核4G</td>
+                  <td>Ubuntu 12.04</td>
+                  <td>10元/月</td>
+                  <td>10</td>
+                  <td>100</td>
+                  <td>
+                    <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>广州</td>
+                  <td>电信</td>
+                  <td></td>
+                  <td></td>
+                  <td>2核4G</td>
+                  <td>Ubuntu 12.04</td>
+                  <td>10元/月</td>
+                  <td>10</td>
+                  <td>100</td>
+                  <td>
+                    <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  </td>
+                </tr>
+                <tr></tr>
+              </tbody>
+            </table>
+
+            <div class="form-item text-center mt-20">
+              <button class="modal-btn modal-cancel-btn" id="prevBtn">上一步</button>
+              <button class="modal-btn" id="nextBtn">下一步</button>
+            </div>
+          </div>
+
+          <div id="pay">
+            <div class="form-item">
+              <p class="form-title">基础配置</p>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">项目名称:</span>
+                <input type="text" class="form-input long-input" disabled>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">用户名前缀:</span>
+                <input type="text" class="form-input" disabled>
+              </label>
+              <label>
+                <span class="form-label">密码:</span>
+                <input type="text" class="form-input" disabled>
+              </label>
+              <label>
+                <span class="form-label">密码更新提醒:</span>
+                <input type="text" class="form-input" disabled>
+              </label>
+              <label>
+                <span class="form-label">内部共享服务:</span>
+                <input type="text" class="form-input" disabled>
+              </label>
+            </div>
+            <!-- <div class="form-item">
+            </div> -->
+            <div class="form-item">
+              <label>
+                <span class="form-label">管理员信息:</span>
+                <input type="text" class="form-input" disabled>
+              </label>
+              <label>
+                <span class="form-label">内部IP范围:</span>
+                <input type="text" class="form-input" disabled>
+              </label>
+              <label>
+                <span class="form-label">内网文件服务器:</span>
+                <input type="text" class="form-input" disabled>
+              </label>
+            </div>
+            <!-- <div class="form-item">
+            </div> -->
+            <hr>
+            <div class="form-item">
+              <p class="form-title">虚拟机资源</p>
+            </div>
+
+            <table class="villa-table">
+              <thead>
+                <th width="50">序号</th>
+                <th>城市</th>
+                <th>运营商</th>
+                <th>颜色深度</th>
+                <th>链路速度</th>
+                <th>套餐名称</th>
+                <th>模板名称</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>总价</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>广州</td>
+                  <td>电信</td>
+                  <td></td>
+                  <td></td>
+                  <td>2核4G</td>
+                  <td>Ubuntu 12.04</td>
+                  <td>10元/月</td>
+                  <td>10</td>
+                  <td>100</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>广州</td>
+                  <td>电信</td>
+                  <td></td>
+                  <td></td>
+                  <td>2核4G</td>
+                  <td>Ubuntu 12.04</td>
+                  <td>10元/月</td>
+                  <td>10</td>
+                  <td>100</td>
+                </tr>
+                <tr></tr>
+              </tbody>
+            </table>
+
+            <div class="form-item text-center mt-20">
+              <button class="modal-btn modal-cancel-btn" id="prevBtn">上一步</button>
+              <button class="modal-btn">提交</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script>
+  $(function() {
+    $('#baseConfigForm #nextBtn').on('click', function(e) {
+      e.preventDefault();
+      $('#baseConfigForm').hide();
+      $('.step:eq(1)').addClass('active');
+      $('#virtualResource').show();
+    });
+
+    $('#virtualResource #nextBtn').on('click', function(e) {
+      e.preventDefault();
+      $('#virtualResource').hide();
+      $('.step:eq(2)').addClass('active');
+      $('#pay').show();
+    });
+
+    $('#virtualResource #prevBtn').on('click', function(e) {
+      e.preventDefault();
+      $('#virtualResource').hide();
+      $('.step:eq(1)').removeClass('active');
+      $('#baseConfigForm').show();
+    });
+
+    $('#pay #prevBtn').on('click', function(e) {
+      e.preventDefault();
+      $('#pay').hide();
+      $('.step:eq(2)').removeClass('active');
+      $('#virtualResource').show();
+    });
+  });
+</script>
+</html>
