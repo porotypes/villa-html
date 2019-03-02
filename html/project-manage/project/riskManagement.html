@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../../../css/main.css">
   <link rel="stylesheet" href="../../../css/font-awesome.min.css">
   <script src="../../../js/jq-3.3.1.js"></script>
+  <script src="../../../js/bootstrap.js"></script>
   <script src="../../../js/index.js"></script>
 </head>
 
@@ -168,11 +169,494 @@
         </ul>
 
         <div class="content">
+          <div class="operation">
+            <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
+            <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button>
+            <button class="operation-btn" data-toggle="modal" data-target="#seeModal">查看</button>
+            <button class="operation-btn">删除</button>
+          </div>
 
+          <table class="villa-table mt-3">
+            <thead>
+              <th width="50">
+                <label>
+                  <input type="checkbox" id="villa-1">
+                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                  <span style="visibility: hidden;">0</span>
+                </label>
+              </th>
+              <th>风险概述</th>
+              <th>识别时间</th>
+              <th>可能发生阶段</th>
+              <th>风险概率</th>
+              <th>风险值</th>
+              <th>风险状态</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>1</span>
+                  </label>
+                </td>
+                <td>有风险</td>
+                <td>2018-03-01</td>
+                <td>中午</td>
+                <td>一般</td>
+                <td>4</td>
+                <td>一般</td>
+              </tr>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>2</span>
+                  </label>
+                </td>
+                <td>有风险</td>
+                <td>2018-03-01</td>
+                <td>中午</td>
+                <td>一般</td>
+                <td>4</td>
+                <td>一般</td>
+              </tr>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>3</span>
+                  </label>
+                </td>
+                <td>有风险</td>
+                <td>2018-03-01</td>
+                <td>中午</td>
+                <td>一般</td>
+                <td>4</td>
+                <td>一般</td>
+              </tr>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>1</span>
+                  </label>
+                </td>
+                <td>有风险</td>
+                <td>2018-03-01</td>
+                <td>中午</td>
+                <td>一般</td>
+                <td>4</td>
+                <td>一般</td>
+              </tr>
+              <tr>
+                <td>
+                  <label>
+                    <input type="checkbox" id="villa-1">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>5</span>
+                  </label>
+                </td>
+                <td>有风险</td>
+                <td>2018-03-01</td>
+                <td>中午</td>
+                <td>一般</td>
+                <td>4</td>
+                <td>一般</td>
+              </tr>
+              <tr>
+                <td colspan="12">
+                  <div class="villa-pagination">
+                    共计10条记录 当前显示项目:
+                    <select name="" id="">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                      <option value="15">15</option>
+                      <option value="20">20</option>
+                    </select>
+                    <ul class="clearfix">
+                      <li><i class="fa fa-angle-left"></i></li>
+                      <li class="active">1</li>
+                      <li>...</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>...</li>
+                      <li>10</li>
+                      <li><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                    <input type="text" class="page-num">
+                    <button class="page-btn">GO</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- 新增 -->
+  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 650px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">新增风险</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body" style="max-height: 530px; overflow-x: auto;">
+          <form action="" id="addForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险概述:</span>
+                <select class="form-input" name="name">
+                  <option value="123">缺乏必要的硬件设备</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>可能发生<br>的阶段:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+              <label>
+                <span class="form-label "><i class="form-require">*</i>风险概率:</span>
+                <input type="text" name="time" class="form-input input-tip">%
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险状态:</span>
+                <select class="form-input" name="name">
+                  <option value="123">List item1</option>
+                  <option value="123">List item2</option>
+                </select>
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险影响:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>缓解方式:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险值:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>缓解措施:</span>
+                <textarea rows="5" name="remark" class="form-input long-input" value="客户现场技术支持"></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>缓解措施<br>执行情况:</span>
+                <select class="form-input" name="name">
+                  <option value="123">List item1</option>
+                  <option value="123">List item2</option>
+                </select>
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>责任人:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>提出人:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>识别时间:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险详细描述:</span>
+                <textarea rows="3" name="remark" class="form-input long-input" value="客户现场技术支持"></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>应急措施:</span>
+                <textarea rows="2" name="remark" class="form-input long-input" value="客户现场技术支持"></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>跟踪记录:</span>
+                <textarea rows="2" name="remark" class="form-input long-input" value="客户现场技术支持"></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>备注:</span>
+                <textarea rows="2" name="remark" class="form-input long-input" value="客户现场技术支持"></textarea>
+              </label>
+              <label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="modal-btn" id="addBtn">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 修改 -->
+  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 650px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">修改风险</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body" style="max-height: 530px; overflow-x: auto;">
+          <form action="" id="addForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险概述:</span>
+                <select class="form-input" name="name">
+                  <option value="123">缺乏必要的硬件设备</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>可能发生<br>的阶段:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+              <label>
+                <span class="form-label "><i class="form-require">*</i>风险概率:</span>
+                <input type="text" name="time" class="form-input input-tip">%
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险状态:</span>
+                <select class="form-input" name="name">
+                  <option value="123">List item1</option>
+                  <option value="123">List item2</option>
+                </select>
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险影响:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>缓解方式:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险值:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>缓解措施:</span>
+                <textarea rows="5" name="remark" class="form-input long-input" value="客户现场技术支持"></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>缓解措施<br>执行情况:</span>
+                <select class="form-input" name="name">
+                  <option value="123">List item1</option>
+                  <option value="123">List item2</option>
+                </select>
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>责任人:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>提出人:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>识别时间:</span>
+                <input type="text" name="time" class="form-input">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险详细描述:</span>
+                <textarea rows="3" name="remark" class="form-input long-input" value="客户现场技术支持"></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>应急措施:</span>
+                <textarea rows="2" name="remark" class="form-input long-input" value="客户现场技术支持"></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>跟踪记录:</span>
+                <textarea rows="2" name="remark" class="form-input long-input" value="客户现场技术支持"></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>备注:</span>
+                <textarea rows="2" name="remark" class="form-input long-input" value="客户现场技术支持"></textarea>
+              </label>
+              <label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="modal-btn" id="addBtn">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 查看 -->
+  <div class="modal fade" id="seeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 650px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">查看风险</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body" style="max-height: 530px; overflow-x: auto;">
+          <form action="" id="addForm">
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险概述:</span>
+                <select class="form-input" name="name" disabled>
+                  <option value="123">缺乏必要的硬件设备</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>可能发生<br>的阶段:</span>
+                <input type="text" name="time" class="form-input" disabled>
+              </label>
+              <label>
+                <span class="form-label "><i class="form-require">*</i>风险概率:</span>
+                <input type="text" name="time" class="form-input input-tip" disabled>%
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险状态:</span>
+                <select class="form-input" name="name" disabled>
+                  <option value="123">List item1</option>
+                  <option value="123">List item2</option>
+                </select>
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险影响:</span>
+                <input type="text" name="time" class="form-input" disabled>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>缓解方式:</span>
+                <input type="text" name="time" class="form-input" disabled>
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险值:</span>
+                <input type="text" name="time" class="form-input" disabled>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>缓解措施:</span>
+                <textarea rows="5" name="remark" class="form-input long-input" value="客户现场技术支持" disabled></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>缓解措施<br>执行情况:</span>
+                <select class="form-input" name="name" disabled>
+                  <option value="123">List item1</option>
+                  <option value="123">List item2</option>
+                </select>
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>责任人:</span>
+                <input type="text" name="time" class="form-input" disabled>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>提出人:</span>
+                <input type="text" name="time" class="form-input" disabled>
+              </label>
+              <label>
+                <span class="form-label"><i class="form-require">*</i>识别时间:</span>
+                <input type="text" name="time" class="form-input" disabled>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>风险详细描述:</span>
+                <textarea rows="3" name="remark" class="form-input long-input" value="客户现场技术支持" disabled></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>应急措施:</span>
+                <textarea rows="2" name="remark" class="form-input long-input" value="客户现场技术支持" disabled></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>跟踪记录:</span>
+                <textarea rows="2" name="remark" class="form-input long-input" value="客户现场技术支持" disabled></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label"><i class="form-require">*</i>备注:</span>
+                <textarea rows="2" name="remark" class="form-input long-input" value="客户现场技术支持" disabled></textarea>
+              </label>
+              <label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="modal-btn" id="addBtn">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

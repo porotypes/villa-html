@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>消息通知</title>
+    <link rel="stylesheet" href="../../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.min.css">
+    <script src="../../../js/jq-3.3.1.js"></script>
+    <script src="../../../js/bootstrap.js"></script>
+    <script src="../../../js/index.js"></script>
+</head>
+
+<body class="clearfix">
+    <header class="clearfix">
+        <div class="logo">
+            <img src="../../../img/index/logo.png" alt="logo">
+        </div>
+
+        <div class="role">
+            <span>Master <i class="fa fa-caret-right"></i></span>
+
+            <div class="role-select">
+                <p class="role-item">User</p>
+                <p class="role-item">Upton</p>
+            </div>
+        </div>
+
+        <div class="right-control clearfix">
+            <div class="notice">
+                <a href="../../project-manage/messageNotice.html">
+                    <i class="fa fa-bell"></i>
+                </a>
+
+                <span class="num">5</span>
+            </div>
+            <div class="user">
+                <i class="fa fa-user"></i>
+                <span>13800138000,您好</span>
+            </div>
+            <div class="logout" title="注销">
+                <a href="../../login/login.html">
+                    <span class="icon-container">
+                        <i class="fa fa-power-off"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <aside>
+        <ul class="menu">
+            <li class="menu-item">
+                <div class="clearfix">
+                    <a href="../../index.html">
+                        <span class="menu-icon project-situation"></span>
+                        <span>项目情况</span>
+                    </a>
+                </div>
+            </li>
+            <li class="menu-item">
+                <div class="clearfix">
+                    <a href="javascript:void(0);">
+                        <span class="menu-icon resource-manage"></span>
+                        <span>资源管理</span>
+                        <i class="fa fa-caret-left"></i>
+                    </a>
+                </div>
+                <ul class="sub-menu">
+                    <li class="sub-menu-item">
+                        <a href="../../resource-manage/taskToApplyFor.html">任务申请</a>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="../../resource-manage/virtualManage.html">虚拟机管理</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item active open">
+                <div class="clearfix">
+                    <a href="javascript:void(0);">
+                        <span class="menu-icon project-manage"></span>
+                        <span>项目管理</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                </div>
+                <ul class="sub-menu">
+                    <li class="sub-menu-item">
+                        <a href="../../project-manage/project.html">我的项目</a>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="../../project-manage/projectWeekly.html">项目周报</a>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="../../project-manage/workingHours.html">工时统计</a>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="../../project-manage/daily.html">人员日报</a>
+                    </li>
+                    <li class="sub-menu-item sub-menu-item-active">
+                        <a href="../../project-manage/messageNotice.html">消息通知</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <div class="clearfix">
+                    <a href="javascript:void(0);">
+                        <span class="menu-icon system-config"></span>
+                        <span>系统设置</span>
+                        <i class="fa fa-caret-left"></i>
+                    </a>
+                </div>
+                <ul class="sub-menu">
+                    <li class="sub-menu-item">
+                        <a href="../../system-config/infomation.html">个人信息</a>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="../../system-config/bingdingXiaohui.html">绑定小慧号</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    <section class="main">
+        <div class="main-container">
+            <p class="module-title">消息通知</p>
+
+            <div class="tab-container">
+                <ul class="clearfix">
+                    <li class="tab-item"><a href="../messageNotice.html">项目移交通知</a></li>
+                    <li class="tab-item active"><a href="./generalNotice.html">普通通知</a></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <table class="villa-table mt-3">
+                    <thead>
+                        <th>序号</th>
+                        <th>标题</th>
+                        <th>发送人</th>
+                        <th width="200">接收时间</th>
+                        <th>状态</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <a href="javascript:void(0);" data-toggle="modal" data-target="#acceptModal">
+                                    虚拟机登录信息通知
+                                </a>
+                            </td>
+                            <td>张三</td>
+                            <td>2017-3-12 15:31:28</td>
+                            <td>已回复</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>虚拟机登录信息通知</td>
+                            <td>张三</td>
+                            <td>2017-3-12 15:31:28</td>
+                            <td>已回复</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>虚拟机登录信息通知</td>
+                            <td>张三</td>
+                            <td>2017-3-12 15:31:28</td>
+                            <td>已回复</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>虚拟机登录信息通知</td>
+                            <td>张三</td>
+                            <td>2017-3-12 15:31:28</td>
+                            <td>已回复</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>虚拟机登录信息通知</td>
+                            <td>张三</td>
+                            <td>2017-3-12 15:31:28</td>
+                            <td>已回复</td>
+                        </tr>
+                        <tr>
+                            <td colspan="11">
+                                <div class="villa-pagination">
+                                    共计10条记录 当前显示项目:
+                                    <select name="" id="">
+                                        <option value="5">5</option>
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                        <option value="20">20</option>
+                                    </select>
+                                    <ul class="clearfix">
+                                        <li><i class="fa fa-angle-left"></i></li>
+                                        <li class="active">1</li>
+                                        <li>...</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>...</li>
+                                        <li>10</li>
+                                        <li><i class="fa fa-angle-right"></i></li>
+                                    </ul>
+                                    <input type="text" class="page-num">
+                                    <button class="page-btn">GO</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="acceptModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog dialog" role="document" style="width: 625px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">XX项目移交通知</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="addForm">
+                        <div class="form-item">
+                            <label>
+                                <span class="form-label">标题:</span>
+                                <input type="text" name="name" class="form-input border-0" value="虚拟机登录信息通知">
+                            </label>
+                        </div>
+                        <div class="form-item">
+                            <label>
+                                <span class="form-label">项目名称:</span>
+                                <input type="text" name="name" class="form-input border-0" value="项目一，项目二">
+                            </label>
+                        </div>
+                        <div class="form-item">
+                            <label>
+                                <span class="form-label">接收人:</span>
+                                <input type="text" name="name" class="form-input border-0" value="赵六，孙明，宋国，刘海">
+                            </label>
+                        </div>
+                        <div class="form-item">
+                            <label>
+                                <span class="form-label">发送内容:</span>
+                                <input type="text" name="name" class="form-input border-0" value="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                    XXXX
+                    XXXXXXXXXXXXXX">
+                            </label>
+                        </div>
+                        <div class="form-item">
+                            <label>
+                                <span class="form-label">发送人:</span>
+                                <input type="text" name="name" class="form-input border-0" value="张三">
+                            </label>
+                        </div>
+                        <div class="form-item">
+                            <label>
+                                <span class="form-label">发送时间:</span>
+                                <input type="text" name="name" class="form-input border-0" value="2017-3-12  15:31:28">
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
