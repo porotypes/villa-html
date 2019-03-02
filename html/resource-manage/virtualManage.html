@@ -615,7 +615,7 @@
   <script>
     $('#tab-content div').eq(0).show().siblings().hide();
     $('#tab li').click(function () {
-      let i = $(this).index(); //下标第一种写法
+      let i = $(this).index();
       $(this).addClass('active').siblings().removeClass('active');
       $('#tab-content div').eq(i).show().siblings().hide();
     });

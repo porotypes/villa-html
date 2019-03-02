@@ -618,6 +618,9 @@ aside {
   font-size: 18px;
   font-weight: 600;
 }
+.tab-container .tab-item-long {
+  width: 220px;
+}
 .tab-container .tab-item:last-child {
   margin-right: 0;
 }
