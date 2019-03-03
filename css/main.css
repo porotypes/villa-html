@@ -8,6 +8,9 @@ ul {
   padding: 0;
   list-style: none;
 }
+hr {
+  margin: 0;
+}
 
 ::-webkit-input-placeholder { /* WebKit browsers */
   color: #b3b3b3;
@@ -20,6 +23,31 @@ ul {
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
   color: #b3b3b3;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.m-20 {
+  margin: 20px;
+}
+.pt-20 {
+  padding-top: 20px;
+}
+.pb-20 {
+  padding-bottom: 20px;
+}
+.pl-20 {
+  padding-left: 20px;
+}
+.pr-20 {
+  padding-right: 20px;
+}
+.p-20 {
+  padding: 20px;
 }
 
 /* header */
@@ -358,6 +386,7 @@ aside {
 .villa-table .operation-icon {
   margin-right: 10px;
   font-size: 20px;
+  text-decoration: none;
 }
 .villa-table .checkbox {
   position: relative;
@@ -558,6 +587,14 @@ aside {
   color: #000000;
   border: 1px solid #ccc;
 }
+.modal-btn > a {
+  color: #000000;
+  text-decoration: none;
+}
+.modal-cancel-btn > a {
+  color: #000000;
+  text-decoration: none;
+}
 .modal-footer {
   padding: 20px;
 }
@@ -725,6 +762,10 @@ aside {
   cursor: pointer;
   transition: all .3s;
 }
+.operation-btn > a {
+  color: #fff;
+  text-decoration: none;
+}
 .operation-btn:focus {
   outline: none;
 }
@@ -736,6 +777,13 @@ aside {
   width: 100%;
   font-size: 0;
 }
+.form-item .form-title {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  font-size: 18px;
+  font-weight: 600;
+}
 .form-item label {
   position: relative;
   margin-bottom: 18px;
@@ -743,7 +791,7 @@ aside {
 }
 .form-item label.error {
   position: absolute;
-  top: 34px;
+  top: 30px;
   left: 110px;
   margin: 0;
   color: #ff0000;
@@ -829,6 +877,9 @@ aside {
   border-radius: 0.25rem 0 0 0.25rem;
   border-right: none;
 }
+.form-item .form-input-with-unit label.error {
+  left: 0;
+}
 .form-item .form-input-with-unit .unit {
   position: absolute;
   top: 0;
@@ -843,6 +894,44 @@ aside {
   text-align: center;
   font-style: normal;
 }
+.form-item .form-input-with-unit .unit.long-unit {
+  width: 50px;
+}
+.form-item label input[type=checkbox] {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  visibility: hidden;
+  z-index: 2;
+}
+.form-item label .checkbox-icon {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+.form-item label .checkbox-icon i {
+  display: none;
+  margin: -3px 0 0 -2px;
+  font-size: 20px;
+  color: #e94343;
+}
+.form-item label input[type=checkbox]:checked + .checkbox-icon i {
+  display: block;
+}
+.form-half {
+  display: inline-block;
+  min-width: 500px;
+  max-width: 800px;
+  vertical-align: top;
+}
+
 .green-bg{
   background-color: #009900;
 }
@@ -874,4 +963,72 @@ aside {
   width: 180px;
   height: 180px;
   cursor: pointer;
+}
+/* 团队云申请步骤条 */
+.steps-wrap {
+  width: 100%;
+}
+.steps {
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 0;
+  text-align: center;
+}
+.steps .step {
+  position: relative;
+  display: inline-block;
+  margin-right: 175px;
+  padding: 48px 0 0;
+  font-size: 16px;
+}
+.steps .step:last-child {
+  margin: 0;
+}
+.steps .step .step-num {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-24px);
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #cccccc;
+  user-select: none;
+  z-index: 2;
+}
+.steps .step .step-text {
+  display: block;
+  width: 100%;
+}
+.steps .step:not(:first-child)::after {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: -200px;
+  width: 220px;
+  height: 2px;
+  background-color: #cccccc;
+}
+.steps .step.active > .step-num {
+  background-color: #4286fe;
+  color: #ffffff;
+}
+.steps .step.active > .step-text {
+  color: #4286fe;
+}
+.steps .step.active::after {
+  background-color: #4286fe;
+}
+#baseConfigForm {
+  display: block;
+}
+#virtualResource {
+  display: none;
+}
+#pay {
+  display: none;
 }

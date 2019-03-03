@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="../../css/font-awesome.min.css">
   <script src="../../js/jq-3.3.1.js"></script>
+  <script src="../../js/bootstrap.js"></script>
   <script src="../../js/index.js"></script>
 </head>
 
@@ -124,8 +125,202 @@
   </aside>
 
   <section class="main">
+    <div class="main-container">
+      <p class="module-title">任务申请</p>
 
+      <div class="search-bar border-0">
+        <button class="operation-btn"><a href="./taskToApply/oneCloud.html">团队云</a></button>
+        <!-- <button class="operation-btn">扩展资源</button>
+        <button class="operation-btn">套餐变更</button>
+        <button class="operation-btn">释放资源</button>
+        <button class="operation-btn">移交项目</button>
+        <button class="operation-btn" data-toggle="modal" data-target="#resetModel">第三方服务</button>
+        <button class="operation-btn" data-toggle="modal" data-target="#controlModel">网络变更</button> -->
+        <button class="operation-btn" data-toggle="modal" data-target="#problemFeedbackModal">问题反馈</button>
+      </div>
+
+      <div class="content">
+        <table class="villa-table">
+          <thead>
+            <th width="50">序号</th>
+            <th>申请单号</th>
+            <th>申请时间</th>
+            <th>等待时长</th>
+            <th>估计剩余时间</th>
+            <th>项目名称</th>
+            <th>申请类别</th>
+            <th>状态</th>
+            <th>操作</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><a href="javascript:void(0);">XXX20180202555</a></td>
+              <td>2018-02-02</td>
+              <td>5小时</td>
+              <td>30小时</td>
+              <td>无纸化</td>
+              <td>开发云</td>
+              <td>已支付，待审核</td>
+              <td>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                  class="operation-icon">
+                  <i class="fa fa-edit"></i>
+                </a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="取消"
+                  class="operation-icon">
+                  <i class="fa fa-close"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><a href="javascript:void(0);">XXX20180202555</a></td>
+              <td>2018-02-02</td>
+              <td>5小时</td>
+              <td>30小时</td>
+              <td>无纸化</td>
+              <td>开发云</td>
+              <td>已支付，待审核</td>
+              <td>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                  class="operation-icon">
+                  <i class="fa fa-edit"></i>
+                </a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="取消"
+                  class="operation-icon">
+                  <i class="fa fa-close"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><a href="javascript:void(0);">XXX20180202555</a></td>
+              <td>2018-02-02</td>
+              <td>5小时</td>
+              <td>30小时</td>
+              <td>无纸化</td>
+              <td>开发云</td>
+              <td>已支付，待审核</td>
+              <td>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                  class="operation-icon">
+                  <i class="fa fa-edit"></i>
+                </a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="取消"
+                  class="operation-icon">
+                  <i class="fa fa-close"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><a href="javascript:void(0);">XXX20180202555</a></td>
+              <td>2018-02-02</td>
+              <td>5小时</td>
+              <td>30小时</td>
+              <td>无纸化</td>
+              <td>开发云</td>
+              <td>已支付，待审核</td>
+              <td>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                  class="operation-icon">
+                  <i class="fa fa-edit"></i>
+                </a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="取消"
+                  class="operation-icon">
+                  <i class="fa fa-close"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><a href="javascript:void(0);">XXX20180202555</a></td>
+              <td>2018-02-02</td>
+              <td>5小时</td>
+              <td>30小时</td>
+              <td>无纸化</td>
+              <td>开发云</td>
+              <td>已支付，待审核</td>
+              <td>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                  class="operation-icon">
+                  <i class="fa fa-edit"></i>
+                </a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="取消"
+                  class="operation-icon">
+                  <i class="fa fa-close"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="99">
+                <div class="villa-pagination">
+                  共计10条记录 当前显示项目:
+                  <select name="" id="">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                  </select>
+                  <ul class="clearfix">
+                    <li><i class="fa fa-angle-left"></i></li>
+                    <li class="active">1</li>
+                    <li>...</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>...</li>
+                    <li>10</li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                  </ul>
+                  <input type="text" class="page-num">
+                  <button class="page-btn">GO</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </section>
+
+  <div class="modal fade" id="problemFeedbackModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog dialog" role="document" style="width: 625px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">问题反馈</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-item">
+              <label>
+                <span class="form-label">项目名称:</span>
+                <select class="form-input">
+                  <option value=""></option>
+                  <option value="123">132</option>
+                  <option value="123">132</option>
+                  <option value="123">132</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">问题内容:</span>
+                <textarea rows="5" class="form-input long-input"></textarea>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
+          <button type="button" class="modal-btn" id="editBtn">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
