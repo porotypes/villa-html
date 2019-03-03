@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Villa 首页</title>
-    <link rel="stylesheet" href="../../css/bootstrap.css">
-    <link rel="stylesheet" href="../../css/main.css">
-    <link rel="stylesheet" href="../../css/font-awesome.min.css">
-    <script src="../../js/jq-3.3.1.js"></script>
-    <script src="../../js/bootstrap.js"></script>
-    <script src="../../js/index.js"></script>
+    <link rel="stylesheet" href="../../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.min.css">
+    <script src="../../../js/jq-3.3.1.js"></script>
+    <script src="../../../js/bootstrap.js"></script>
+    <script src="../../../js/index.js"></script>
 </head>
 
 <body class="clearfix">
     <header class="clearfix">
         <div class="logo">
-            <img src="../../img/index/logo.png" alt="logo">
+            <img src="../../../img/index/logo.png" alt="logo">
         </div>
 
         <div class="role">
@@ -42,7 +42,7 @@
                 <span>13800138000,您好</span>
             </div>
             <div class="logout" title="注销">
-                <a href="../../html/login/login.html">
+                <a href="../../../html/login/login.html">
                     <span class="icon-container">
                         <i class="fa fa-power-off"></i>
                     </span>
@@ -63,10 +63,10 @@
                 </div>
                 <ul class="sub-menu">
                     <li class="sub-menu-item">
-                        <a href="./user.html">用户管理
+                        <a href="../user.html">用户管理
                         </a> </li>
                     <li class="sub-menu-item  sub-menu-item-active">
-                        <a href="./parameter.html">参数配置</a>
+                        <a href="../parameter.html">参数配置</a>
                     </li>
                 </ul>
             </li>
@@ -79,18 +79,24 @@
 
             <div class="tab-container">
                 <ul class="clearfix">
-                    <li class="tab-item active"><a href="./parameter.html">数据类型</a></li>
-                    <li class="tab-item"><a href="./parameter/dataItem.html">数据项</a></li>
-                    <li class="tab-item"><a href="./parameter/conventionalDataItems.html">常规数据项</a></li>
+                    <li class="tab-item"><a href="../parameter.html">数据类型</a></li>
+                    <li class="tab-item"><a href="./dataItem.html">数据项</a></li>
+                    <li class="tab-item active"><a href="./conventionalDataItems.html">常规数据项</a></li>
                 </ul>
             </div>
 
             <div class="content">
                 <div class="search-bar clearfix m-0">
                     <label>
-                        类型: <input type="text" class="search-input">
+                        数据项: <select class="search-input" name="type">
+                            <option value=""></option>
+                            <option value="123">123</option>
+                            <option value="123">123</option>
+                            <option value="123">123</option>
+                        </select>
                     </label>
                     <button class="search-btn">查 询</button>
+                    <button class="search-btn" data-toggle="modal" data-target="#editModal">编 辑</button>
                 </div>
                 <div class="operation mt-2">
                     <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
@@ -105,7 +111,8 @@
                                 <span style="visibility: hidden;">0</span>
                             </label>
                         </th>
-                        <th>类型</th>
+                        <th>常规数据项</th>
+                        <th>值</th>
                         <th>备注</th>
                         <th width="60">操作</th>
                     </thead>
@@ -118,8 +125,9 @@
                                     <span>1</span>
                                 </label>
                             </td>
-                            <td>部门</td>
-                            <td></td>
+                            <td>补助小计常数值</td>
+                            <td>0</td>
+                            <td>出差天数-0，n默认为0</td>
                             <td>
                                 <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
                                     class="operation-icon"><i class="fa fa-edit"></i></a>
@@ -133,8 +141,9 @@
                                     <span>2</span>
                                 </label>
                             </td>
-                            <td>部门</td>
-                            <td></td>
+                            <td>补助小计常数值</td>
+                            <td>0</td>
+                            <td>出差天数-0，n默认为0</td>
                             <td>
                                 <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
                                     class="operation-icon"><i class="fa fa-edit"></i></a>
@@ -148,8 +157,9 @@
                                     <span>3</span>
                                 </label>
                             </td>
-                            <td>部门</td>
-                            <td></td>
+                            <td>补助小计常数值</td>
+                            <td>0</td>
+                            <td>出差天数-0，n默认为0</td>
                             <td>
                                 <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
                                     class="operation-icon"><i class="fa fa-edit"></i></a>
@@ -163,8 +173,9 @@
                                     <span>4</span>
                                 </label>
                             </td>
-                            <td>部门</td>
-                            <td></td>
+                            <td>补助小计常数值</td>
+                            <td>0</td>
+                            <td>出差天数-0，n默认为0</td>
                             <td>
                                 <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
                                     class="operation-icon"><i class="fa fa-edit"></i></a>
@@ -178,8 +189,9 @@
                                     <span>5</span>
                                 </label>
                             </td>
-                            <td>部门</td>
-                            <td></td>
+                            <td>补助小计常数值</td>
+                            <td>0</td>
+                            <td>出差天数-0，n默认为0</td>
                             <td>
                                 <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
                                     class="operation-icon"><i class="fa fa-edit"></i></a>
@@ -229,7 +241,13 @@
                     <form action="" id="addForm">
                         <div class="form-item">
                             <label>
-                                <span class="form-label"><i class="form-require">*</i>类型:</span>
+                                <span class="form-label"><i class="form-require">*</i>常规数据项:</span>
+                                <input type="text" name="amount" class="form-input">
+                            </label>
+                        </div>
+                        <div class="form-item">
+                            <label>
+                                <span class="form-label"><i class="form-require">*</i>值:</span>
                                 <input type="text" name="amount" class="form-input">
                             </label>
                         </div>
@@ -238,9 +256,7 @@
                                 <span class="form-label">备注:</span>
                                 <textarea rows="5" name="projectSituation" class="form-input long-input"></textarea>
                             </label>
-                            <label>
                         </div>
-
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -251,19 +267,25 @@
         </div>
     </div>
 
-    <!-- 修改 -->
+    <!-- 编辑 -->
     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog dialog" role="document" style="width: 625px;">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">修改</h4>
+                    <h4 class="modal-title">编辑</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <form action="" id="addForm">
                         <div class="form-item">
                             <label>
-                                <span class="form-label">类型:</span>
+                                <span class="form-label">常规数据项:</span>
+                                <input type="text" name="amount" class="form-input">
+                            </label>
+                        </div>
+                        <div class="form-item">
+                            <label>
+                                <span class="form-label">值:</span>
                                 <input type="text" name="amount" class="form-input">
                             </label>
                         </div>
@@ -272,9 +294,7 @@
                                 <span class="form-label">备注:</span>
                                 <textarea rows="5" name="projectSituation" class="form-input long-input"></textarea>
                             </label>
-                            <label>
                         </div>
-
                     </form>
                 </div>
                 <div class="modal-footer">
