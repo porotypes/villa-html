@@ -399,14 +399,20 @@ aside {
   width: 100%;
   cursor: pointer;
 }
-.villa-table label input[type=checkbox] {
+.villa-form-item{
+  position: relative;
+  display: inline-block;
+  margin: 0 0 0 30px;
+  cursor: pointer;
+}
+.villa-table label input[type=checkbox], .villa-form-item input[type=checkbox]{
   position: absolute;
   top: 4px;
   left: 0;
   visibility: hidden;
   z-index: 2;
 }
-.villa-table label .checkbox-icon {
+.villa-table label .checkbox-icon, .villa-form-item .checkbox-icon{
   position: absolute;
   top: 4px;
   left: 0;
@@ -418,13 +424,16 @@ aside {
   border-radius: 3px;
   background-color: #ffffff;
 }
-.villa-table label .checkbox-icon i {
+.villa-form-item .checkbox-icon {
+  position: relative
+}
+.villa-table label .checkbox-icon i, .villa-form-item .checkbox-icon i{
   display: none;
   margin: -3px 0 0 -2px;
   font-size: 20px;
   color: #e94343;
 }
-.villa-table label input[type=checkbox]:checked + .checkbox-icon i {
+.villa-table label input[type=checkbox]:checked + .checkbox-icon i, .villa-form-item input[type=checkbox]:checked + .checkbox-icon i{
   display: block;
 }
 /* 纵向table */
