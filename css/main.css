@@ -1,5 +1,5 @@
 body {
-  min-width: 1200px;
+  min-width: 1280px;
   font-family: 'Microsoft YaHei';
   background-color: #eeeeee;
   overflow-x: auto;
@@ -9,6 +9,9 @@ ul {
   list-style: none;
 }
 hr {
+  margin: 0;
+}
+label {
   margin: 0;
 }
 
@@ -31,6 +34,9 @@ hr {
 .mb-20 {
   margin-bottom: 20px;
 }
+.mr-20 {
+  margin-right: 20px;
+}
 .m-20 {
   margin: 20px;
 }
@@ -49,6 +55,9 @@ hr {
 .p-20 {
   padding: 20px;
 }
+.tip {
+  color: #999999;
+}
 
 /* header */
 header {
@@ -66,23 +75,26 @@ header {
   float: left;
   margin-top: 35px;
   padding: 0 6px;
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   background-color: #FFFFFF;
-  color: #7e9ef9;
+  color: #4286fe;
   text-align: center;
   border-radius: 3px;
   cursor: pointer;
   user-select: none;
+  font-weight: bold;
+  font-size: 18px;
 }
 .role-select {
   display: none;
   position: absolute;
-  top: 35px;
+  top: 40px;
   left: 0;
   min-width: 70px;
+  width: 100%;
   background: #FFFFFF;
-  color: #7e9ef9;
+  color: #4286fe;
   text-align: center;
   border-radius: 3px;
   overflow: hidden;
@@ -115,16 +127,16 @@ header {
 }
 .right-control .notice .num {
   position: absolute;
-  top: 0;
-  right: -11px;
-  width: 22px;
-  height: 12px;
-  line-height: 12px;
+  top: -4px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
   text-align: center;
   background-color: #ff3a49;
   color: #ffffff;
   font-size: 12px;
-  border-radius: 6px;
+  border-radius: 50%;
 }
 .right-control .user {
   margin-right: 27px;
@@ -270,7 +282,7 @@ aside {
 .message-notice {
   float: left;
   margin-right: 15px;
-  width: 540px;
+  width: 32%;
   background-color: #ffffff;
   border-radius: 5px;
   overflow: hidden;
@@ -285,8 +297,8 @@ aside {
 }
 .message-notice .message-list .list-item {
   width: 100%;
-  height: 50px;
-  line-height: 50px;
+  height: 32px;
+  line-height: 32px;
   border-bottom: 1px dashed #dadada;
 }
 .message-notice .message-list .list-item > a {
@@ -307,6 +319,14 @@ aside {
 }
 .message-notice .message-list .list-item span.time {
   float: right;
+}
+@media screen and (max-width: 1900px) {
+  .message-notice {
+    font-size: 14px;
+  }
+  .message-notice .message-list .list-item span.content {
+    max-width: 200px;
+  }
 }
 
 .project-charts {
@@ -341,9 +361,18 @@ aside {
 .project-charts .content .task-statistial > div {
   margin: 0 auto;
 }
+@media screen and (max-width: 1900px) {
+  .project-charts {
+    width: 66.5%;
+  }
+  .project-charts .content .project-phase,
+  .project-charts .content .task-statistial {
+    width: 49%;
+  }
+}
 .center, .bottom {
   margin-top: 15px;
-  width: 1667px;
+  width: 100%;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -369,7 +398,7 @@ aside {
 }
 .villa-table thead {
   border: none;
-  background-color: #6da2ff;
+  background-color: #4286fe;
   color: #ffffff;
 }
 .villa-table th {
@@ -405,14 +434,16 @@ aside {
   margin: 0 0 0 30px;
   cursor: pointer;
 }
-.villa-table label input[type=checkbox], .villa-form-item input[type=checkbox]{
+.villa-table label input[type=checkbox], 
+.villa-form-item input[type=checkbox] {
   position: absolute;
   top: 4px;
   left: 0;
   visibility: hidden;
   z-index: 2;
 }
-.villa-table label .checkbox-icon, .villa-form-item .checkbox-icon{
+.villa-table label .checkbox-icon, 
+.villa-form-item .checkbox-icon {
   position: absolute;
   top: 4px;
   left: 0;
@@ -427,14 +458,22 @@ aside {
 .villa-form-item .checkbox-icon {
   position: relative
 }
-.villa-table label .checkbox-icon i, .villa-form-item .checkbox-icon i{
+.villa-table label .checkbox-icon i,
+.villa-form-item .checkbox-icon i {
   display: none;
   margin: -3px 0 0 -2px;
   font-size: 20px;
   color: #e94343;
 }
-.villa-table label input[type=checkbox]:checked + .checkbox-icon i, .villa-form-item input[type=checkbox]:checked + .checkbox-icon i{
+.villa-table label input[type=checkbox]:checked + .checkbox-icon i,
+.villa-form-item input[type=checkbox]:checked + .checkbox-icon i {
   display: block;
+}
+.checkbox-icon + span {
+  vertical-align: middle;
+}
+.villa-table .no-data {
+  color: #b2b2b2;
 }
 /* 纵向table */
 .vertical-table td{
@@ -459,6 +498,7 @@ aside {
   border-radius: 5px;
   text-align: center;
   text-align-last: center;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .villa-pagination ul {
   display: inline-block;
@@ -483,10 +523,12 @@ aside {
 }
 .villa-pagination ul li.active {
   background-color: #4286fe;
+  border-color: #4286fe;
   color: #ffffff;
 }
 .villa-pagination ul li:hover {
   background-color: #4286fe;
+  border-color: #4286fe;
   color: #ffffff;
 }
 .villa-pagination .page-num {
@@ -497,6 +539,15 @@ aside {
   border-radius: 5px;
   outline: none;
   text-align: center;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.villa-pagination select:focus,
+.villa-pagination .page-num:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 .villa-pagination .page-btn {
   width: 50px;
@@ -547,6 +598,32 @@ aside {
   border-radius: 7px;
   background-color: #20c5ff;
 }
+.form-item .progress + .progress-percent {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.form-item .progress + .progress-percent .unit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 31px;
+  line-height: 31px;
+  font-size: 14px;
+  border-radius: 0 0.25rem 0.25rem 0;
+  background-color: #6da2ff;
+  color: #fff;
+  border: 1px solid #6da2ff;
+  text-align: center;
+  font-style: normal;
+}
+.form-item .progress + .progress-percent input {
+  border-radius: 0.25rem 0 0 0.25rem !important;
+  border-right: none !important;
+}
 
 /* modal */
 .dialog {
@@ -577,7 +654,7 @@ aside {
   line-height: 1.5;
   border-radius: 3px;
   border: none;
-  background-color: #6da2ff;
+  background-color: #4286fe;
   color: #ffffff;
   font-size: 14px;
   cursor: pointer;
@@ -607,24 +684,22 @@ aside {
 
 /* tab */
 .tab-container {
-  padding: 20px 0;
+  padding: 20px 0 0;
 }
 .tab-container > ul {
   margin: 0;
   padding: 0 30px;
   width: 100%;
-  height: 50px;
-  line-height: 50px;
+  height: 42px;
+  line-height: 42px;
   border-bottom: 2px solid #71a4ff;
 }
 .tab-container .tab-item {
   float: left;
   position: relative;
   margin: 0 6px 0 0;
-  width: 150px;
-  height: 50px;
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
 }
 .tab-container .tab-item-long {
@@ -635,8 +710,9 @@ aside {
 }
 .tab-container .tab-item > a {
   display: block;
+  padding: 0 5px;
   width: 100%;
-  height: 50px;
+  height: 42px;
   color: #4186ff;
   text-decoration: none;
   border-radius: 5px 5px 0 0;
@@ -666,16 +742,16 @@ aside {
 .tab-container .tab-sub-item {
   display: none;
   position: absolute;
-  top: 48px;
+  top: 40px;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 42px;
   z-index: 2;
 }
 .tab-container .tab-sub-item a {
   display: block;
   width: 100%;
-  height: 50px;
+  height: 42px;
   color: #ffffff;
   text-decoration: none;
   background-color: #4186ff;
@@ -707,7 +783,7 @@ aside {
 }
 .search-input {
   width: 270px;
-  padding: 6px 8px;
+  padding: 4px 8px;
   font-size: 16px;
   line-height: 1.5;
   color: #495057;
@@ -716,6 +792,17 @@ aside {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.search-icon {
+  font-size: 26px;
+  cursor: pointer;
+  color: #999999;
+}
+.search-icon:hover {
+  color: #80bdff;
+}
+.search-icon.active {
+  color: #80bdff;
 }
 .table-input {
   padding: 6px 8px;
@@ -737,7 +824,7 @@ aside {
 }
 .search-btn {
   width: 80px;
-  height: 38px;
+  height: 34px;
   border: 1px solid #4286fe;
   background: #fff;
   color: #4286fe;
@@ -752,9 +839,14 @@ aside {
 .search-btn:focus {
   outline: none;
 }
+@media screen and (max-width: 1900px) {
+  .search-input {
+    width: 180px;
+  }
+}
 
 .operation-btn {
-  padding: 8px 12px;
+  padding: 5px 12px;
   border: none;
   border-radius: 5px;
   background: #4286fe;
@@ -809,7 +901,7 @@ aside {
   font-size: 16px;
 }
 .form-item .form-input,
-.form-item .progress + input {
+.form-item .progress + .progress-percent > input {
   padding: 4px;
   width: 178px;
   font-size: 14px;
@@ -826,13 +918,13 @@ aside {
   vertical-align: text-top;
 }
 .form-item .long-input {
-  width: 470px;
+  width: 465px;
 }
 .form-item .md-input {
   width: 250px;
 }
 .form-item .form-input:focus,
-.form-item .progress + input:focus,
+.form-item .progres + .progress-percent > input:focus,
 .form-item .form-input:focus {
   color: #495057;
   background-color: #fff;
@@ -851,16 +943,18 @@ aside {
   width: 400px;
   vertical-align: middle;
 }
-.form-item .progress + input {
-  width: 65px;
+.form-item .progress + .progress-percent > input {
+  width: 40px;
   text-align: center;
 }
 .form-item input:disabled,
 .form-item select:disabled,
-.form-item textarea:disabled {
+.form-item textarea:disabled,
+.form-item .progress + .progress-percent > input:disabled {
   background-color: #f2f2f2;
   /* cursor: not-allowed; */
 }
+.form-item .progress + .progress-percent > input:disabled + .unit,
 .form-item input:disabled + .unit {
   background-color: #e2e2e2;
   color: #000000;
@@ -869,11 +963,11 @@ aside {
 .form-item .form-input-with-unit {
   position: relative;
   display: inline-block;
-  padding: 0 40px 0 0;
+  padding: 0 50px 0 0;
   width: 178px;
 }
 .form-item .form-input-with-unit input {
-  width: 138px;
+  width: 128px;
   border-radius: 0.25rem 0 0 0.25rem;
   border-right: none;
 }
@@ -885,7 +979,7 @@ aside {
   top: 0;
   right: 0;
   padding: 4px;
-  width: 40px;
+  width: 50px;
   font-size: 14px;
   border-radius: 0 0.25rem 0.25rem 0;
   background-color: #6da2ff;
@@ -893,9 +987,6 @@ aside {
   border: 1px solid #6da2ff;
   text-align: center;
   font-style: normal;
-}
-.form-item .form-input-with-unit .unit.long-unit {
-  width: 50px;
 }
 .form-item label input[type=checkbox] {
   position: absolute;
@@ -1031,4 +1122,39 @@ aside {
 }
 #pay {
   display: none;
+}
+.pay-type {
+  display: inline-block;
+  margin-right: 20px;
+  width: 76px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+}
+.alipay.active {
+  background: #00a0e8;
+  color: #ffffff;
+  border-color: #00a0e8;
+}
+.wechatpay.active {
+  background: #84d842;
+  color: #ffffff;
+  border-color: #84d842;
+}
+#search-form {
+  display: none;
+}
+.save-tip {
+  margin: 0 auto;
+  width: 95px;
+}
+#saveSuccessModal .tip-text {
+  color: #4ac91b;
+}
+#saveErrorModal .tip-text {
+  color: #ef3c2e;
 }

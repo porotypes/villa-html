@@ -136,9 +136,9 @@
       </div>
 
       <div class="content">
-        <table class="villa-table mt-3">
+        <table class="villa-table">
           <thead>
-            <th>序号</th>
+            <th width="50">序号</th>
             <th>标题</th>
             <th>姓名</th>
             <th>发送人</th>
@@ -155,13 +155,17 @@
                 </a>
               </td>
               <td>张三</td>
+              <td>张三</td>
               <td>2017-3-12 15:31:28</td>
               <td>否</td>
               <td>已回复</td>
             </tr>
             <tr>
               <td>2</td>
-              <td>XX项目移交通知</td>
+              <td><a href="javascript:void(0);" data-toggle="modal" data-target="#acceptModal">
+                  XX项目移交通知
+                </a></td>
+              <td>张三</td>
               <td>张三</td>
               <td>2017-3-12 15:31:28</td>
               <td>否</td>
@@ -169,7 +173,10 @@
             </tr>
             <tr>
               <td>3</td>
-              <td>XX项目移交通知</td>
+              <td><a href="javascript:void(0);" data-toggle="modal" data-target="#acceptModal">
+                  XX项目移交通知
+                </a></td>
+              <td>张三</td>
               <td>张三</td>
               <td>2017-3-12 15:31:28</td>
               <td>否</td>
@@ -177,7 +184,10 @@
             </tr>
             <tr>
               <td>4</td>
-              <td>XX项目移交通知</td>
+              <td><a href="javascript:void(0);" data-toggle="modal" data-target="#acceptModal">
+                  XX项目移交通知
+                </a></td>
+              <td>张三</td>
               <td>张三</td>
               <td>2017-3-12 15:31:28</td>
               <td>否</td>
@@ -185,7 +195,10 @@
             </tr>
             <tr>
               <td>5</td>
-              <td>XX项目移交通知</td>
+              <td><a href="javascript:void(0);" data-toggle="modal" data-target="#acceptModal">
+                  XX项目移交通知
+                </a></td>
+              <td>张三</td>
               <td>张三</td>
               <td>2017-3-12 15:31:28</td>
               <td>否</td>
@@ -228,62 +241,52 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">XX项目移交通知</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <form action="" id="addForm">
             <div class="form-item">
               <label>
                 <span class="form-label">标题:</span>
-                <input type="text" name="name" class="form-input border-0" value="XX项目移交通知">
+                <input type="text" name="name" class="form-input" disabled value="XX项目移交通知">
               </label>
-            </div>
-            <div class="form-item">
               <label>
                 <span class="form-label">项目名称:</span>
-                <input type="text" name="name" class="form-input border-0" value="项目二">
+                <input type="text" name="name" class="form-input" disabled value="项目二">
               </label>
             </div>
             <div class="form-item">
               <label>
                 <span class="form-label">内容:</span>
-                <input type="text" name="name" class="form-input border-0" value="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-                    XXXX
-                    XXXXXXXXXXXXXX">
+                <textarea type="text" name="name" rows="5" class="form-input long-input" disabled value=""></textarea>
               </label>
             </div>
             <div class="form-item">
               <label>
                 <span class="form-label">需要确认:</span>
-                <input type="text" name="name" class="form-input border-0" value="是">
+                <input type="text" name="name" class="form-input" disabled value="是">
               </label>
             </div>
             <div class="form-item">
               <label>
                 <span class="form-label">发送人:</span>
-                <input type="text" name="name" class="form-input border-0" value="张三">
+                <input type="text" name="name" class="form-input" disabled value="张三">
               </label>
-            </div>
-            <div class="form-item">
               <label>
                 <span class="form-label">发送时间:</span>
-                <input type="text" name="name" class="form-input border-0" value="2017-3-12  15:31:28">
+                <input type="text" name="name" class="form-input" disabled value="2017-3-12  15:31:28">
               </label>
             </div>
             <div class="form-item">
               <h3 class="modal-title">反馈回复</h3>
-              <hr>
-              <label>
-                <span class="form-label">是否接受:</span>
-                <select class="form-input">
-                  <option value="1" selected>是</option>
-                  <option value="1">否</option>
-                </select>
-              </label>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>
-              <button type="button" class="modal-btn" id="acceptBtn">确定</button>
+            <hr>
+            <div class="form-item">
+              <label>
+                <span class="form-label mt-20">是否接受:</span>
+                <input type="text" name="name" class="form-input" disabled value="是">
+              </label>
             </div>
           </form>
         </div>

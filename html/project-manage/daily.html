@@ -129,73 +129,113 @@
     <div class="main-container">
       <p class="module-title">人员日报</p>
       <div class="search-bar clearfix">
-        <div class="search-box">
+        <div class="search-box pull-right">
           <label>
             项目名称:
             <select class="search-input">
               <option value="1" selected>项目一</option>
             </select>
-            <span class="ml-5">汇报日期:</span>
+            <span class="">汇报日期:</span>
             <input type="text" class="search-input">
-            <span class="ml-5 mr-5">至:</span>
+            <span class="ml-1 mr-1">至:</span>
             <input type="text" class="search-input">
           </label>
-          <button class="search-btn ml-3">查 询</button>
+          <button class="search-btn ml-1">查 询</button>
         </div>
-      </div>
-      <div class="operation search-bar border-0">
-        <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
-        <button class="operation-btn" data-toggle="modal" data-target="#editModal">查看</button>
-        <button class="operation-btn" data-toggle="modal" data-target="#auditModal">审核</button>
+        <div class="operation">
+          <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
+        </div>
       </div>
 
       <div class="content">
         <table class="villa-table">
           <thead>
+            <th width="50">序号</th>
             <th>所属项目</th>
             <th>任务</th>
             <th width="250">汇报日期</th>
             <th width="200">填报时间</th>
             <th>状态</th>
+            <th>操作</th>
           </thead>
           <tbody>
             <tr>
-              <td>国家电投</td>
+              <td>1</td>
+              <td>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal">一体机</a>
+              </td>
               <td>模块一开发</td>
               <td>‎2018-03-12</td>
               <td>‎2018-03-12 ‏‎16:08:13</td>
               <td>未审核</td>
+              <td>
+                <a href="javascript:void(0);" title="审核" class="operation-icon" data-toggle="modal" data-target="#auditModal">
+                  <i class="fa fa-gavel"></i>
+                </a>
+              </td>
             </tr>
             <tr>
-              <td>一体机</td>
+              <td>2</td>
+              <td>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal">一体机</a>
+              </td>
               <td>模块一开发</td>
               <td>‎2018-03-12</td>
               <td>‎2018-03-12 ‏‎16:08:13</td>
               <td>审核通过</td>
+              <td>
+                <a href="javascript:void(0);" title="审核" class="operation-icon" data-toggle="modal" data-target="#auditModal">
+                  <i class="fa fa-gavel"></i>
+                </a>
+              </td>
             </tr>
             <tr>
-              <td>无纸化</td>
+              <td>3</td>
+              <td>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal">一体机</a>
+              </td>
               <td>模块一开发</td>
               <td>‎2018-03-12</td>
               <td>‎2018-03-12 ‏‎16:08:13</td>
               <td>发回重写</td>
+              <td>
+                <a href="javascript:void(0);" title="审核" class="operation-icon" data-toggle="modal" data-target="#auditModal">
+                  <i class="fa fa-gavel"></i>
+                </a>
+              </td>
             </tr>
             <tr>
-              <td>一体机</td>
+              <td>4</td>
+              <td>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal">一体机</a>
+              </td>
               <td>模块一开发</td>
               <td>‎2018-03-12</td>
               <td>‎2018-03-12 ‏‎16:08:13</td>
               <td>审核通过</td>
+              <td>
+                <a href="javascript:void(0);" title="审核" class="operation-icon" data-toggle="modal" data-target="#auditModal">
+                  <i class="fa fa-gavel"></i>
+                </a>
+              </td>
             </tr>
             <tr>
-              <td>无纸化</td>
+              <td>5</td>
+              <td>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal">一体机</a>
+              </td>
               <td>模块一开发</td>
               <td>‎2018-03-12</td>
               <td>‎2018-03-12 ‏‎16:08:13</td>
               <td>发回重写</td>
+              <td>
+                <a href="javascript:void(0);" title="审核" class="operation-icon" data-toggle="modal" data-target="#auditModal">
+                  <i class="fa fa-gavel"></i>
+                </a>
+              </td>
             </tr>
             <tr>
-              <td colspan="11">
+              <td colspan="99">
                 <div class="villa-pagination">
                   共计10条记录 当前显示项目:
                   <select name="" id="">
@@ -245,7 +285,7 @@
             <div class="form-item">
               <label>
                 <span class="form-label">汇报日期:</span>
-                <input type="text" name="name" class="form-input" value="2018-05-01">
+                <input type="text" name="name" class="form-input">
               </label>
             </div>
             <div class="work-content">
@@ -258,26 +298,33 @@
               <div class="form-item">
                 <label>
                   <span class="form-label">工作工时:</span>
-                  <input type="text" name="name" class="form-input input-tip" value="4">
-                  小时
+                  <div class="form-input-with-unit">
+                    <input type="text" name="amount" class="form-input">
+                    <i class="unit">小时</i>
+                  </div>
                 </label>
                 <label>
                   <span class="form-label">加班工时:</span>
-                  <input type="text" name="name" class="form-input input-tip" value="4">
-                  小时
+                  <div class="form-input-with-unit">
+                    <input type="text" name="amount" class="form-input">
+                    <i class="unit">小时</i>
+                  </div>
                 </label>
               </div>
               <div class="form-item">
                 <label>
                   <span class="form-label">完成内容:</span>
-                  <textarea rows="5" name="projectSituation" class="form-input long-input">1、模块2档编写 2、模块2系统开发
-                  </textarea>
+                  <textarea rows="5" name="projectSituation" class="form-input long-input"></textarea>
                 </label>
               </div>
               <div class="form-item">
                 <label>
                   <span class="form-label">任务进度:</span>
-                  <td><span class="progress"><i></i></span> 10%</td>
+                  <span class="progress"><i></i></span>
+                  <div class="progress-percent">
+                    <input type="text">
+                    <i class="unit">%</i>
+                  </div>
                 </label>
               </div>
             </div>
@@ -322,13 +369,17 @@
                 <div class="form-item">
                   <label>
                     <span class="form-label">工作工时:</span>
-                    <input type="text" name="name" class="form-input input-tip" value="4" disabled>
-                    小时
+                    <div class="form-input-with-unit">
+                      <input type="text" name="amount" class="form-input" disabled>
+                      <i class="unit">小时</i>
+                    </div>
                   </label>
                   <label>
                     <span class="form-label">加班工时:</span>
-                    <input type="text" name="name" class="form-input input-tip" value="4" disabled>
-                    小时
+                    <div class="form-input-with-unit">
+                      <input type="text" name="amount" class="form-input" disabled>
+                      <i class="unit">小时</i>
+                    </div>
                   </label>
                 </div>
                 <div class="form-item">
@@ -341,7 +392,11 @@
                 <div class="form-item">
                   <label>
                     <span class="form-label">任务进度:</span>
-                    <td><span class="progress"><i></i></span> 10%</td>
+                    <span class="progress"><i></i></span>
+                    <div class="progress-percent">
+                      <input type="text" disabled>
+                      <i class="unit">%</i>
+                    </div>
                   </label>
                 </div>
               </div>

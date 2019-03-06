@@ -171,7 +171,7 @@
         <div class="content">
           <div class="operation">
             <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
-            <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button>
+            <!-- <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button> -->
             <button class="operation-btn">删除</button>
           </div>
           <table class="villa-table mt-3">
@@ -192,6 +192,7 @@
               <th>报销(元)</th>
               <th>合计(元)</th>
               <th>备注</th>
+              <th>操作</th>
             </thead>
             <tbody>
               <tr>
@@ -211,6 +212,13 @@
                 <td class="text-right">30.00</td>
                 <td class="text-right">610.00</td>
                 <td>现场培训</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -229,6 +237,13 @@
                 <td class="text-right">30.00</td>
                 <td class="text-right">610.00</td>
                 <td>现场培训</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -247,6 +262,13 @@
                 <td class="text-right">30.00</td>
                 <td class="text-right">610.00</td>
                 <td>现场培训</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -265,6 +287,13 @@
                 <td class="text-right">30.00</td>
                 <td class="text-right">610.00</td>
                 <td>现场培训</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -283,6 +312,13 @@
                 <td class="text-right">30.00</td>
                 <td class="text-right">610.00</td>
                 <td>现场培训</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr style="background: #6da2ff">
                 <td></td>
@@ -295,9 +331,10 @@
                 <td class="text-right">150.00</td>
                 <td class="text-right">100300.00</td>
                 <td></td>
+                <td></td>
               </tr>
               <tr>
-                <td colspan="12">
+                <td colspan="99">
                   <div class="villa-pagination">
                     共计10条记录 当前显示项目:
                     <select name="" id="">
@@ -335,7 +372,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">成本新增</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <form action="" id="addForm">
@@ -362,21 +400,33 @@
             <div class="form-item">
               <label>
                 <span class="form-label">成本:</span>
-                <input type="text" name="time" class="form-input input-tip">天
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" class="form-input">
+                  <i class="unit">天</i>
+                </div>
               </label>
               <label>
-                <span class="form-label"></span>
-                补助小计: 320元
+                <span class="form-label">补助小计:</span>
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" disabled class="form-input">
+                  <i class="unit">元</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
               <label>
                 <span class="form-label">差旅费:</span>
-                <input type="text" name="time" class="form-input input-tip">元
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" class="form-input">
+                  <i class="unit">元</i>
+                </div>
               </label>
               <label>
-                <span class="form-label"></span>
-                合计: 820元
+                <span class="form-label">合计:</span>
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" disabled class="form-input">
+                  <i class="unit">元</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -402,7 +452,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">成本修改</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <form action="" id="addForm">
@@ -429,21 +480,33 @@
             <div class="form-item">
               <label>
                 <span class="form-label">成本:</span>
-                <input type="text" name="time" class="form-input input-tip">天
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" class="form-input">
+                  <i class="unit">天</i>
+                </div>
               </label>
               <label>
-                <span class="form-label"></span>
-                补助小计: 320元
+                <span class="form-label">补助小计:</span>
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" disabled class="form-input">
+                  <i class="unit">元</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
               <label>
                 <span class="form-label">差旅费:</span>
-                <input type="text" name="time" class="form-input input-tip">元
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" class="form-input">
+                  <i class="unit">元</i>
+                </div>
               </label>
               <label>
-                <span class="form-label"></span>
-                合计: 820元
+                <span class="form-label">合计:</span>
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" disabled class="form-input">
+                  <i class="unit">元</i>
+                </div>
               </label>
             </div>
             <div class="form-item">

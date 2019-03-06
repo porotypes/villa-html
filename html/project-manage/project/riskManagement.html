@@ -171,8 +171,8 @@
         <div class="content">
           <div class="operation">
             <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
-            <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button>
-            <button class="operation-btn" data-toggle="modal" data-target="#seeModal">查看</button>
+            <!-- <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button> -->
+            <!-- <button class="operation-btn" data-toggle="modal" data-target="#seeModal">查看</button> -->
             <button class="operation-btn">删除</button>
           </div>
 
@@ -191,6 +191,7 @@
               <th>风险概率</th>
               <th>风险值</th>
               <th>风险状态</th>
+              <th>操作</th>
             </thead>
             <tbody>
               <tr>
@@ -201,12 +202,20 @@
                     <span>1</span>
                   </label>
                 </td>
-                <td>有风险</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">有风险</a>
+                </td>
                 <td>2018-03-01</td>
                 <td>中午</td>
                 <td>一般</td>
                 <td>4</td>
                 <td>一般</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -216,12 +225,20 @@
                     <span>2</span>
                   </label>
                 </td>
-                <td>有风险</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">有风险</a>
+                </td>
                 <td>2018-03-01</td>
                 <td>中午</td>
                 <td>一般</td>
                 <td>4</td>
                 <td>一般</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -231,12 +248,20 @@
                     <span>3</span>
                   </label>
                 </td>
-                <td>有风险</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">有风险</a>
+                </td>
                 <td>2018-03-01</td>
                 <td>中午</td>
                 <td>一般</td>
                 <td>4</td>
                 <td>一般</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -246,12 +271,20 @@
                     <span>1</span>
                   </label>
                 </td>
-                <td>有风险</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">有风险</a>
+                </td>
                 <td>2018-03-01</td>
                 <td>中午</td>
                 <td>一般</td>
                 <td>4</td>
                 <td>一般</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -261,15 +294,23 @@
                     <span>5</span>
                   </label>
                 </td>
-                <td>有风险</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">有风险</a>
+                </td>
                 <td>2018-03-01</td>
                 <td>中午</td>
                 <td>一般</td>
                 <td>4</td>
                 <td>一般</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
-                <td colspan="12">
+                <td colspan="99">
                   <div class="villa-pagination">
                     共计10条记录 当前显示项目:
                     <select name="" id="">
@@ -321,12 +362,15 @@
             </div>
             <div class="form-item">
               <label>
-                <span class="form-label"><i class="form-require">*</i>可能发生<br>的阶段:</span>
+                <span class="form-label"><i class="form-require">*</i>可能发生的阶段:</span>
                 <input type="text" name="time" class="form-input">
               </label>
               <label>
                 <span class="form-label "><i class="form-require">*</i>风险概率:</span>
-                <input type="text" name="time" class="form-input input-tip">%
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" class="form-input">
+                  <i class="unit">%</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -361,7 +405,7 @@
             </div>
             <div class="form-item">
               <label>
-                <span class="form-label"><i class="form-require">*</i>缓解措施<br>执行情况:</span>
+                <span class="form-label"><i class="form-require">*</i>缓解措施执行情况:</span>
                 <select class="form-input" name="name">
                   <option value="123">List item1</option>
                   <option value="123">List item2</option>
@@ -440,12 +484,15 @@
             </div>
             <div class="form-item">
               <label>
-                <span class="form-label"><i class="form-require">*</i>可能发生<br>的阶段:</span>
+                <span class="form-label"><i class="form-require">*</i>可能发生的阶段:</span>
                 <input type="text" name="time" class="form-input">
               </label>
               <label>
                 <span class="form-label "><i class="form-require">*</i>风险概率:</span>
-                <input type="text" name="time" class="form-input input-tip">%
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" class="form-input">
+                  <i class="unit">%</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -480,7 +527,7 @@
             </div>
             <div class="form-item">
               <label>
-                <span class="form-label"><i class="form-require">*</i>缓解措施<br>执行情况:</span>
+                <span class="form-label"><i class="form-require">*</i>缓解措施执行情况:</span>
                 <select class="form-input" name="name">
                   <option value="123">List item1</option>
                   <option value="123">List item2</option>
@@ -559,12 +606,15 @@
             </div>
             <div class="form-item">
               <label>
-                <span class="form-label"><i class="form-require">*</i>可能发生<br>的阶段:</span>
+                <span class="form-label"><i class="form-require">*</i>可能发生的阶段:</span>
                 <input type="text" name="time" class="form-input" disabled>
               </label>
               <label>
                 <span class="form-label "><i class="form-require">*</i>风险概率:</span>
-                <input type="text" name="time" class="form-input input-tip" disabled>%
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" disabled class="form-input">
+                  <i class="unit">%</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -599,7 +649,7 @@
             </div>
             <div class="form-item">
               <label>
-                <span class="form-label"><i class="form-require">*</i>缓解措施<br>执行情况:</span>
+                <span class="form-label"><i class="form-require">*</i>缓解措施执行情况:</span>
                 <select class="form-input" name="name" disabled>
                   <option value="123">List item1</option>
                   <option value="123">List item2</option>

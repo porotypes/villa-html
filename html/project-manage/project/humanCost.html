@@ -171,7 +171,7 @@
         <div class="content">
           <div class="operation">
             <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
-            <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button>
+            <!-- <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button> -->
             <button class="operation-btn">删除</button>
           </div>
           <table class="villa-table mt-3">
@@ -190,6 +190,7 @@
               <th>实际工期</th>
               <th>成本小计（元）</th>
               <th>备注</th>
+              <th>操作</th>
             </thead>
             <tbody>
               <tr>
@@ -203,7 +204,7 @@
                 <td>
                   张三
                   <a href="javascript:void(0);" data-toggle="modal" data-target="#listModal">
-                    <img src="../../../img/index/u1270.png" alt="">
+                    <i class="fa fa-align-center"></i>
                   </a>
                 </td>
                 <td>初级</td>
@@ -212,6 +213,11 @@
                 <td>30</td>
                 <td class="text-right">36000.00</td>
                 <td>李四、王五有任务移交给张三</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon"><i class="fa fa-edit"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -230,6 +236,11 @@
                 <td>30</td>
                 <td class="text-right">36000.00</td>
                 <td>李四、王五有任务移交给张三</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon"><i class="fa fa-edit"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -248,6 +259,11 @@
                 <td>30</td>
                 <td class="text-right">36000.00</td>
                 <td>李四、王五有任务移交给张三</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon"><i class="fa fa-edit"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -266,6 +282,11 @@
                 <td>30</td>
                 <td class="text-right">36000.00</td>
                 <td>李四、王五有任务移交给张三</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon"><i class="fa fa-edit"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -284,6 +305,11 @@
                 <td>30</td>
                 <td class="text-right">36000.00</td>
                 <td>李四、王五有任务移交给张三</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon"><i class="fa fa-edit"></i></a>
+                </td>
               </tr>
               <tr style="background: #6da2ff">
                 <td></td>
@@ -294,9 +320,10 @@
                 <td></td>
                 <td class="text-right">100300.00</td>
                 <td></td>
+                <td></td>
               </tr>
               <tr>
-                <td colspan="9">
+                <td colspan="99">
                   <div class="villa-pagination">
                     共计10条记录 当前显示项目:
                     <select name="" id="">
@@ -337,7 +364,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
-          <table class="villa-table mt-3">
+          <table class="villa-table">
             <thead>
               <th width="50">
                 <label>
@@ -443,18 +470,27 @@
                 </select>
               </label>
               <label>
-                <span class="form-label"></span>
-                成本: 1000人/天
+                <span class="form-label">成本:</span>
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" disabled class="form-input">
+                  <i class="unit">人/天</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
               <label>
                 <span class="form-label"><i class="form-require">*</i>工时:</span>
-                <input type="text" name="time" class="form-input input-tip">小时
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" class="form-input">
+                  <i class="unit">小时</i>
+                </div>
               </label>
               <label>
                 <span class="form-label">成本小计:</span>
-                <input type="text" name="time" class="form-input input-tip">元
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" class="form-input">
+                  <i class="unit">元</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -483,49 +519,58 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
-          <form action="" id="addForm">
-            <div class="form-item">
-              <label>
-                <span class="form-label"><i class="form-require">*</i>姓名:</span>
-                <select class="form-input" name="name">
-                  <option value="123">张三</option>
-                  <option value="123">李四</option>
-                  <option value="123">王五</option>
-                </select>
-              </label>
-            </div>
-            <div class="form-item">
-              <label>
-                <span class="form-label">级别:</span>
-                <select class="form-input" name="name">
-                  <option value="123">低</option>
-                  <option value="123">中</option>
-                  <option value="123">高</option>
-                </select>
-              </label>
-              <label>
-                <span class="form-label"></span>
-                成本: 1000人/天
-              </label>
-            </div>
-            <div class="form-item">
-              <label>
-                <span class="form-label"><i class="form-require">*</i>工时:</span>
-                <input type="text" name="time" class="form-input input-tip">小时
-              </label>
-              <label>
-                <span class="form-label">成本小计:</span>
-                <input type="text" name="time" class="form-input input-tip">元
-              </label>
-            </div>
-            <div class="form-item">
-              <label>
-                <span class="form-label">备注:</span>
-                <textarea rows="5" name="remark" class="form-input long-input" value="XX日 参与项目启动会议"></textarea>
-              </label>
-              <label>
-            </div>
-          </form>
+            <form action="" id="addForm">
+              <div class="form-item">
+                <label>
+                  <span class="form-label"><i class="form-require">*</i>姓名:</span>
+                  <select class="form-input" name="name">
+                    <option value="123">张三</option>
+                    <option value="123">李四</option>
+                    <option value="123">王五</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">级别:</span>
+                  <select class="form-input" name="name">
+                    <option value="123">低</option>
+                    <option value="123">中</option>
+                    <option value="123">高</option>
+                  </select>
+                </label>
+                <label>
+                  <span class="form-label">成本:</span>
+                  <div class="form-input-with-unit">
+                    <input type="text" name="cost" disabled class="form-input">
+                    <i class="unit">人/天</i>
+                  </div>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label"><i class="form-require">*</i>工时:</span>
+                  <div class="form-input-with-unit">
+                    <input type="text" name="cost" class="form-input">
+                    <i class="unit">小时</i>
+                  </div>
+                </label>
+                <label>
+                  <span class="form-label">成本小计:</span>
+                  <div class="form-input-with-unit">
+                    <input type="text" name="cost" class="form-input">
+                    <i class="unit">元</i>
+                  </div>
+                </label>
+              </div>
+              <div class="form-item">
+                <label>
+                  <span class="form-label">备注:</span>
+                  <textarea rows="5" name="remark" class="form-input long-input" value="XX日 参与项目启动会议"></textarea>
+                </label>
+                <label>
+              </div>
+            </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">取消</button>

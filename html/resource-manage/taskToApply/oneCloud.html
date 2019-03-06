@@ -157,75 +157,80 @@
                   <option value="123">123</option>
                   <option value="123">123</option>
                 </select>
-                <span>提示: 如果没有项目将不能申请团队云，请先创建项目</span>
+                <div>
+                  <span class="form-label"></span>
+                  <span class="tip">提示: 如果没有项目将不能申请团队云，请先创建项目</span>
+                </div>
               </label>
             </div>
             <hr>
-            <div class="form-half">
-              <div class="form-item">
-                <p class="form-title">团队云账号初始化设置</p>
+            <div class="clearfix">
+              <div class="form-half pull-left">
+                <div class="form-item">
+                  <p class="form-title">团队云账号初始化设置</p>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label"><i class="form-require">*</i>用户名前缀:</span>
+                    <input type="text" class="form-input">
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label"><i class="form-require">*</i>密码:</span>
+                    <input type="password" class="form-input">
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label"><i class="form-require">*</i>确认密码:</span>
+                    <input type="password" class="form-input">
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label>
+                    <span class="form-label">密码更新提醒:</span>
+                    <select name="" id="" class="form-input">
+                      <option value="永不">永不</option>
+                      <option value="一个月">一个月</option>
+                      <option value="二个月">二个月</option>
+                      <option value="三个月">三个月</option>
+                    </select>
+                  </label>
+                </div>
               </div>
-              <div class="form-item">
-                <label>
-                  <span class="form-label">用户名前缀:<i class="form-require">*</i></span>
-                  <input type="text" class="form-input">
-                </label>
-              </div>
-              <div class="form-item">
-                <label>
-                  <span class="form-label">密码:<i class="form-require">*</i></span>
-                  <input type="password" class="form-input">
-                </label>
-              </div>
-              <div class="form-item">
-                <label>
-                  <span class="form-label">确认密码:<i class="form-require">*</i></span>
-                  <input type="password" class="form-input">
-                </label>
-              </div>
-              <div class="form-item">
-                <label>
-                  <span class="form-label">密码更新提醒:</span>
-                  <select name="" id="" class="form-input">
-                    <option value="永不">永不</option>
-                    <option value="一个月">一个月</option>
-                    <option value="二个月">二个月</option>
-                    <option value="三个月">三个月</option>
-                  </select>
-                </label>
-              </div>
-            </div>
-            <div class="form-half">
-              <div class="form-item">
-                <p class="form-title">选择团队云内部共享服务</p>
-              </div>
-              <div class="form-item">
-                <label class="pl-20">
-                  <input type="checkbox">
-                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
-                  <span>SVN + NFS + jira + Wiki + SMS</span>
-                </label>
-              </div>
-              <div class="form-item">
-                <label class="pl-20">
-                  <input type="checkbox">
-                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
-                  <span>数据库服务</span>
-                </label>
-              </div>
-              <div class="form-item">
-                <label class="pl-20">
-                  <input type="checkbox">
-                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
-                  <span>内部邮件系统</span>
-                </label>
-              </div>
-              <div class="form-item">
-                <label class="pl-20">
-                  <input type="checkbox">
-                  <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
-                  <span>群聊共享服务</span>
-                </label>
+              <div class=" pull-left">
+                <div class="form-item">
+                  <p class="form-title">选择团队云内部共享服务</p>
+                </div>
+                <div class="form-item">
+                  <label class="pl-20">
+                    <input type="checkbox">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>SVN + NFS + jira + Wiki + SMS</span>
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label class="pl-20">
+                    <input type="checkbox">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>数据库服务</span>
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label class="pl-20">
+                    <input type="checkbox">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>内部邮件系统</span>
+                  </label>
+                </div>
+                <div class="form-item">
+                  <label class="pl-20">
+                    <input type="checkbox">
+                    <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
+                    <span>群聊共享服务</span>
+                  </label>
+                </div>
               </div>
             </div>
             <hr>
@@ -258,8 +263,8 @@
           </form>
 
           <div id="virtualResource">
-            <form action="">
-              <span class="form-half">
+            <form action="" class="clearfix">
+              <span class="form-half pull-left">
                 <div class="form-item">
                   <label>
                     <span class="form-label">城市:</span>
@@ -321,7 +326,7 @@
                   </label>
 
                   <label>
-                    <span class="form-label">数量:<i class="form-require">*</i></span>
+                    <span class="form-label"><i class="form-require">*</i>数量:</span>
                     <input type="text" class="form-input" value="10">
                   </label>
                 </div>
@@ -342,7 +347,7 @@
                 </div>
               </span>
 
-              <span class="form-half pl-20">
+              <span class="pl-20 pull-left">
                 <div class="mb-20">
                   可申请虚拟机20个，已申请2个，剩余8个
                 </div>

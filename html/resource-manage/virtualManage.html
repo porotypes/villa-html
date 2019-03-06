@@ -165,10 +165,10 @@
                 <span style="visibility: hidden;">0</span>
               </label>
             </th>
-            <th width="200">虚拟机名称</th>
-            <th width="160">登录名</th>
-            <th width="130">密码</th>
-            <th width="120">使用者</th>
+            <th width="">虚拟机名称</th>
+            <th width="">登录名</th>
+            <th width="">密码</th>
+            <th width="">使用者</th>
             <th>登录模板</th>
             <th>状态</th>
             <th>套餐</th>
@@ -315,7 +315,7 @@
   </section>
 
   <div class="modal fade" id="resetModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog dialog" role="document" style="width: 620px;">
+    <div class="modal-dialog dialog" role="document" style="width: 435px;">
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">重置密码</h4>
@@ -324,7 +324,7 @@
         <div class="modal-body">
           <form action="" id="addForm">
             <div class="form-item">
-              <label>
+              <label class="m-0">
                 <span class="form-label">验证码:</span>
                 <input type="text" name="code" class="form-input">
                 <span id="verify">
@@ -333,10 +333,10 @@
                 </span>
               </label>
             </div>
-            <div class="form-item">
-              <button type="button" class="modal-btn text-center offset-3">重置密码</button>
-            </div>
           </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn text-center offset-3">重置密码</button>
         </div>
       </div>
     </div>
@@ -385,7 +385,9 @@
                   <input type="text" class="table-input" value="2017-03-15 10:45">
                 </td>
                 <td>
-                  <a href="javascript:void(0);" title="添加">添加</a>
+                  <a href="javascript:void(0);" title="添加">
+                    <i class="fa fa-plus-circle"></i>
+                  </a>
                 </td>
               </tr>
               <tr>
@@ -396,8 +398,12 @@
                 <td></td>
                 <td></td>
                 <td>
-                  <a href="javascript:void(0);" title="编辑">编辑</a>
-                  <a href="javascript:void(0);" title="添加">删除</a>
+                  <a href="javascript:void(0);" title="编辑">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                  <a href="javascript:void(0);" title="添加">
+                    <i class="fa fa-trash"></i>
+                  </a>
                 </td>
               </tr>
             </tbody>
@@ -408,7 +414,7 @@
   </div>
 
   <div class="modal fade" id="applyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog dialog" role="document" style="width: 625px;">
+    <div class="modal-dialog dialog" role="document" style="width: 370px;">
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">申请端口访问</h4>
@@ -417,19 +423,20 @@
         <div class="modal-body">
           <form action="" id="addForm">
             <div class="form-item">
-              <label>
+              <label class="m-0">
                 <span class="form-label">虚拟机端口:</span>
-                <input type="text" name="name" class="form-input long-input">
+                <input type="text" name="name" class="form-input">
+                <div>
+                  <!-- <span class="form-label"></span> -->
+                  <span class="tip">提交申请后，系统将会自动分配其对应的公网IP和端</span>
+                </div>
               </label>
-            </div>
-            <div class="form-item text-center">
-              <span class="gray">提交申请后，系统将会自动分配其对应的公网IP和端口</span>
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="modal-btn" id="applyBtn">提交</button>
           <button type="button" class="modal-btn modal-cancel-btn" data-dismiss="modal">关闭</button>
+          <button type="button" class="modal-btn" id="applyBtn">提交</button>
         </div>
       </div>
     </div>
@@ -580,7 +587,7 @@
             <div>
               <table class="villa-table">
                 <thead>
-                  <th>序号</th>
+                  <th width="50">序号</th>
                   <th>虚拟机端口</th>
                   <th>公网IP：Port</th>
                   <th>分配时间</th>

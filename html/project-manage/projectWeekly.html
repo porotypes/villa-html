@@ -170,7 +170,7 @@
             <th>填写时间</th>
             <th width="130">操作</th>
           </thead>
-          <tbody>
+          <!-- <tbody>
             <tr>
               <td>
                 <label>
@@ -302,6 +302,16 @@
                 </div>
               </td>
             </tr>
+          </tbody> -->
+          <tbody>
+            <tr>
+              <td colspan="99">
+                <div class="no-data text-center">
+                  <img src="../../img/no-data.png">
+                  <p>暂无数据</p>
+                </div>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -360,7 +370,10 @@
               <label>
                 <span class="form-label"><i class="form-require">*</i>项目进度:</span>
                 <span class="progress"><i></i></span>
-                <input type="text">
+                <div class="progress-percent">
+                  <input type="text">
+                  <i class="unit">%</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -439,7 +452,10 @@
               <label>
                 <span class="form-label"><i class="form-require">*</i>项目进度:</span>
                 <span class="progress"><i></i></span>
-                <input type="text">
+                <div class="progress-percent">
+                  <input type="text">
+                  <i class="unit">%</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -517,7 +533,10 @@
               <label>
                 <span class="form-label"><i class="form-require">*</i>项目进度:</span>
                 <span class="progress"><i></i></span>
-                <input type="text" disabled>
+                <div class="progress-percent">
+                  <input type="text" disabled>
+                  <i class="unit">%</i>
+                </div>
               </label>
             </div>
             <div class="form-item">

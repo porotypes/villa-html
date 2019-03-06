@@ -171,9 +171,7 @@
         <div class="content">
           <div class="operation">
             <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
-            <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button>
             <button class="operation-btn">删除</button>
-            <button class="operation-btn" data-toggle="modal" data-target="#seeModal">查看</button>
           </div>
           <table class="villa-table mt-3">
             <thead>
@@ -192,6 +190,7 @@
               <th>实际结束时间</th>
               <th>实际工期</th>
               <th>当前状态</th>
+              <th>操作</th>
             </thead>
             <tbody>
               <tr>
@@ -202,7 +201,9 @@
                     <span>1</span>
                   </label>
                 </td>
-                <td>需求分析</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">需求分析</a>
+                </td>
                 <td>2018-01-01</td>
                 <td>2018-02-01</td>
                 <td></td>
@@ -210,16 +211,23 @@
                 <td></td>
                 <td>30</td>
                 <td>进行中</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon"><i class="fa fa-edit"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>
                   <label>
                     <input type="checkbox" id="villa-1">
                     <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
-                    <span>1</span>
+                    <span>2</span>
                   </label>
                 </td>
-                <td>需求分析</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">需求分析</a>
+                </td>
                 <td>2018-01-01</td>
                 <td>2018-02-01</td>
                 <td></td>
@@ -227,16 +235,23 @@
                 <td></td>
                 <td>30</td>
                 <td>进行中</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon"><i class="fa fa-edit"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>
                   <label>
                     <input type="checkbox" id="villa-1">
                     <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
-                    <span>1</span>
+                    <span>3</span>
                   </label>
                 </td>
-                <td>需求分析</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">需求分析</a>
+                </td>
                 <td>2018-01-01</td>
                 <td>2018-02-01</td>
                 <td></td>
@@ -244,16 +259,23 @@
                 <td></td>
                 <td>30</td>
                 <td>进行中</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon"><i class="fa fa-edit"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>
                   <label>
                     <input type="checkbox" id="villa-1">
                     <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
-                    <span>1</span>
+                    <span>4</span>
                   </label>
                 </td>
-                <td>需求分析</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">需求分析</a>
+                </td>
                 <td>2018-01-01</td>
                 <td>2018-02-01</td>
                 <td></td>
@@ -261,16 +283,23 @@
                 <td></td>
                 <td>30</td>
                 <td>进行中</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon"><i class="fa fa-edit"></i></a>
+                </td>
               </tr>
               <tr>
                 <td>
                   <label>
                     <input type="checkbox" id="villa-1">
                     <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
-                    <span>1</span>
+                    <span>5</span>
                   </label>
                 </td>
-                <td>需求分析</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">需求分析</a>
+                </td>
                 <td>2018-01-01</td>
                 <td>2018-02-01</td>
                 <td></td>
@@ -278,9 +307,14 @@
                 <td></td>
                 <td>30</td>
                 <td>进行中</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon"><i class="fa fa-edit"></i></a>
+                </td>
               </tr>
               <tr>
-                <td colspan="9">
+                <td colspan="99">
                   <div class="villa-pagination">
                     共计10条记录 当前显示项目:
                     <select name="" id="">
@@ -347,8 +381,10 @@
             <div class="form-item">
               <label>
                 <span class="form-label"><i class="form-require">*</i>计划工期:</span>
-                <input type="text" name="start" class="form-input">
-                人/天
+                <div class="form-input-with-unit">
+                  <input type="text" name="amount" class="form-input">
+                  <i class="unit">人/天</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -403,8 +439,10 @@
             <div class="form-item">
               <label>
                 <span class="form-label"><i class="form-require">*</i>计划工期:</span>
-                <input type="text" name="start" class="form-input">
-                人/天
+                <div class="form-input-with-unit">
+                  <input type="text" name="amount" class="form-input">
+                  <i class="unit">人/天</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -459,8 +497,10 @@
               <div class="form-item">
                 <label>
                   <span class="form-label"><i class="form-require">*</i>计划工期:</span>
-                  <input type="text" name="start" class="form-input" disabled>
-                  人/天
+                  <div class="form-input-with-unit">
+                    <input type="text" name="amount" disabled class="form-input">
+                    <i class="unit">人/天</i>
+                  </div>
                 </label>
               </div>
               <div class="form-item">

@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   $('#startTime1').fdatepicker({
     language: 'zh-CN',
     format: 'yyyy-mm-dd',
@@ -19,7 +19,7 @@ $(function() {
     format: 'yyyy-mm-dd',
   });
 
-  $('#addBtn').on('click', function() {
+  $('#addBtn').on('click', function () {
     $('#addForm').validate({
       rules: {
         name: {
@@ -57,10 +57,22 @@ $(function() {
       }
     });
 
-    $('#addForm').valid();
+    if (!$('#addForm').valid()) {
+      $('#addModal').modal('hide');
+      $('#saveErrorModal').modal('show');
+      setTimeout(function () {
+        $('#saveErrorModal').modal('hide');
+      }, 2000);
+      return;
+    }
+    $('#addModal').modal('hide');
+    $('#saveSuccessModal').modal('show');
+    setTimeout(function () {
+      $('#saveSuccessModal').modal('hide');
+    }, 2000);
   });
 
-  $('#editBtn').on('click', function() {
+  $('#editBtn').on('click', function () {
     $('#editForm').validate({
       rules: {
         name: {

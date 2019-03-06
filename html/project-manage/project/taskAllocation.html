@@ -171,8 +171,8 @@
         <div class="content">
           <div class="operation">
             <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
-            <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button>
-            <button class="operation-btn" data-toggle="modal" data-target="#interruptModal">中断</button>
+            <!-- <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button>
+            <button class="operation-btn" data-toggle="modal" data-target="#interruptModal">中断</button> -->
             <button class="operation-btn" data-toggle="modal" data-target="#transferModal">任务移交</button>
             <button class="operation-btn" data-toggle="modal" data-target="#detailModal">任汇报读明细</button>
           </div>
@@ -193,8 +193,9 @@
               <th>计划结束时间</th>
               <th>预计工时(小时)</th>
               <th>实际工时</th>
-              <th>进度</th>
+              <th width="300">进度</th>
               <th>状态</th>
+              <th>操作</th>
             </thead>
             <tbody>
               <tr>
@@ -215,13 +216,23 @@
                 <td>2</td>
                 <td><span class="progress"><i></i></span> 50%</td>
                 <td>正常</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#interruptModal" title="中断"
+                    class="operation-icon">
+                    <i class="fa fa-ban"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
                   <label>
                     <input type="checkbox" id="villa-1">
                     <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
-                    <span>1</span>
+                    <span>2</span>
                   </label>
                 </td>
                 <td>需求</td>
@@ -234,13 +245,23 @@
                 <td>2</td>
                 <td><span class="progress"><i></i></span> 50%</td>
                 <td>正常</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#interruptModal" title="中断"
+                    class="operation-icon">
+                    <i class="fa fa-ban"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
                   <label>
                     <input type="checkbox" id="villa-1">
                     <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
-                    <span>1</span>
+                    <span>3</span>
                   </label>
                 </td>
                 <td>需求</td>
@@ -253,13 +274,23 @@
                 <td>2</td>
                 <td><span class="progress"><i></i></span> 50%</td>
                 <td>正常</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#interruptModal" title="中断"
+                    class="operation-icon">
+                    <i class="fa fa-ban"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
                   <label>
                     <input type="checkbox" id="villa-1">
                     <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
-                    <span>1</span>
+                    <span>4</span>
                   </label>
                 </td>
                 <td>需求</td>
@@ -272,13 +303,23 @@
                 <td>2</td>
                 <td><span class="progress"><i></i></span> 50%</td>
                 <td>正常</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#interruptModal" title="中断"
+                    class="operation-icon">
+                    <i class="fa fa-ban"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
                   <label>
                     <input type="checkbox" id="villa-1">
                     <span class="checkbox-icon"><i class="fa fa-check-square"></i></span>
-                    <span>1</span>
+                    <span>5</span>
                   </label>
                 </td>
                 <td>需求</td>
@@ -291,9 +332,19 @@
                 <td>2</td>
                 <td><span class="progress"><i></i></span> 50%</td>
                 <td>正常</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改"
+                    class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#interruptModal" title="中断"
+                    class="operation-icon">
+                    <i class="fa fa-ban"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
-                <td colspan="9">
+                <td colspan="99">
                   <div class="villa-pagination">
                     共计10条记录 当前显示项目:
                     <select name="" id="">
@@ -331,14 +382,15 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">项目任务</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <form action="" id="addForm">
             <div class="form-item">
               <label>
                 <span class="form-label"><i class="form-require">*</i>任务名称:</span>
-                <input type="text" name="name" class="form-input">
+                <input type="text" name="name" class="form-input long-input">
               </label>
             </div>
             <div class="form-item">
@@ -391,8 +443,11 @@
                 </select>
               </label>
               <label>
-                <span class="form-label text-center"><i class="form-require">*</i>计划工时:</span>
-                <input type="text" name="end" class="form-input input-tip">小时
+                <span class="form-label"><i class="form-require">*</i>计划工时:</span>
+                <div class="form-input-with-unit">
+                  <input type="text" name="cost" class="form-input">
+                  <i class="unit">小时</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -428,7 +483,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">任务修改</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <form action="" id="addForm">
@@ -525,14 +581,15 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">任务中断</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <form action="" id="addForm">
             <div class="form-item">
               <label>
                 <span class="form-label"><i class="form-require">*</i>中断原因:</span>
-                <input type="text" name="start" class="form-input">
+                <input type="text" name="start" class="form-input long-input">
               </label>
             </div>
             <div class="form-item">
@@ -572,11 +629,12 @@
 
   <!-- 任务移交 -->
   <div class="modal fade" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog dialog" role="document" style="width: 625px;">
+    <div class="modal-dialog dialog" role="document" style="width: 400px;">
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">任务移交</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <form action="" id="addForm">
@@ -616,7 +674,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">日报汇总</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body" style="max-height: 600px; overflow: auto">
           <form action="" id="addForm">
@@ -627,7 +686,10 @@
               </label>
               <label>
                 <span class="form-label">工时:</span>
-                <input type="text" name="end" class="form-input input-tip">小时
+                <div class="form-input-with-unit">
+                  <input type="text" name="amount" class="form-input">
+                  <i class="unit">小时</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -641,59 +703,77 @@
             <div class="form-item">
               <label>
                 <span class="form-label">任务进度:</span>
-                <span class="progress"><i></i></span> 10%
+                <span class="progress"><i></i></span>
+                <div class="progress-percent">
+                  <input type="text">
+                  <i class="unit">%</i>
+                </div>
               </label>
             </div>
-            <hr>
+            <hr class="mb-20">
             <div class="form-item">
-                <label>
-                  <span class="form-label">汇报日期:</span>
-                  <input type="text" name="end" class="form-input">
-                </label>
-                <label>
-                  <span class="form-label">工时:</span>
-                  <input type="text" name="end" class="form-input input-tip">小时
-                </label>
-              </div>
-              <div class="form-item">
-                <label>
-                  <span class="form-label">完成内容:</span>
-                  <textarea rows="5" name="remark" class="form-input long-input" value="1、模块2档编写
-                      2、模块2系统开发"></textarea>
-                </label>
-                <label>
-              </div>
-              <div class="form-item">
-                <label>
-                  <span class="form-label">任务进度:</span>
-                  <span class="progress"><i></i></span> 10%
-                </label>
-              </div>
-              <hr>
+              <label>
+                <span class="form-label">汇报日期:</span>
+                <input type="text" name="end" class="form-input">
+              </label>
+              <label>
+                <span class="form-label">工时:</span>
+                <div class="form-input-with-unit">
+                  <input type="text" name="amount" class="form-input">
+                  <i class="unit">小时</i>
+                </div>
+              </label>
+            </div>
             <div class="form-item">
-                <label>
-                  <span class="form-label">汇报日期:</span>
-                  <input type="text" name="end" class="form-input">
-                </label>
-                <label>
-                  <span class="form-label">工时:</span>
-                  <input type="text" name="end" class="form-input input-tip">小时
-                </label>
-              </div>
-              <div class="form-item">
-                <label>
-                  <span class="form-label">完成内容:</span>
-                  <textarea rows="5" name="remark" class="form-input long-input" value="1、模块2档编写
+              <label>
+                <span class="form-label">完成内容:</span>
+                <textarea rows="5" name="remark" class="form-input long-input" value="1、模块2档编写
                       2、模块2系统开发"></textarea>
-                </label>
-                <label>
-              </div>
-              <div class="form-item">
-                <label>
-                  <span class="form-label">任务进度:</span>
-                  <span class="progress"><i></i></span> 10%
-                </label>
-              </div>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">任务进度:</span>
+                <span class="progress"><i></i></span>
+                <div class="progress-percent">
+                  <input type="text">
+                  <i class="unit">%</i>
+                </div>
+              </label>
+            </div>
+            <hr class="mb-20">
+            <div class="form-item">
+              <label>
+                <span class="form-label">汇报日期:</span>
+                <input type="text" name="end" class="form-input">
+              </label>
+              <label>
+                <span class="form-label">工时:</span>
+                <div class="form-input-with-unit">
+                  <input type="text" name="amount" class="form-input">
+                  <i class="unit">小时</i>
+                </div>
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">完成内容:</span>
+                <textarea rows="5" name="remark" class="form-input long-input" value="1、模块2档编写
+                      2、模块2系统开发"></textarea>
+              </label>
+              <label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">任务进度:</span>
+                <span class="progress"><i></i></span>
+                <div class="progress-percent">
+                  <input type="text">
+                  <i class="unit">%</i>
+                </div>
+              </label>
+            </div>
           </form>
         </div>
         <div class="modal-footer">

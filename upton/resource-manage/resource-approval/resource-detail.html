@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>资源审批清单</title>
+  <link rel="stylesheet" href="../../../css/bootstrap.css">
+  <link rel="stylesheet" href="../../../css/main.css">
+  <link rel="stylesheet" href="../../../css/font-awesome.min.css">
+  <script src="../../../js/jq-3.3.1.js"></script>
+  <script src="../../../js/bootstrap.js"></script>
+  <script src="../../../js/index.js"></script>
+</head>
+
+<body class="clearfix">
+  <header class="clearfix">
+    <div class="logo">
+      <img src="../../../img/index/logo.png" alt="logo">
+    </div>
+
+    <div class="role">
+      <span>Upton <i class="fa fa-caret-right"></i></span>
+
+      <div class="role-select">
+        <p class="role-item">User</p>
+        <p class="role-item">Master</p>
+      </div>
+    </div>
+
+    <div class="right-control clearfix">
+      <div class="notice">
+        <a href="##">
+          <i class="fa fa-bell"></i>
+        </a>
+
+        <span class="num">5</span>
+      </div>
+      <div class="user">
+        <i class="fa fa-user"></i>
+        <span>13800138000,您好</span>
+      </div>
+      <div class="logout" title="注销">
+        <a href="../../html/login/login.html">
+          <span class="icon-container">
+            <i class="fa fa-power-off"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <aside>
+    <ul class="menu">
+      <li class="menu-item active open">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon project-manage"></span>
+            <span>资源管理</span>
+            <i class="fa fa-caret-down"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item sub-menu-item-active"">
+            <a href="../resource-approval.html">资源审批 </a> </li> <li class="sub-menu-item">
+            <a href="../enterprises-pay.html">企业支付</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon project-manage"></span>
+            <span>系统管理</span>
+            <i class="fa fa-caret-down"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item"">
+            <a href="../../system-manage/user.html">用户管理 </a> </li> <li class="sub-menu-item">
+            <a href="../../system-manage/parameter.html">参数配置</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../system-manage/operation-log.html">操作日志</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../../system-manage/enterprise-information.html">企业基本信息</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <section class="main">
+    <div class="main-container">
+      <p class="module-title"><a href="../resource-approval.html">
+          <</a> XX0000000</p> <div class="content">
+            <div class="form-item">
+              <label>
+                <span class="form-label">项目名称:</span>
+                <input type="text" class="form-input" disabled value="无纸化">
+              </label>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">申请人:</span>
+                <input type="text" class="form-input" disabled value="张三">
+              </label>
+            </div>
+            <hr>
+            <div class="form-item">
+              <div class="form-title">团队云账号初始化设置</div>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">用户名前缀:</span>
+                <input type="text" class="form-input" disabled value="onecloud">
+              </label>
+              <label>
+                <span class="form-label">密码:</span>
+                <input type="text" class="form-input" disabled value="123456">
+              </label>
+              <label>
+                <span class="form-label">密码更新提醒:</span>
+                <input type="text" class="form-input" disabled value="永不">
+              </label>
+            </div>
+            <div class="form-item">
+              <div class="form-title">团队云内部共享服务</div>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">服务:</span>
+                <input type="text" class="form-input long-input" disabled value="SVN+NFS+Jira+Wiki+SMS, 数据库服务, 内部邮件服务">
+              </label>
+            </div>
+            <div class="form-item">
+              <div class="form-title">管理员信息</div>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">管理员姓名:</span>
+                <input type="text" class="form-input" disabled value="张三">
+              </label>
+            </div>
+            <div class="form-item">
+              <div class="form-title">团队云内部IP范围</div>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">IP:</span>
+                <input type="text" class="form-input" disabled value="192.168.0.1/24">
+              </label>
+            </div>
+            <hr>
+            <div class="form-item">
+              <div class="form-title">文件拷贝信息</div>
+            </div>
+            <div class="form-item">
+              <label>
+                <span class="form-label">内部文件服务器:</span>
+                <input type="text" class="form-input long-input" disabled value="SVN+NFS+Jira+Wiki+SMS">
+              </label>
+            </div>
+            <hr>
+            <div class="form-item">
+              <div class="form-title">虚拟机资源</div>
+            </div>
+            <table class="villa-table">
+              <thead>
+                <th width="50">序号</th>
+                <th>城市</th>
+                <th>运营商</th>
+                <th>颜色深度</th>
+                <th>链路速度</th>
+                <th>套餐名称</th>
+                <th>模板名称</th>
+                <th>数量</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>广州</td>
+                  <td>电信</td>
+                  <td></td>
+                  <td></td>
+                  <td>2核4G</td>
+                  <td>Ubuntu 12.04</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>广州</td>
+                  <td>电信</td>
+                  <td></td>
+                  <td></td>
+                  <td>2核4G</td>
+                  <td>Ubuntu 12.04</td>
+                  <td>10</td>
+                </tr>
+                <tr></tr>
+              </tbody>
+            </table>
+
+            <div class="form-item mt-20 text-center">
+              <button class="modal-btn modal-cancel-btn" data-toggle="modal" data-target="#feedBackModal">退回编辑</button>
+              <button class="modal-btn" data-toggle="modal" data-target="#payModal">支 付</button>
+            </div>
+    </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 625px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h4 class="modal-title">支付</h4> -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-item">
+            <label>
+              <span class="form-label">付款账号:</span>
+              <input type="text" disabled class="form-input" value="onecloud_admin">
+            </label>
+            <label>
+              <span class="form-label">套餐名称:</span>
+              <input type="text" disabled class="form-input" value="1核1G">
+            </label>
+          </div>
+          <div class="form-item">
+            <label>
+              <span class="form-label">模板名称:</span>
+              <input type="text" disabled class="form-input" value="provider-win7-temp1">
+            </label>
+            <label>
+              <span class="form-label">到期时间:</span>
+              <input type="text" disabled class="form-input" value="2019-12-30">
+            </label>
+          </div>
+          <hr>
+          <div class="form-item mt-20">
+            <label>
+              <span class="form-label">支付方式:</span>
+              <span class="pay-type alipay">支付宝</span>
+              <span class="pay-type wechatpay">微信支付</span>
+            </label>
+          </div>
+          <hr>
+          <div class="form-item">
+            <p class="form-title text-right m-0">
+              支付金额: <span class="text-danger">10000.00</span>
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-btn" id="addBtn">提交订单</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="feedBackModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog dialog" role="document" style="width: 625px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">提示</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <p class="form-title text-center">确定退回给项目经理进行编辑？</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="modal-btn modal-cancel-btn" id="addBtn">取消</button>
+          <button type="button" class="modal-btn" id="addBtn">确认</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  $(function() {
+    $('.pay-type').on('click', function() {
+      $('.pay-type').removeClass('active');
+      $(this).addClass('active');
+    });
+  });
+</script>
+</html>

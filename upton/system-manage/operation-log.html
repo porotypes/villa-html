@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>操作日志</title>
+  <link rel="stylesheet" href="../../css/bootstrap.css">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
+  <script src="../../js/jq-3.3.1.js"></script>
+  <script src="../../js/bootstrap.js"></script>
+  <script src="../../js/index.js"></script>
+</head>
+
+<body class="clearfix">
+  <header class="clearfix">
+    <div class="logo">
+      <img src="../../img/index/logo.png" alt="logo">
+    </div>
+
+    <div class="role">
+      <span>Upton <i class="fa fa-caret-right"></i></span>
+
+      <div class="role-select">
+        <p class="role-item">User</p>
+        <p class="role-item">Master</p>
+      </div>
+    </div>
+
+    <div class="right-control clearfix">
+      <div class="notice">
+        <a href="##">
+          <i class="fa fa-bell"></i>
+        </a>
+
+        <span class="num">5</span>
+      </div>
+      <div class="user">
+        <i class="fa fa-user"></i>
+        <span>13800138000,您好</span>
+      </div>
+      <div class="logout" title="注销">
+        <a href="../../html/login/login.html">
+          <span class="icon-container">
+            <i class="fa fa-power-off"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <aside>
+    <ul class="menu">
+      <li class="menu-item">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon project-manage"></span>
+            <span>资源管理</span>
+            <i class="fa fa-caret-down"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item"">
+            <a href=" ../resource-manage/resource-approval.html">资源审批 </a> </li> <li class="sub-menu-item">
+            <a href="../resource-manage/enterprises-pay.html">企业支付</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item active open">
+        <div class="clearfix">
+          <a href="javascript:void(0);">
+            <span class="menu-icon project-manage"></span>
+            <span>系统管理</span>
+            <i class="fa fa-caret-down"></i>
+          </a>
+        </div>
+        <ul class="sub-menu">
+          <li class="sub-menu-item"">
+            <a href=" ../system-manage/user.html">用户管理 </a> </li> <li class="sub-menu-item">
+            <a href="../system-manage/parameter.html">参数配置</a>
+          </li>
+          <li class="sub-menu-item sub-menu-item-active">
+            <a href="../system-manage/operation-log.html">操作日志</a>
+          </li>
+          <li class="sub-menu-item">
+            <a href="../system-manage/enterprise-information.html">企业基本信息</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <section class="main">
+    <div class="main-container">
+      <p class="module-title">操作日志</p>
+
+      <div class="search-bar clearfix">
+        <div class="search-icon mr-20 pull-right">
+          <i class="fa fa-search-plus"></i>
+        </div>
+        <form id="search-form">
+          <div>
+            <label>
+              操作页面:
+              <select class="search-input">
+                <option value="123">132</option>
+                <option value="123">132</option>
+                <option value="123">132</option>
+                <option value="123">132</option>
+              </select>
+            </label>
+            <label>
+              操作类型:
+              <select class="search-input">
+                <option value="123">132</option>
+                <option value="123">132</option>
+                <option value="123">132</option>
+                <option value="123">132</option>
+              </select>
+            </label>
+            <label>
+              操作人: <input type="text" class="search-input">
+            </label>
+            <button class="search-btn">查 询</button>
+          </div>
+          <div>
+            <label>
+              操作时间: <input type="text" class="search-input">
+              至 <input type="text" class="search-input">
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <div class="content">
+        <table class="villa-table">
+          <thead>
+            <th width="50">序号</th>
+            <th>操作页面</th>
+            <th>操作类型</th>
+            <th>操作内容</th>
+            <th>操作人</th>
+            <th>操作时间</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>操作日志</td>
+              <td>删除</td>
+              <td>123</td>
+              <td>张三</td>
+              <td>2018-02-01</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>操作日志</td>
+              <td>删除</td>
+              <td>123</td>
+              <td>张三</td>
+              <td>2018-02-01</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>操作日志</td>
+              <td>删除</td>
+              <td>123</td>
+              <td>张三</td>
+              <td>2018-02-01</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>操作日志</td>
+              <td>删除</td>
+              <td>123</td>
+              <td>张三</td>
+              <td>2018-02-01</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>操作日志</td>
+              <td>删除</td>
+              <td>123</td>
+              <td>张三</td>
+              <td>2018-02-01</td>
+            </tr>
+            <tr>
+              <td colspan="99">
+                <div class="villa-pagination">
+                  共计10条记录 当前显示项目:
+                  <select name="" id="">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                  </select>
+                  <ul class="clearfix">
+                    <li><i class="fa fa-angle-left"></i></li>
+                    <li class="active">1</li>
+                    <li>...</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>...</li>
+                    <li>10</li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                  </ul>
+                  <input type="text" class="page-num">
+                  <button class="page-btn">GO</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</body>
+<script>
+  $(function() {
+    var openSearchBar = false;
+
+    $('.search-icon i').on('click', function() {
+      if (openSearchBar) {
+        $('.search-icon').removeClass('active');
+        $('#search-form').hide();
+      } else {
+        $('.search-icon').addClass('active');
+        $('#search-form').show();
+      }
+      openSearchBar = !openSearchBar;
+    });
+  });
+</script>
+</html>

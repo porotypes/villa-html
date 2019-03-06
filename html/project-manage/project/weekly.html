@@ -171,9 +171,9 @@
         <div class="content">
           <div class="operation">
             <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
-            <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button>
+            <!-- <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button> -->
             <button class="operation-btn" data-toggle="modal" data-target="#delModal">删除</button>
-            <button class="operation-btn" data-toggle="modal" data-target="#seeModal">查看</button>
+            <!-- <button class="operation-btn" data-toggle="modal" data-target="#seeModal">查看</button> -->
           </div>
           <table class="villa-table mt-3">
             <thead>
@@ -189,6 +189,7 @@
               <th>亮灯状态</th>
               <th>汇报时间</th>
               <th>审核状态</th>
+              <th>操作</th>
             </thead>
             <tbody>
               <tr>
@@ -199,11 +200,19 @@
                     <span>1</span>
                   </label>
                 </td>
-                <td>2018-04-09 至 2018-04-13</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">2018-04-09 至 2018-04-13</a>
+                </td>
                 <td><span class="progress"><i></i></span> 20%</td>
                 <td class="text-center"><span class="light green"></span></td>
                 <td>‎2018-03-02 ‏‎16:08:13</td>
                 <td>审核通过</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -213,11 +222,19 @@
                     <span>2</span>
                   </label>
                 </td>
-                <td>2018-04-09 至 2018-04-13</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">2018-04-09 至 2018-04-13</a>
+                </td>
                 <td><span class="progress"><i></i></span> 20%</td>
                 <td class="text-center"><span class="light green"></span></td>
                 <td>‎2018-03-02 ‏‎16:08:13</td>
                 <td>审核通过</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -227,11 +244,19 @@
                     <span>3</span>
                   </label>
                 </td>
-                <td>2018-04-09 至 2018-04-13</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">2018-04-09 至 2018-04-13</a>
+                </td>
                 <td><span class="progress"><i></i></span> 20%</td>
                 <td class="text-center"><span class="light green"></span></td>
                 <td>‎2018-03-02 ‏‎16:08:13</td>
                 <td>审核通过</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -241,11 +266,19 @@
                     <span>4</span>
                   </label>
                 </td>
-                <td>2018-04-09 至 2018-04-13</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">2018-04-09 至 2018-04-13</a>
+                </td>
                 <td><span class="progress"><i></i></span> 20%</td>
                 <td class="text-center"><span class="light green"></span></td>
                 <td>‎2018-03-02 ‏‎16:08:13</td>
                 <td>审核通过</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -255,14 +288,22 @@
                     <span>5</span>
                   </label>
                 </td>
-                <td>2018-04-09 至 2018-04-13</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">2018-04-09 至 2018-04-13</a>
+                </td>
                 <td><span class="progress"><i></i></span> 20%</td>
                 <td class="text-center"><span class="light green"></span></td>
                 <td>‎2018-03-02 ‏‎16:08:13</td>
                 <td>审核通过</td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon"><i class="fa fa-trash"></i></a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
-                <td colspan="9">
+                <td colspan="99">
                   <div class="villa-pagination">
                     共计10条记录 当前显示项目:
                     <select name="" id="">
@@ -331,7 +372,10 @@
               <label>
                 <span class="form-label"><i class="form-require">*</i>项目进度:</span>
                 <span class="progress"><i></i></span>
-                <input type="text">
+                <div class="progress-percent">
+                  <input type="text">
+                  <i class="unit">%</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -395,7 +439,10 @@
               <label>
                 <span class="form-label"><i class="form-require">*</i>项目进度:</span>
                 <span class="progress"><i></i></span>
-                <input type="text">
+                <div class="progress-percent">
+                  <input type="text">
+                  <i class="unit">%</i>
+                </div>
               </label>
             </div>
             <div class="form-item">
@@ -478,7 +525,10 @@
               <label>
                 <span class="form-label"><i class="form-require">*</i>项目进度:</span>
                 <span class="progress"><i></i></span>
-                <input type="text" disabled>
+                <div class="progress-percent">
+                  <input type="text" disabled>
+                  <i class="unit">%</i>
+                </div>
               </label>
             </div>
             <div class="form-item">

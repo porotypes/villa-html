@@ -66,7 +66,7 @@ $(function () {
       },
       legend: {
         squareSymbol: false,
-        symbolPadding: 5,
+        symbolPadding: 2,
         symbolRadius: 3,
         symbolWidth: 25,
         symbolHeight: 14,
@@ -90,11 +90,15 @@ $(function () {
     var taskStatistialChartOption = {
       title: {
         text: '任务统计',
-        left: 'center'
+        left: 'center',
+        top: 5
       },
       color: ['#6b75fa', '#efe24c'],
       tooltip: {
         trigger: 'item'
+      },
+      grid: {
+        top: 20
       },
       legend: {
         bottom: 10,
@@ -104,7 +108,7 @@ $(function () {
       series: [
         {
           type: 'pie',
-          radius: ['50%', '70%'],
+          radius: ['40%', '60%'],
           center: ['50%', '50%'],
           selectedMode: 'single',
           label: {
@@ -154,9 +158,6 @@ $(function () {
           ],
           axisTick: {
             alignWithLabel: true
-          },
-          axisLabel: {
-            interval: 0
           },
           nameTextStyle: {
             color: '#4a4a4a'

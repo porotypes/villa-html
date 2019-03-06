@@ -171,9 +171,9 @@
         <div class="content">
           <div class="operation">
             <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
-            <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button>
+            <!-- <button class="operation-btn" data-toggle="modal" data-target="#editModal">修改</button> -->
             <button class="operation-btn">删除</button>
-            <button class="operation-btn" data-toggle="modal" data-target="#seeModal">查看</button>
+            <!-- <button class="operation-btn" data-toggle="modal" data-target="#seeModal">查看</button> -->
           </div>
 
           <table class="villa-table mt-3">
@@ -191,6 +191,7 @@
               <th>员工等级</th>
               <th>审核状态</th>
               <th>审核结果</th>
+              <th>操作</th>
             </thead>
             <tbody>
               <tr>
@@ -201,12 +202,22 @@
                     <span>1</span>
                   </label>
                 </td>
-                <td></td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">无纸化</a>
+                </td>
                 <td>需求</td>
                 <td>高</td>
                 <td>待审核</td>
                 <td></td>
                 <td></td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon">
+                    <i class="fa fa-trash"></i>
+                  </a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -216,12 +227,22 @@
                     <span>2</span>
                   </label>
                 </td>
-                <td></td>
-                <td>设计</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">无纸化</a>
+                </td>
+                <td>需求</td>
                 <td>高</td>
                 <td>待审核</td>
                 <td></td>
                 <td></td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon">
+                    <i class="fa fa-trash"></i>
+                  </a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -231,12 +252,22 @@
                     <span>3</span>
                   </label>
                 </td>
-                <td></td>
-                <td>设计</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">无纸化</a>
+                </td>
+                <td>需求</td>
                 <td>高</td>
                 <td>待审核</td>
                 <td></td>
                 <td></td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon">
+                    <i class="fa fa-trash"></i>
+                  </a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -246,12 +277,22 @@
                     <span>4</span>
                   </label>
                 </td>
-                <td></td>
-                <td>设计</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">无纸化</a>
+                </td>
+                <td>需求</td>
                 <td>高</td>
                 <td>待审核</td>
                 <td></td>
                 <td></td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon">
+                    <i class="fa fa-trash"></i>
+                  </a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
                 <td>
@@ -261,15 +302,25 @@
                     <span>5</span>
                   </label>
                 </td>
-                <td></td>
-                <td>设计</td>
+                <td>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#seeModal">无纸化</a>
+                </td>
+                <td>需求</td>
                 <td>高</td>
                 <td>待审核</td>
                 <td></td>
                 <td></td>
+                <td>
+                  <a href="javascript:void(0);" title="删除" class="operation-icon">
+                    <i class="fa fa-trash"></i>
+                  </a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#editModal" title="修改" class="operation-icon">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </td>
               </tr>
               <tr>
-                <td colspan="8">
+                <td colspan="89">
                   <div class="villa-pagination">
                     共计10条记录 当前显示项目:
                     <select name="" id="">
@@ -314,7 +365,7 @@
             <div class="form-item">
               <label>
                 <span class="form-label"><i class="form-require">*</i>变更名称:</span>
-                <input type="text" name="name" class="form-input">
+                <input type="text" name="name" class="form-input long-input">
               </label>
             </div>
             <div class="form-item">
@@ -394,7 +445,7 @@
             <div class="form-item">
               <label>
                 <span class="form-label"><i class="form-require">*</i>变更名称:</span>
-                <input type="text" name="name" class="form-input">
+                <input type="text" name="name" class="form-input long-input">
               </label>
             </div>
             <div class="form-item">
@@ -474,7 +525,7 @@
             <div class="form-item">
               <label>
                 <span class="form-label"><i class="form-require">*</i>变更名称:</span>
-                <input type="text" name="name" class="form-input" disabled>
+                <input type="text" name="name" class="form-input long-input" disabled>
               </label>
             </div>
             <div class="form-item">

@@ -52,25 +52,47 @@
     </header>
 
     <aside>
-        <ul class="menu">
-            <li class="menu-item active open">
-                <div class="clearfix">
-                    <a href="javascript:void(0);">
-                        <span class="menu-icon project-manage"></span>
-                        <span>系统管理</span>
-                        <i class="fa fa-caret-down"></i>
-                    </a>
-                </div>
-                <ul class="sub-menu">
-                    <li class="sub-menu-item">
-                        <a href="../user.html">用户管理
-                        </a> </li>
-                    <li class="sub-menu-item  sub-menu-item-active">
-                        <a href="../parameter.html">参数配置</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+            <ul class="menu">
+                <li class="menu-item">
+                    <div class="clearfix">
+                        <a href="javascript:void(0);">
+                            <span class="menu-icon project-manage"></span>
+                            <span>资源管理</span>
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item"">
+                          <a href="../../resource-manage/resource-approval.html">资源审批 </a> </li> <li
+                            class="sub-menu-item">
+                            <a href="../../resource-manage/enterprises-pay.html">企业支付</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item active open">
+                    <div class="clearfix">
+                        <a href="javascript:void(0);">
+                            <span class="menu-icon project-manage"></span>
+                            <span>系统管理</span>
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">
+                          <a href=" ../../system-manage/user.html">用户管理</a>
+                        </li> 
+                        <li class="sub-menu-item sub-menu-item-active">
+                            <a href="../../system-manage/parameter.html">参数配置</a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="../../system-manage/operation-log.html">操作日志</a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="../../system-manage/enterprise-information.html">企业基本信息</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
     </aside>
 
     <section class="main">
@@ -87,19 +109,20 @@
 
             <div class="content">
                 <div class="search-bar clearfix m-0">
-                    <label>
-                        数据项: <select class="search-input" name="type">
-                            <option value=""></option>
-                            <option value="123">123</option>
-                            <option value="123">123</option>
-                            <option value="123">123</option>
-                        </select>
-                    </label>
-                    <button class="search-btn">查 询</button>
-                    <button class="search-btn" data-toggle="modal" data-target="#editModal">编 辑</button>
-                </div>
-                <div class="operation mt-2">
-                    <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
+                    <div class="pull-right">
+                        <label>
+                            数据项: <select class="search-input" name="type">
+                                <option value=""></option>
+                                <option value="123">123</option>
+                                <option value="123">123</option>
+                                <option value="123">123</option>
+                            </select>
+                        </label>
+                        <button class="search-btn">查 询</button>
+                    </div>
+                    <div class="operation mt-2">
+                        <button class="operation-btn" data-toggle="modal" data-target="#addModal">新增</button>
+                    </div>
                 </div>
 
                 <table class="villa-table mt-2">
@@ -235,7 +258,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">新增</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <form action="" id="addForm">
@@ -273,7 +297,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">编辑</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <form action="" id="addForm">
